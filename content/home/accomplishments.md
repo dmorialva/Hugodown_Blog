@@ -66,7 +66,7 @@ date_format = "Jan 2006"
   certificate_url = 
   date_start = "2017-08-01"
   date_end = ""
-  description = "Applied understanding of many different analytics methods to implement all of these                       method in R.Applied understanding of mathematical optimization."
+  description = ""
   
 [[item]]
   organization = "Coursera"
@@ -75,7 +75,7 @@ date_format = "Jan 2006"
   url = ""
   certificate_url = "https://coursera.org/share/d6d6064f0a18acdcb26513e7dedf8553"
   date_start = "2014-04-01"
-  date_end = 
-  description = """
+  date_end = ""
+  description = ""
 
 +++
