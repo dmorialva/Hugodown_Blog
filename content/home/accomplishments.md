@@ -76,6 +76,6 @@ date_format = "Jan 2006"
   certificate_url = "https://coursera.org/share/d6d6064f0a18acdcb26513e7dedf8553"
   date_start = "2014-04-01"
   date_end = 
-  description = ""
+  description = """
 
 +++
