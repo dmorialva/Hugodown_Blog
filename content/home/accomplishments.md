@@ -28,7 +28,7 @@ date_format = "Jan 2006"
   date_end = ""
   description = ""
 
-[[item]]
+
   organization = "edX"
   organization_url = "https://www.edx.org"
   title = "Machine Learning with Python-From Linear Models to Deep Learning - MITx"
@@ -38,7 +38,7 @@ date_format = "Jan 2006"
   date_end = ""
   description = ""
 
-[[item]]
+
   organization = "edX"
   organization_url = "https://www.edx.org"
   title = "Data Analysis in Social Science-Assessing Your Knowledge - MITx"
@@ -48,7 +48,7 @@ date_format = "Jan 2006"
   date_end = ""
   description = ""
 
-[[item]]
+
   organization = "edX"
   organization_url = "https://www.edx.org"
   title = "Probability - The Science of Uncertainty and Data - MITx"
@@ -58,7 +58,7 @@ date_format = "Jan 2006"
   date_end = ""
   description = ""
 
-[[item]]
+
   organization = "edX"
   organization_url = "https://www.edx.org"
   title = "The Analytics Edge - MITx"
@@ -68,7 +68,7 @@ date_format = "Jan 2006"
   date_end = ""
   description = ""
   
-[[item]]
+
   organization = "Coursera"
   organization_url = "https://www.coursera.org"
   title = "Financial Markets - Yale University"
