@@ -15,21 +15,39 @@ subtitle = ""
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
 
 [[feature]]
-  icon = "r-project"
-  icon_pack = "fab"
-  name = "R"
-  description = "90%"
-  
-[[feature]]
   icon = "chart-line"
   icon_pack = "fas"
   name = "Statistics"
-  description = "100%"  
+  description = ""  
+
+[[feature]]
+  icon = "house-damage"
+  icon_pack = "fas"
+  name = "Insurance-Reinsurance"
+  description = ""
+
+[[feature]]
+  icon = "coins"
+  icon_pack = "fas"
+  name = "Quantitative Finance"
+  description = ""
+
+[[feature]]
+  icon = "r-project"
+  icon_pack = "fab"
+  name = "R"
+  description = ""
+
+[[feature]]
+  icon = "github"
+  icon_pack = "fab"
+  name = "Github"
+  description = ""
   
 [[feature]]
-  icon = "camera-retro"
+  icon = "book"
   icon_pack = "fas"
-  name = "Photography"
-  description = "10%"
+  name = "Research"
+  description = ""
 
 +++
