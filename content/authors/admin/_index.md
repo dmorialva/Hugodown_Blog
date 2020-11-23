@@ -14,11 +14,11 @@ role: Ingeniería Estadistica
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
+- name: University National of Engenieering
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include statistics, machine learning and finance quantitative.
+bio: My research interests include statistics, insurance-Reinsurance, machine learning and finance quantitative.
 
 interests:
 - Statistics
@@ -67,8 +67,8 @@ email: ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
-- Visitors
+#- Researchers
+#- Visitors
 ---
 
 Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.

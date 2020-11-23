@@ -1,0 +1,50 @@
+---
+output: hugodown::md_document
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Bienvenidos"
+subtitle: ""
+summary: ""
+authors: [admin]
+tags: [Data Science]
+categories: [Bienvenidos]
+date: 2020-11-22
+lastmod: 2020-11-22
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+rmd_hash: 40a45097d81cefc3
+
+---
+
+Bienvenidos
+-----------
+
+Estuve pensando mucho tiempo en cómo iniciar un blog enfocado en data science y voy a tratar de dirigir el contenido con base en mi propia experiencia en el aprendizaje de estos temas. Estudié ingeniería estadística en pre grado, y vi como poco a poco comenzó a emerger los términos de data science, machine learning, deep learning, etc. Luego de transitar por muchas definiciones, debemos entender primero que estamos en la era del **Big Data**, donde esta se define con las 4V (variedad, velocidad, volumen y veracidad) y esta forma parte fundamental de la cuarta revolución industrial.
+
+Una mayor capacidad de cálculo computacional en la nube, el almacenamiento de datos y generación de los mismos a gran escala gracias al avance de las tecnologías, requiere que nos detengamos a pensar en cómo podemos sacarle provecho a éste desborde de datos. Los skills que ahora necesitamos para poder afrontar esta nueva era nunca antes vista, son los **conocimientos matemáticos**, **estadísticos**, **programación y la capacidad de síntesis e interpretabilidad.**
+
+Existe un diluvio de información de este tema, muchos yendo a la aplicación directa en las diversas herramientas estadísticas y de machine learning que existen, sea **R** o **Python** por mencionar las más populares, resaltando las habilidades de programación y de paquetes predefinidos para la tarea que se lleva a cabo. Pero si se quiere llevar con mayor responsabilidad el uso de esto, se debe dar la importancia a las piedras angulares en la que se apoyan los métodos que nos ayudan en el trabajo de un científico de datos, la estadística y las matemáticas.
+
+Si bien la estadística se remonta mucho tiempo atrás, con el origen de las grandes civilizaciones, la inclusión de la teoría de la probabilidad la convirtió en una ciencia por el siglo XVII con Galileo y después, con los conceptos de inferencia y de la teoría de Bayes tuvo una evolución constante. A finales del siglo XX nace el concepto de regresión y correlación con Francis Galton, más adelante las ideas del muestreo, el diseño experimental, la prueba de hipótesis, los procesos estocásticos, análisis multivariante, series de tiempo, estadística no paramétrica, modelos no lineales, etc nos muestra que es una ciencia viva y en constante adaptación a los cambios de los paradigmas.
+
+Dicho todo esto, ser un científico de datos no es solo usar una librería predefinida de alguna herramienta estadística o de ML, es reconocer que hay detrás de todo eso. Si Francis Galton quisiera ser etiquetado hoy un científico de datos, tendría que desarrollar los skills que seguramente tienes desarrollados, el de la **programación** y del **tratamiento y manejo de grandes bases de datos**. Espero que esta breve introducción sea lo que buscabas, y me acompañes al desarrollo de diversos temas que trataremos de abarcar de una manera concisa y que espero te ayude a resolver algunas dudas que nos surgen cuando comenzamos explorar los tópicos de Data Science.
+
+Y si quieres ser un data scientist, ¿Qué skills te faltan?
+
+### Te parece útil? Considera compartirlo 🙌
+
