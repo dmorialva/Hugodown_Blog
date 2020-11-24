@@ -20,7 +20,7 @@ image:
   caption: "Photo by [BHASKER GUPTA](https://analyticsindiamag.com/)"
   focal_point: "Smart"
   preview_only: false
-  placement: 4
+  placement: 5
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -28,7 +28,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 80eecab162eea07f
+rmd_hash: ed3094515f979910
 
 ---
 
