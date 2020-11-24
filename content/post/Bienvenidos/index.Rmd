@@ -19,8 +19,8 @@ draft: false
 image:
   caption: "Photo by [BHASKER GUPTA](https://analyticsindiamag.com/)"
   focal_point: "Center"
-  preview_only: true
-  placement: 1
+  preview_only: false
+  placement: 3
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
