@@ -17,9 +17,10 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
-  focal_point: ""
-  preview_only: false
+  caption: "Photo by [BHASKER GUPTA](https://analyticsindiamag.com/)"
+  focal_point: "Center"
+  preview_only: true
+  placement: 1
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -27,12 +28,12 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 40a45097d81cefc3
+rmd_hash: c796931b014a0ba0
 
 ---
 
-Bienvenidos
------------
+!Hola!
+------
 
 Estuve pensando mucho tiempo en cómo iniciar un blog enfocado en data science y voy a tratar de dirigir el contenido con base en mi propia experiencia en el aprendizaje de estos temas. Estudié ingeniería estadística en pre grado, y vi como poco a poco comenzó a emerger los términos de data science, machine learning, deep learning, etc. Luego de transitar por muchas definiciones, debemos entender primero que estamos en la era del **Big Data**, donde esta se define con las 4V (variedad, velocidad, volumen y veracidad) y esta forma parte fundamental de la cuarta revolución industrial.
 
