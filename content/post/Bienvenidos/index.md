@@ -2,12 +2,12 @@
 output: hugodown::md_document
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Bienvenidos"
+title: "¿Data Science, estadística, matemática?"
 subtitle: ""
 summary: ""
 authors: [admin]
 tags: [Data Science]
-categories: [Bienvenidos]
+categories: []
 date: 2020-11-22
 lastmod: 2020-11-22
 featured: false
@@ -18,9 +18,9 @@ draft: false
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: "Photo by [BHASKER GUPTA](https://analyticsindiamag.com/)"
-  focal_point: "Center"
+  focal_point: "Smartr"
   preview_only: false
-  placement: 3
+  placement: 1
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -28,12 +28,11 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: de5485585a1f0106
+rmd_hash: bcb667578da7f3d3
 
 ---
 
-!Hola!
-------
+### !Hola!
 
 Estuve pensando mucho tiempo en cómo iniciar un blog enfocado en data science y voy a tratar de dirigir el contenido con base en mi propia experiencia en el aprendizaje de estos temas. Estudié ingeniería estadística en pre grado, y vi como poco a poco comenzó a emerger los términos de data science, machine learning, deep learning, etc. Luego de transitar por muchas definiciones, debemos entender primero que estamos en la era del **Big Data**, donde esta se define con las 4V (variedad, velocidad, volumen y veracidad) y esta forma parte fundamental de la cuarta revolución industrial.
 
