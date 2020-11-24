@@ -18,9 +18,9 @@ draft: false
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: "Photo by [BHASKER GUPTA](https://analyticsindiamag.com/)"
-  focal_point: "Smartr"
+  focal_point: "Smart"
   preview_only: false
-  placement: 1
+  placement: 4
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -28,7 +28,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: bcb667578da7f3d3
+rmd_hash: 80eecab162eea07f
 
 ---
 
