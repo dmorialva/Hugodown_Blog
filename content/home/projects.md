@@ -27,7 +27,11 @@ subtitle = ""
   
   [[content.filter_button]]
     name = "Tutoriales"
-    tag = {"Data Science","Demo","prueba"}
+    tag = "Data Science"
+    
+  [[content.filter_button]]
+    name = "Tutoriales"
+    tag = "Statistics"  
   
   [[content.filter_button]]
     name = "Other"
