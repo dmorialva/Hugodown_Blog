@@ -27,7 +27,7 @@ subtitle = ""
   
   [[content.filter_button]]
     name = "Tutoriales"
-    tag = ["Machine Learning","R","Python","Insurance","Statistics"]
+    tag = "Machine Learning","R","Python","Insurance","Statistics"
   
   [[content.filter_button]]
     name = "Other"
