@@ -90,7 +90,7 @@ address = {street = "Universitaria 1951", city = "Lima", region = "LIM", postcod
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "-12.075911262452337", longitude = "-77.08057475180739"}
+coordinates = {latitude = "-12.076980809540531", longitude = "-77.08111120766668"}
 
 # Directions for visitors to locate you.
 directions = ""
