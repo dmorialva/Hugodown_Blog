@@ -10,7 +10,7 @@ tags: [Data Science]
 categories: []
 date: 2020-11-22
 lastmod: 2020-11-22
-featured: false
+featured: true
 draft: false
 
 # Featured image
@@ -28,7 +28,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 70d556ca54864acd
+rmd_hash: 9c3f3b4f7406dfd1
 
 ---
 

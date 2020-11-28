@@ -10,7 +10,7 @@ tags: [Data Science]
 categories: []
 date: 2020-11-22
 lastmod: 2020-11-22
-featured: false
+featured: true
 draft: false
 
 # Featured image
