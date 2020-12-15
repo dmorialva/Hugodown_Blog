@@ -44,7 +44,13 @@ La teoría de probabilidad, no es un campo de la estadística, sino de la matem�
 
 ¿Pero y esto como se relaciona con los modelos estadísticos o los de ML (Machine Learning?. Te hare pensar no con los ejemplos clásicos del lanzamiento de una moneda, o la extraccion de una bola de una urna, sino con problemas que seguramente ya tuviste que afrontar pero sin darte cuenta estas aplicando estos conceptos.
 
-```{r include = FALSE}
+```r
 library(ggplot2)
 ```
+# Distribuciones Discretas
+
+Entre las distribuciones discretas más usadas tenemos la Bernoulli, binomial, geometrica, hipergeometrica, poisson, binomial negativa o pascal.
+
+## Bernoulli
+
 
