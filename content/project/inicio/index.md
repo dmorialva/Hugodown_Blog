@@ -3,7 +3,7 @@ output: hugodown::md_document
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Explorando información"
-summary: ""
+summary: "probando"
 authors: []
 tags: []
 categories: []
