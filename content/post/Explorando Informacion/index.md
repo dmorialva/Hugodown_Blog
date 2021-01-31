@@ -26,8 +26,8 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: ["Tutoriales"]
-rmd_hash: fc4a1903110c49da
+projects: [inicio] 
+rmd_hash: 99198b6546159070
 
 ---
 
