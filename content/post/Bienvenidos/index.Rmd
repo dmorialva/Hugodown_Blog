@@ -6,7 +6,7 @@ title: "¿Data Science, estadística, matemática?"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: ["Data Science", "Deep Learning"]
+tags: [Data Science, Deep Learning]
 categories: []
 date: 2020-11-22
 lastmod: 2020-11-22
