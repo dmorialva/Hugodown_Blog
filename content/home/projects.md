@@ -30,7 +30,7 @@ subtitle = ""
     tag = "Data Science"
   
   [[content.filter_button]]
-    name = "Other"
+    name = "Deep Learning"
     tag = "Deep Learning"
 
 [design]
