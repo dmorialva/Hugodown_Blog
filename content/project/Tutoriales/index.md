@@ -1,8 +1,7 @@
 ---
 title: Tutorial
 summary: An example of using the in-built project page.
-tags:
-- Depp Learning
+tags: ["Depp Learning"]
 date: "2020-04-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
