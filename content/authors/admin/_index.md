@@ -71,6 +71,7 @@ user_groups:
 #- Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Hola!, Mi nombre es David, y soy un entusiasta en el continuo aprendizaje de la estadística aplicada en muchas areas de investigación. Actualmente me encuentro trabajando en seguros, particularmente en temas actuariales. Mis intereses de investigación incluyen machine learning, actuarial, estadística, mercado bursátil.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Me gusta poder compartir lo aprendido, y considero que es una de las maneras mas dinámicas de seguir aprendiendo. Mi trayectoria laboral y académica me ha permitido ver la aplicación de la estadística en distintos frentes, desde campañas de marketing, mercado de capitales y seguros. 
+

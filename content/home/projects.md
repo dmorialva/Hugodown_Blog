@@ -22,7 +22,7 @@ subtitle = ""
   filter_default = 0
   
   [[content.filter_button]]
-    name = "no se"
+    name = "Todo"
     tag = "*"
   
   [[content.filter_button]]
