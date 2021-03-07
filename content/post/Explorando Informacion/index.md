@@ -27,7 +27,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: fa2273a448c8c9b2
+rmd_hash: 8a01bfd975b11799
 
 ---
 
@@ -40,9 +40,9 @@ Definición de Probabilidad
 
 La probabilidad es un cálculo matemático o medición que se le asigna a la realización de un suceso o evento aleatorio, y esta medida cuantifica la certidumbre que el suceso pueda ocurrir.
 
-Bajo condiciones de eventos equiprobables en el espacio muestral, es decir, que cada suceso tenga la misma probabilidad de ocurrir, la regla de Laplace define el cálculo como: $$P(evento) = \frac{Casos Favorables}{Casos Totales}$$ el total de casos favorables entre el total de casos o espacion muestral.
+Bajo condiciones de eventos equiprobables en el espacio muestral, es decir, que cada suceso tenga la misma probabilidad de ocurrir, la regla de Laplace define el cálculo como: $$P(evento) = \frac{Casos Favorables}{Casos Totales}$$ Por ejemplo si lanzas un dado, y anotas si el resultado fue par o no. El espacio muestral esta definido por 2 sucesos, cada uno con la misma probabilidad.
 
-Entre las distribuciones discretas más usadas tenemos la Bernoulli, binomial, geometrica, hipergeometrica, poisson, binomial negativa o pascal.
+¿Y cuándo se tiene un experimento con sucesos que no sean equiprobables?. Pensemos en el lanzamiento de 2 dados y el evento como la suma de los números de los dados. En este caso la probabilidad que el resultado sea 2 ${[(1,1)]}$, es distinto a la probabilidad que el resultado sea 4 $[(3,1),(1,3),(2,2)]$ es decir no son equiprobables.
 
 Bernoulli
 ---------
