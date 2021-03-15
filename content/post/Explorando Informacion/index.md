@@ -27,7 +27,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: 8a01bfd975b11799
+rmd_hash: 3354d4993d6d5890
 
 ---
 
@@ -44,6 +44,13 @@ Bajo condiciones de eventos equiprobables en el espacio muestral, es decir, que 
 
 ¿Y cuándo se tiene un experimento con sucesos que no sean equiprobables?. Pensemos en el lanzamiento de 2 dados y el evento como la suma de los números de los dados. En este caso la probabilidad que el resultado sea 2 ${[(1,1)]}$, es distinto a la probabilidad que el resultado sea 4 $[(3,1),(1,3),(2,2)]$ es decir no son equiprobables.
 
-Bernoulli
----------
+Probabilidad de eventos independientes
+--------------------------------------
+
+Puedes pensar que 2 eventos son independientes, cuando la realización de uno no depende de la realización del otro ni influye en el resultado. Formalmente se define como: $$P(A\cap B) = P(A)P(B)$$ No confundir con *eventos disjuntos o mutuamente excluyentes*. Esto se cumple cuando no existe interseccion, es decir cuando ambos eventos no pueden ocurrir simultaneamente. La intersección de ambos eventos es el conjunto vacio.
+
+Probabilidad Condicional
+------------------------
+
+Esto se da cuando el evento "B" influye en el resultado de la realización del evento "A". Se define como: $$P(A/B) = \frac{P(A \cap B)}{P(B)}$$ Si el evento "B" no influye sobre el "A" entonces son eventos independientes. $$P(A/B) = P(A)$$ $$P(A) = \frac{P(A \cap B)}{P(B)} \implies P(A \cap B)= P(A)P(B)$$
 
