@@ -53,7 +53,7 @@ Puedes pensar que 2 eventos son independientes, cuando la realización de uno no
 $$P(A\cap B) = P(A)P(B)$$
 No confundir con *eventos disjuntos o mutuamente excluyentes*. Esto se cumple cuando no existe interseccion, es decir cuando ambos eventos no pueden ocurrir simultaneamente. La intersección de ambos eventos es el conjunto vacio.
 
-Probabilidad Condicional (NOSE SU FUNCIONO)
+Probabilidad Condicional (esto prueba)
 -------------------------
 
 Esto se da cuando el evento "B" influye en el resultado de la realización del evento "A". Se define como:
