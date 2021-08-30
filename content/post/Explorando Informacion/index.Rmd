@@ -61,4 +61,4 @@ $$P(A/B) = \frac{P(A \cap B)}{P(B)}$$
 Si el evento "B" no influye sobre el "A" entonces son eventos independientes.
 $$P(A/B) = P(A)$$
 $$P(A) = \frac{P(A \cap B)}{P(B)} \implies P(A \cap B)= P(A)P(B)$$
-aksejeaiem mejrekjrken nerkjekjre 
+a ver si ahora si
