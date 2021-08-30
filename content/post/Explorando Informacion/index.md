@@ -27,9 +27,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: 34ad1361fc4c7a95
-
-rmd_hash: 62d8c59e417e860a
+rmd_hash: 4dc0abb12e87ff42
 
 ---
 
@@ -49,5 +47,5 @@ Puedes pensar que 2 eventos son independientes, cuando la realización de uno no
 
 ## Probabilidad Condicional
 
-Esto se da cuando el evento "B" influye en el resultado de la realización del evento "A". Se define como: $$P(A/B) = \frac{P(A \cap B)}{P(B)}$$ Si el evento "B" no influye sobre el "A" entonces son eventos independientes. $$P(A/B) = P(A)$$ $$P(A) = \frac{P(A \cap B)}{P(B)} \implies P(A \cap B)= P(A)P(B)$$ aksejeaiem mejrekjrken nerkjekjre
+Esto se da cuando el evento "B" influye en el resultado de la realización del evento "A". Se define como: $$P(A/B) = \frac{P(A \cap B)}{P(B)}$$ Si el evento "B" no influye sobre el "A" entonces son eventos independientes. $$P(A/B) = P(A)$$ $$P(A) = \frac{P(A \cap B)}{P(B)} \implies P(A \cap B)= P(A)P(B)$$ a ver si ahora si
 
