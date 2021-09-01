@@ -27,11 +27,11 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: 4dc0abb12e87ff42
+rmd_hash: 8e2358bc0eb5a6aa
 
 ---
 
-La teoría de probabilidad, no es un campo de la estadística, sino de la matemática (sí de la matemática), que estudia los **fenómenos aleatorios**. Sabemos que originalmente se creo a partir de los juegos de azar, con un clásico ejemplo del lanzamiento de dados, que dada las mismas condiciones de realización del experimento, en cada ejecución se obtendrá uno de todos los posibles resultados, denominándose a este conjunto *espacio muestral*. Una interpretación de la probabilidad es la frecuencia con la que un evento ocurre.
+La teoría de probabilidad, no es un campo de la estadística, sino de la matemática (sí de la matemática), que estudia los **fenómenos aleatorios**. Sabemos que originalmente se creo al tratar de resolver algunos problemas relacionados con los juegos de azar. Por ejemplo el lanzamiento de dados, que dada las mismas condiciones de realización del experimento, en cada ejecución se obtendrá uno de todos los posibles resultados, denominándose a este conjunto *espacio muestral*. Una interpretación de la probabilidad es la frecuencia con la que un evento ocurre.
 
 # Definición de Probabilidad
 
@@ -47,5 +47,11 @@ Puedes pensar que 2 eventos son independientes, cuando la realización de uno no
 
 ## Probabilidad Condicional
 
-Esto se da cuando el evento "B" influye en el resultado de la realización del evento "A". Se define como: $$P(A/B) = \frac{P(A \cap B)}{P(B)}$$ Si el evento "B" no influye sobre el "A" entonces son eventos independientes. $$P(A/B) = P(A)$$ $$P(A) = \frac{P(A \cap B)}{P(B)} \implies P(A \cap B)= P(A)P(B)$$ a ver si ahora si
+Esto se da cuando el evento "B" influye en el resultado de la realización del evento "A". Se define como: $$P(A/B) = \frac{P(A \cap B)}{P(B)}$$ Si el evento "B" no influye sobre el "A" entonces son eventos independientes. $$P(A/B) = P(A)$$ $$P(A) = \frac{P(A \cap B)}{P(B)} \implies P(A \cap B)= P(A)P(B)$$
+
+## Teorema de la Probabilidad Total
+
+Este teorema es bastante útil, cuando queremos encontrar la probabilidad de un evento a partir de las probabilidades condicionales. Para ellos debemos definir el concepto de **partición**.
+
+-Partición: Si tenemos un espacio muestral "Z", se denomina *partición* si los eventos $A_1, A_2, A_3, ..., A_n$ cumplen la condicion de ser mutuamente excluyentes y colectivamente exhaustivos.
 
