@@ -27,7 +27,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: cdf602f4112fb91d
+rmd_hash: 4b66f8f32671d98b
 
 ---
 
@@ -63,5 +63,5 @@ Thomas Bayes propuso que la probabilidad condicionada de A dado B, tambien puede
 
 $$P(A_i/B) = \frac{P(B/A_i)*P(A_i)}{\sum_{k=1}^{n}P(B/A_k)*P(A_k)}$$
 
-Dado las definiones anteriores, se puede llegar a su demostración. Este teorema mencionado, marca la una separación de la estadística tradicional o llamada frecuentista, ya que como vimos en esta publicación, tradicionalmente se espera que una probabilidad provenga de experimientos repetibles y que la evidencia sea empírica. Mientras que la estadística bayesiada, toma a las probabilidades subjetivas que se van modificando conforme se obtiene nueva información. Un ejemplo de esta aplicacion hoy en día es en el reconocimiento de correos spam con el empleo de \[clasificadores bayesianos\] (<https://es.wikipedia.org/wiki/Filtrado_bayesiano_de_spam>) como también en la detección de cancer.
+Dado las definiones anteriores, se puede llegar a su demostración. Este teorema mencionado, marca la una separación de la estadística tradicional o llamada frecuentista, ya que como vimos en esta publicación, tradicionalmente se espera que una probabilidad provenga de experimientos repetibles y que la evidencia sea empírica. Mientras que la estadística bayesiada, toma a las probabilidades subjetivas que se van modificando conforme se obtiene nueva información. Un ejemplo de esta aplicacion hoy en día es en el reconocimiento de correos spam con el empleo de [clasificadores bayesianos](https://es.wikipedia.org/wiki/Filtrado_bayesiano_de_spam) como también en la detección de cancer.
 
