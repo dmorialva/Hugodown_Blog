@@ -27,7 +27,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: 8e2358bc0eb5a6aa
+rmd_hash: 92f69455e148e931
 
 ---
 
@@ -53,5 +53,5 @@ Esto se da cuando el evento "B" influye en el resultado de la realización del e
 
 Este teorema es bastante útil, cuando queremos encontrar la probabilidad de un evento a partir de las probabilidades condicionales. Para ellos debemos definir el concepto de **partición**.
 
--Partición: Si tenemos un espacio muestral "Z", se denomina *partición* si los eventos $A_1, A_2, A_3, ..., A_n$ cumplen la condicion de ser mutuamente excluyentes y colectivamente exhaustivos.
+**-Partición**: Si tenemos un espacio muestral "Z", se denomina *partición* si los eventos $A_1, A_2, A_3, ..., A_n$ cumplen la condicion de ser **mutuamente excluyentes** y **colectivamente exhaustivos** $(A_1UA_2UA_3U...A_n = Z)$
 
