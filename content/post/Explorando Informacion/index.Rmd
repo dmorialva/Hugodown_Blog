@@ -67,4 +67,4 @@ Teorema de la Probabilidad Total
 
 Este teorema es bastante útil, cuando queremos encontrar la probabilidad de un evento a partir de las probabilidades condicionales. Para ellos debemos definir el concepto de **partición**.
 
-  -**Partición**: Si tenemos un espacio muestral "Z", se denomina *partición* si los eventos $A_1, A_2, A_3, ..., A_n$ cumplen la condicion de ser **mutuamente excluyentes** y **colectivamente exhaustivos**($A_1UA_2UA_3U...A_n = Z$).
+  -**Partición**: Si tenemos un espacio muestral "Z", se denomina *partición* si los eventos $A_1, A_2, A_3, ..., A_n$ cumplen la condicion de ser **mutuamente excluyentes** y **colectivamente exhaustivos**$(A_1UA_2UA_3U...A_n = Z)$).
