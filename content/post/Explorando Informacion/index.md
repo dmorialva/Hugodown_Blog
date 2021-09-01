@@ -27,7 +27,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: 92f69455e148e931
+rmd_hash: cdf602f4112fb91d
 
 ---
 
@@ -53,5 +53,15 @@ Esto se da cuando el evento "B" influye en el resultado de la realización del e
 
 Este teorema es bastante útil, cuando queremos encontrar la probabilidad de un evento a partir de las probabilidades condicionales. Para ellos debemos definir el concepto de **partición**.
 
-**-Partición**: Si tenemos un espacio muestral "Z", se denomina *partición* si los eventos $A_1, A_2, A_3, ..., A_n$ cumplen la condicion de ser **mutuamente excluyentes** y **colectivamente exhaustivos** $(A_1UA_2UA_3U...A_n = Z)$
+**-Partición**: Si tenemos un espacio muestral "Z", se denomina *partición* si los eventos $A_1, A_2, A_3, ..., A_n$ cumplen la condición de ser **mutuamente excluyentes** y **colectivamente exhaustivos** $(A_1UA_2UA_3U...UA_n = Z)$
+
+$$P(B) = \sum_{i=1}^{n}P(A_i)*P(B/A_i)$$
+
+## Regla de Bayes
+
+Thomas Bayes propuso que la probabilidad condicionada de A dado B, tambien puede ser calculada por la probabbilidad condicionada de B dado A. Esto implica un gran aporte para el campo científico, ya que vincula una explicacion de los efectos causales sobre la observación.
+
+$$P(A_i/B) = \frac{P(B/A_i)*P(A_i)}{\sum_{k=1}^{n}P(B/A_k)*P(A_k)}$$
+
+Dado las definiones anteriores, se puede llegar a su demostración. Este teorema mencionado, marca la una separación de la estadística tradicional o llamada frecuentista, ya que como vimos en esta publicación, tradicionalmente se espera que una probabilidad provenga de experimientos repetibles y que la evidencia sea empírica. Mientras que la estadística bayesiada, toma a las probabilidades subjetivas que se van modificando conforme se obtiene nueva información. Un ejemplo de esta aplicacion hoy en día es en el reconocimiento de correos spam con el empleo de \[clasificadores bayesianos\] (<https://es.wikipedia.org/wiki/Filtrado_bayesiano_de_spam>) como también en la detección de cancer.
 
