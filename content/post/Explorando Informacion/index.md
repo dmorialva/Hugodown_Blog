@@ -6,7 +6,7 @@ title: "Explorando Probabilidades"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [Data Science, Visualizacion, Estadistica]
+tags: [Data Science, Probabilidad, Estadistica]
 categories: []
 date: 2021-01-31
 lastmod: 2021-01-31
@@ -27,7 +27,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: 962e4f50fdd1bc45
+rmd_hash: 7059e4ba0d9d0385
 
 ---
 
