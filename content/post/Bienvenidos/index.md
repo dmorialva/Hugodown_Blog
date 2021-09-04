@@ -28,13 +28,12 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [inicio]
-rmd_hash: 2a9e8d5aeb274cf6
+rmd_hash: 4859d2637b839e5b
 
 ---
 
-### !Hola!
+# !Hola!
 
-\#
 <div style="text-align: justify">
 
 Estuve pensando mucho tiempo en cómo iniciar un blog enfocado en data science y voy a tratar de dirigir el contenido con base en mi propia experiencia en el aprendizaje de estos temas. Estudié ingeniería estadística en pre grado, y vi como poco a poco comenzó a emerger los términos de data science, machine learning, deep learning, etc. Luego de transitar por muchas definiciones, debemos entender primero que estamos en la era del **Big Data**, donde esta se define con las 4V (variedad, velocidad, volumen y veracidad) y esta forma parte fundamental de la cuarta revolución industrial.
@@ -47,7 +46,7 @@ Si bien la estadística se remonta mucho tiempo atrás, con el origen de las gra
 
 Dicho todo esto, ser un científico de datos no es solo usar una librería predefinida de alguna herramienta estadística o de ML, es reconocer que hay detrás de todo eso. Si Francis Galton quisiera ser etiquetado hoy un científico de datos, tendría que desarrollar los skills que seguramente tienes desarrollados, el de la **programación** y del **tratamiento y manejo de grandes bases de datos**. Espero que esta breve introducción sea lo que buscabas, y me acompañes al desarrollo de diversos temas que trataremos de abarcar de una manera concisa y que espero te ayude a resolver algunas dudas que nos surgen cuando comenzamos explorar los tópicos de Data Science.
 
-Y si quieres ser un data scientist, ¿Qué skills te faltan? \#
+Y si quieres ser un data scientist, ¿Qué skills te faltan?
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌

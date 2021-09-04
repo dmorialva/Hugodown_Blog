@@ -27,9 +27,11 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: 806e7901b339916d
+rmd_hash: 962e4f50fdd1bc45
 
 ---
+
+<div style="text-align: justify">
 
 La teoría de probabilidad, no es un campo de la estadística, sino de la matemática (sí de la matemática), que estudia los **fenómenos aleatorios**. Sabemos que originalmente se creo al tratar de resolver algunos problemas relacionados con los juegos de azar. Por ejemplo el lanzamiento de dados, que dada las mismas condiciones de realización del experimento, en cada ejecución se obtendrá uno de todos los posibles resultados, denominándose a este conjunto *espacio muestral*. Una interpretación de la probabilidad es la frecuencia con la que un evento ocurre.
 
@@ -53,6 +55,8 @@ Puedes pensar que 2 eventos son independientes, cuando la realización de uno no
 
 Esto se da cuando el evento "B" influye en el resultado de la realización del evento "A". Se define como: $$P(A/B) = \frac{P(A \cap B)}{P(B)}$$ Si el evento "B" no influye sobre el "A" entonces son eventos independientes. $$P(A/B) = P(A)$$ $$P(A) = \frac{P(A \cap B)}{P(B)} \implies P(A \cap B)= P(A)P(B)$$
 
+{{% alert note %}} Por ejemplo, la probabilidad que no pague el credito dado que es hombre. {{% /alert %}}
+
 ## Teorema de la Probabilidad Total
 
 Este teorema es bastante útil, cuando queremos encontrar la probabilidad de un evento a partir de las probabilidades condicionales. Para ellos debemos definir el concepto de **partición**.
@@ -68,4 +72,8 @@ Thomas Bayes propuso que la probabilidad condicionada de A dado B, tambien puede
 $$P(A_i/B) = \frac{P(B/A_i)*P(A_i)}{\sum_{k=1}^{n}P(B/A_k)*P(A_k)}$$
 
 Dado las definiones anteriores, se puede llegar a su demostración. Este teorema mencionado, marca la una separación de la estadística tradicional o llamada frecuentista, ya que como vimos en esta publicación, tradicionalmente se espera que una probabilidad provenga de experimientos repetibles y que la evidencia sea empírica. Mientras que la estadística bayesiada, toma a las probabilidades subjetivas que se van modificando conforme se obtiene nueva información. Un ejemplo de esta aplicacion hoy en día es en el reconocimiento de correos spam con el empleo de [clasificadores bayesianos](https://es.wikipedia.org/wiki/Filtrado_bayesiano_de_spam) como también en la detección de cancer.
+
+<div/>
+
+### Te parece útil? Considera compartirlo 🙌
 
