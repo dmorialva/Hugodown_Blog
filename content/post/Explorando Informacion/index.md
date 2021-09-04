@@ -27,11 +27,15 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: 4b66f8f32671d98b
+rmd_hash: 806e7901b339916d
 
 ---
 
 La teoría de probabilidad, no es un campo de la estadística, sino de la matemática (sí de la matemática), que estudia los **fenómenos aleatorios**. Sabemos que originalmente se creo al tratar de resolver algunos problemas relacionados con los juegos de azar. Por ejemplo el lanzamiento de dados, que dada las mismas condiciones de realización del experimento, en cada ejecución se obtendrá uno de todos los posibles resultados, denominándose a este conjunto *espacio muestral*. Una interpretación de la probabilidad es la frecuencia con la que un evento ocurre.
+
+¿Y por qué nos debe interesar conocer este campo?. En muchos de los temas de aplicación que podrán abordar en el día a día, mucho de estos se deseará tener medido la ocurrencia de un evento de interés, por ejemplo, la probabilidad de conversion de un cliente en una pagina web, o la probabilidad que un cliente no llegue a pagar el crédito que solicita, o cuál es la probabilida que una persona pertenezca a un cluster en particular. Estoy seguro que si se detienen a pensar, ya sea en su trabajo o en su investigación, siempre existe la necesidad de medir algun evento de su interés. Para ello vamos a explicar algunas definiciones.
+
+{{% alert note %}} Recordar que exite una diferencia entre fenomenos aleatorios o deterministas, los invito a buscar sus definiciones. {{% /alert %}}
 
 # Definición de Probabilidad
 
