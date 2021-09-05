@@ -20,7 +20,7 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include statistics, insurance-Reinsurance, machine learning and finance quantitative.
 
-Interest:
+Interests:
 - Estadística
 - Data science en actuarial
 - Finanzas Cuantitativas
