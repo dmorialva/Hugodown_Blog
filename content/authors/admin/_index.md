@@ -20,20 +20,17 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include statistics, insurance-Reinsurance, machine learning and finance quantitative.
 
-interests:
-- Statistics
-- Data science in actuarial
-- Finance quantitative
-- Computational Linguistics
+Intereses:
+- Estadística
+- Data science en actuarial
+- Finanzas Cuantitativas
+- Lenguajes de Programación
 
-education:
+Educación:
   courses:
   - course: MicroMaster Statistics and Data Science
     institution: Massachusetts Institute of Technology
     year: 2020
-  - course: BSc in Statistical Engineering
-    institution: University National of Engineering
-    year: 2011
   - course: BSc in Statistical Engineering
     institution: University National of Engineering
     year: 2011
