@@ -132,7 +132,7 @@ cp -av themes/academic/exampleSite/* .
 
 ## Updating
 
-[View the Update Guide](https://sourcethemes.com/academic/docs/update/).
+[View the Update Guide](https://sourcethemes.com/academic/docse/update/).
 
 Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) and follow [@source_themes](https://twitter.com/source_themes) on Twitter to help keep track of [updates](https://sourcethemes.com/academic/updates).
 
