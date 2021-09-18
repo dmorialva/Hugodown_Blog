@@ -1,32 +1,25 @@
 ---
-title: Tengo datos. ¿Y ahora qué?
+title: "Tengo datos. ¿Y ahora qué?"
 summary: Como importar datos a R de distintas fuentes.
-tags: ["Data Science","Deep Learning", "R"]
-date: 2021-09-18
-
-# Optional external URL for project (replaces project detail page).
-external_link: ""
-
+date: '2021-09-18'
+tags:
+- Data Science
+- Deep Learning
+- R
+external_link: ''
 image:
-  caption: ""
-  focal_point: "Smart"
+  caption: ''
+  focal_point: Smart
   placement: 1
-
 links:
 - icon: twitter
   icon_pack: fab
   name: Follow
   url: https://twitter.com/georgecushen
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
-
-# Slides (optional).
-#   Associate this project with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
+url_code: ''
+url_pdf: ''
+url_slides: ''
+url_video: ''
 slides: []
 ---
 
