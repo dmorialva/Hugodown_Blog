@@ -23,11 +23,11 @@ url_slides: ''
 url_video: ''
 slides: []
 ---
-
+<div style="text-align: justify">
 Esta es una serie de post, que nos ayudará a ver de manera aplicada los conceptos de estadística y de machine learning. Para comenzar, lo primero es conseguir información.
 Asumiendo que ya tenemos esto, el siguiente paso es ahora poder gestionarla dentro de R. 
 
-Podemos tener información en distintos formatos, desde un texto plano, separado por comas, excel, URL, base de datos, json,etc. Nos ayudaremos de datos abiertos de [kaggle](https://www.kaggle.com/priankravichandar/airline-delays-from-20032016/metadata) y de [openml](https://www.openml.org/).
+Podemos tener información en distintos formatos, desde un texto plano, separado por comas, excel, XML, base de datos, json, etc. Nos ayudaremos de datos abiertos de [kaggle](https://www.kaggle.com) y de [openml](https://www.openml.org/).
 
 # Leer información desde web (CSV)
 
@@ -40,7 +40,7 @@ airline <- read.csv('https://corgis-edu.github.io/corgis/datasets/csv/airlines/a
 head(airline)[,c(1:5)]
 
 ```
-Se uso la funcion read.csv, ya que la informacion se encuentra separada por comas. Si la informacion estuviera separa por otro caracter, se agregaria el parametro *sep = "/"* por ejemplo.
+Se usó la funcion read.csv, ya que la informacion se encuentra separada por comas. Si la informacion estuviera separa por otro caracter, se agregaria el parametro *sep = "/"* por ejemplo.
 
 
 # Leer información desde disco local (Zip file)
@@ -49,8 +49,30 @@ Para esto, primero descargar el archivo del siguiente [link](https://www.kaggle.
 
 ```{r}
 
-house <- house <- read.csv(unz("archive.zip","housePrice.csv"), header = T)
+house <- read.csv(unz("archive.zip","housePrice.csv"), header = T)
 
 head(house)
 
 ```
+
+Para que funcione el código de arriba, es necesario saber el nombre del archivo que se encuentra dentro del zip, en este caso es "housePrice.csv"
+
+# Leer información desde disco local (Excel file)
+
+Cuando tenemos un archivo en formato excel, debemos ser cuidadosos en ver si la extensión es ".xls" o ".xlsx". A partir de la extensión tendremos que escoger qué libreria usar. Por otra parte, a diferencia de un texto plano, o un csv, el formato de excel como sabemos esta organizado por pestañas, es decir un archivo podria tener información en más de una pestaña. Para el siguiente ejemplo, por favor descargue el siguiente [archivo](https://www.kaggle.com/akouaorsot/fintech-stock-price-data) y descomprímalo en su disco local.
+
+
+```{r}
+library(openxlsx)
+paypal <- read.xlsx("Fintech Stocks.xlsx", sheet = "PayPal")
+coinbase <- read.xlsx("Fintech Stocks.xlsx", sheet = "Coinbase")
+
+head(paypal,5)
+
+head(coinbase,5)
+
+```
+
+<div/>
+
+### Te parece útil? Considera compartirlo 🙌
