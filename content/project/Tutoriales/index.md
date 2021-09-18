@@ -1,7 +1,7 @@
 ---
 title: Tutoriales
 summary: An example of using the in-built project page.
-tags: ["Data Science"]
+tags: ["Data Science","Deep Learning"]
 date: "2020-04-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

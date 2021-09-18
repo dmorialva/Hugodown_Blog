@@ -26,7 +26,7 @@ subtitle = ""
     tag = "*"
   
   [[content.filter_button]]
-    name = "Como es"
+    name = "Tutorial R"
     tag = "Data Science"
   
   [[content.filter_button]]
