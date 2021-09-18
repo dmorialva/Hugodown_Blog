@@ -1,15 +1,16 @@
 ---
-title: Tutoriales
-summary: An example of using the in-built project page.
-tags: ["Data Science","Deep Learning"]
-date: "2020-04-27T00:00:00Z"
+title: Tengo datos. ¿Y ahora qué?
+summary: Como importar datos a R de distintas fuentes.
+tags: ["Data Science","Deep Learning", "R"]
+date: "2021-00-18T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
 image:
   caption: ""
-  focal_point: 
+  focal_point: "Smart"
+  placement: 1
 
 links:
 - icon: twitter
