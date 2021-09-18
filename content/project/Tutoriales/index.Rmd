@@ -29,7 +29,7 @@ Asumiendo que ya tenemos esto, el siguiente paso es ahora poder gestionarla dent
 
 Podemos tener información en distintos formatos, desde un texto plano, separado por comas, excel, URL, base de datos, json,etc. Nos ayudaremos de datos abiertos de [kaggle](https://www.kaggle.com/priankravichandar/airline-delays-from-20032016/metadata) y de [openml](https://www.openml.org/).
 
-# Leer información desde web
+# Leer información desde web (CSV)
 
 El dataset "airlines" se compone por la información de los vuelos en Estados Unidos del 2003 al 2016.
 
@@ -37,11 +37,20 @@ El dataset "airlines" se compone por la información de los vuelos en Estados Un
 
 airline <- read.csv('https://corgis-edu.github.io/corgis/datasets/csv/airlines/airlines.csv')
 
-head(airline)
+head(airline)[,c(1:5)]
 
 ```
 Se uso la funcion read.csv, ya que la informacion se encuentra separada por comas. Si la informacion estuviera separa por otro caracter, se agregaria el parametro *sep = "/"* por ejemplo.
 
-I'm a very infrequent contributor to [#TidyTuesday](https://github.com/rfordatascience/tidytuesday) (though always planning to do more!)
 
-As and when I do get a chance to participate, I'll be sharing my visualisations here.
+# Leer información desde disco local (Zip file)
+
+Para esto, primero descargar el archivo del siguiente [link](https://www.kaggle.com/mokar2001/house-price-tehran-iran). Se descargará un zip y dentro de el un archivo csv. 
+
+```{r}
+
+house <- house <- read.csv(unz("archive.zip","housePrice.csv"), header = T)
+
+head(house)
+
+```
