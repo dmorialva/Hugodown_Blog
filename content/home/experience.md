@@ -46,11 +46,11 @@ date_format = "Jan 2006"
   
   Responsabilidades:
   
-  *Calcular reservas técnicas de primas y siniestros.
-  *Realizar backtesting de modelos de reserving.
-  *Identificar oportunidades de automatización
-  *Actualización notas técnicas.
-  *Seguimiento de principales KPIs de rentabilidad.
+    *Calcular reservas técnicas de primas y siniestros.
+    *Realizar backtesting de modelos de reserving.
+    *Identificar oportunidades de automatización
+    *Actualización notas técnicas.
+    *Seguimiento de principales KPIs de rentabilidad.
   """
   
   [[experience]]
@@ -64,9 +64,9 @@ date_format = "Jan 2006"
   
   Responsabilidades:
   
-  *Generar estrategias sobre portafolios de inversión y carteras.
-  *Crear y analizar modelos estadísticos-econométricos para toma de decisiones de inversión.
-  *Automatizar estrategias con datos en línea de fuentes externas web scrapping.
-  *Estructurar algoritmos de trading de alta frecuencia(Algorithmic trading).
+    *Generar estrategias sobre portafolios de inversión y carteras.
+    *Crear y analizar modelos estadísticos-econométricos para toma de decisiones de inversión.
+    *Automatizar estrategias con datos en línea de fuentes externas web scrapping.
+    *Estructurar algoritmos de trading de alta frecuencia(Algorithmic trading).
   """
 +++
