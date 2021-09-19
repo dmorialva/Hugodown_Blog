@@ -33,7 +33,7 @@ date_format = "Jan 2006"
   *Proyectar reservas de siniestros para presupuesto y forecast.
   *Cálculo de parámetros para el Capital Basado en Riesgos (CBR).
   *Participación de la función actuarial.
-  
+  """  
 
 [[experience]]
   title = "Analista Acturial - P&C"
@@ -42,6 +42,31 @@ date_format = "Jan 2006"
   location = "Lima"
   date_start = "2016-06-01"
   date_end = "2019-05-01"
-  description = """Taught electronic engineering and researched semiconductor physics."""
-
+  description = """
+  
+  Responsabilidades:
+  
+  *Calcular reservas técnicas de primas y siniestros.
+  *Realizar backtesting de modelos de reserving.
+  *Identificar oportunidades de automatización
+  *Actualización notas técnicas.
+  *Seguimiento de principales KPIs de rentabilidad.
+  """
+  
+  [[experience]]
+  title = "Analista Finanzas Corporativas - Research"
+  company = "GPI SAB"
+  company_url = ""
+  location = "Lima"
+  date_start = "2013-03-01"
+  date_end = "2016-06-01"
+  description = """
+  
+  Responsabilidades:
+  
+  *Generar estrategias sobre portafolios de inversión y carteras.
+  *Crear y analizar modelos estadísticos-econométricos para toma de decisiones de inversión.
+  *Automatizar estrategias con datos en línea de fuentes externas web scrapping.
+  *Estructurar algoritmos de trading de alta frecuencia(Algorithmic trading).
+  """
 +++
