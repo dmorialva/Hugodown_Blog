@@ -27,12 +27,12 @@ date_format = "Jan 2006"
   description = """
   Responsabilidades:
   
-  *Tarificar productos mediante modelos clásicos, GLM, Machine Learning.
-  *Elaborar escenarios simulados para la tarifa.
-  *Elaborar escenarios simulados en esquemas de reaseguros.
-  *Proyectar reservas de siniestros para presupuesto y forecast.
-  *Cálculo de parámetros para el Capital Basado en Riesgos (CBR).
-  *Participación de la función actuarial.
+ """ *Tarificar productos mediante modelos clásicos, GLM, Machine Learning."""
+ """ *Elaborar escenarios simulados para la tarifa."""
+ """ *Elaborar escenarios simulados en esquemas de reaseguros."""
+"""  *Proyectar reservas de siniestros para presupuesto y forecast."""
+"""  *Cálculo de parámetros para el Capital Basado en Riesgos (CBR)."""
+"""  *Participación de la función actuarial.
   """  
 
 [[experience]]
