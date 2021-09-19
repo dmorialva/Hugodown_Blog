@@ -70,8 +70,12 @@ user_groups:
 #- Researchers
 #- Visitors
 ---
+<div style="text-align: justify">
 
 Hola! Mi nombre es David, y soy un entusiasta en el continuo aprendizaje de la estadística aplicada en muchas areas de investigación. Actualmente me encuentro trabajando en seguros, particularmente en temas actuariales. Mis intereses de investigación incluyen machine learning, actuarial, estadística, mercado bursátil.
 
 Me gusta poder compartir lo aprendido, y considero que es una de las maneras más dinámicas de seguir aprendiendo. Mi trayectoria laboral y académica me ha permitido ver la aplicación de la estadística en distintos frentes, desde campañas de marketing, mercado de capitales y seguros. 
+
+Te invito a tomar una buena taza de café, coger unas hojas, tomar las ideas y tener juntos este *Temere Spatium* (espacio aleatorio)
+<div/>
 
