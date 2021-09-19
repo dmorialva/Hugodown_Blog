@@ -28,7 +28,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [inicio]
-rmd_hash: 53097faa5b596a19
+rmd_hash: bdcfc08cdbfee369
 
 ---
 
@@ -36,7 +36,7 @@ rmd_hash: 53097faa5b596a19
 
 <div style="text-align: justify">
 
-Estuve pensando mucho tiempo en cómo iniciar un blog enfocado en data science y voy a tratar de dirigir el contenido con base en mi propia experiencia en el aprendizaje de estos temas. Estudié ingeniería estadística en pre grado, y vi como poco a poco comenzó a emerger los términos de data science, machine learning, deep learning, etc. Luego de transitar por muchas definiciones, debemos entender primero que estamos en la era del **Big Data**, donde esta se define con las 8V (variedad, velocidad, volumen y veracidad,etc) y esta forma parte fundamental de la cuarta revolución industrial.
+Estuve pensando mucho tiempo en cómo iniciar un blog enfocado en data science y voy a tratar de dirigir el contenido con base en mi propia experiencia en el aprendizaje de estos temas. Estudié ingeniería estadística en pre grado, y vi como poco a poco comenzó a emerger los términos de data science, machine learning, deep learning, etc. Luego de transitar por muchas definiciones, debemos entender primero que estamos en la era del **Big Data**, donde esta se define con las 8V (variedad, velocidad, volumen, veracidad,etc) y esta forma parte fundamental de la cuarta revolución industrial.
 
 Una mayor capacidad de cálculo computacional en la nube, el almacenamiento de datos y generación de los mismos a gran escala gracias al avance de las tecnologías, requiere que nos detengamos a pensar en cómo podemos sacarle provecho a éste desborde de datos. Los skills que ahora necesitamos para poder afrontar esta nueva era nunca antes vista, son los **conocimientos matemáticos**, **estadísticos**, **programación y la capacidad de síntesis e interpretabilidad.**
 
