@@ -21,13 +21,14 @@ date_format = "Jan 2006"
   title = "Especialista Acturial - P&C"
   company = "Rimac Seguros"
   company_url = ""
+  company_logo: org-gc
   location = "Lima"
   date_start = "2019-05-01"
   date_end = ""
   description = """
-  Responsabilidades:
+  Responsabilidades:"""
   
- """*Tarificar productos mediante modelos clásicos, GLM, Machine Learning.
+ *Tarificar productos mediante modelos clásicos, GLM, Machine Learning.
  *Elaborar escenarios simulados para la tarifa.
  *Elaborar escenarios simulados en esquemas de reaseguros.
  *Proyectar reservas de siniestros para presupuesto y forecast.
