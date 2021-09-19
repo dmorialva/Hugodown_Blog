@@ -25,20 +25,23 @@ date_format = "Jan 2006"
   date_start = "2019-05-01"
   date_end = ""
   description = """
-  Responsibilities include:
+  Responsabilidades:
   
-  * Analysing
-  * Modelling
-  * Deploying
-  """
+  *Tarificar productos mediante modelos clásicos, GLM, Machine Learning.
+  *Elaborar escenarios simulados para la tarifa.
+  *Elaborar escenarios simulados en esquemas de reaseguros.
+  *Proyectar reservas de siniestros para presupuesto y forecast.
+  *Cálculo de parámetros para el Capital Basado en Riesgos (CBR).
+  *Participación de la función actuarial.
+  
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
+  title = "Analista Acturial - P&C"
+  company = "Rimac Seguros"
   company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
+  location = "Lima"
+  date_start = "2016-06-01"
+  date_end = "2019-05-01"
   description = """Taught electronic engineering and researched semiconductor physics."""
 
 +++
