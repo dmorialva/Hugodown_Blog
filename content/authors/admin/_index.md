@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Ingeniería Estadistica
+role: Ingeniería Estadística
 
 # Organizations/Affiliations
 organizations:
@@ -72,10 +72,10 @@ user_groups:
 ---
 <div style="text-align: justify">
 
-Hola! Mi nombre es David, y soy un entusiasta en el continuo aprendizaje de la estadística aplicada en muchas areas de investigación. Actualmente me encuentro trabajando en seguros, particularmente en temas actuariales. Mis intereses de investigación incluyen machine learning, actuarial, estadística, mercado bursátil.
+Hola! Mi nombre es David, soy un entusiasta en el continuo aprendizaje de la estadística aplicada en muchas áreas de investigación. Actualmente me encuentro trabajando en seguros, particularmente en temas actuariales. Mis intereses de investigación incluyen machine learning, actuarial, estadística y mercado bursátil.
 
-Me gusta poder compartir lo aprendido, y considero que es una de las maneras más dinámicas de seguir aprendiendo. Mi trayectoria laboral y académica me ha permitido ver la aplicación de la estadística en distintos frentes, desde campañas de marketing, mercado de capitales y seguros. 
+Me gusta poder compartir lo aprendido y considero que es una de las maneras más dinámicas de seguir aprendiendo. Mi trayectoria laboral y académica me ha permitido ver la aplicación de la estadística en distintos frentes, desde campañas de marketing, mercado de capitales y seguros. 
 
-Te invito a tomar una buena taza de café, coger unas hojas y tener una grata conversación en este ***Temere Spatium*** (espacio aleatorio).
+Te invito a tomar una buena taza de café, papel y lápiz y muchas ganas de compartir una grata conversación en este ***Temere Spatium*** (espacio aleatorio).
 <div/>
 
