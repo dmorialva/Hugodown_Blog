@@ -63,7 +63,7 @@ date_format = "Jan 2006"
   Responsabilidades:
   
     * Generar estrategias sobre portafolios de inversión y carteras.
-    * Crear y analizar modelos estadísticos-econométricos para toma de decisiones de inversión.
+    * Crear y analizar modelos estadísticos-econométricos de inversión.
     * Automatizar estrategias con datos en línea de fuentes externas web scrapping.
     * Estructurar algoritmos de trading de alta frecuencia(Algorithmic trading).
   """
