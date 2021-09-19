@@ -76,6 +76,6 @@ Hola! Mi nombre es David, y soy un entusiasta en el continuo aprendizaje de la e
 
 Me gusta poder compartir lo aprendido, y considero que es una de las maneras más dinámicas de seguir aprendiendo. Mi trayectoria laboral y académica me ha permitido ver la aplicación de la estadística en distintos frentes, desde campañas de marketing, mercado de capitales y seguros. 
 
-Te invito a tomar una buena taza de café, coger unas hojas, tomar las ideas y tener juntos este *Temere Spatium* (espacio aleatorio)
+Te invito a tomar una buena taza de café, coger unas hojas y tener una grata conversación en este ***Temere Spatium*** (espacio aleatorio).
 <div/>
 
