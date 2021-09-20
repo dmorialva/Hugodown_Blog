@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 output: hugodown::md_document
 title: "Jornada Avances en Métodos Estadísticos"
-event: 
+event: Jornada Avances en Métodos Estadísticos
 event_url: http://eventos.sce.org.co/?fbclid=IwAR2WUnif3ciVLQikI7yVwUmKlWjgHHhlKVlwQWf4ZqkJkVHYsTM2CAz_ipM
 location: "online"
 address:
@@ -65,7 +65,7 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: d909abdff30c0db9
+rmd_hash: 584075203100627c
 
 ---
 
