@@ -34,9 +34,14 @@
   weight = 15
 
 [[main]]
+  name = "News"
+  url = "#talks"
+  weight = 20
+
+[[main]]
   name = "Contact"
   url = "#contact"
-  weight = 20
+  weight = 25
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
