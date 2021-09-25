@@ -1,6 +1,7 @@
 ---
 output: hugodown::md_document
 title: "Tengo datos. ¿Y ahora qué?"
+subtitle: "Carga de datos - I"
 summary: Como importar datos a R de distintas fuentes.
 date: '2021-09-18'
 tags:
@@ -22,7 +23,7 @@ url_pdf: ''
 url_slides: ''
 url_video: ''
 slides: []
-rmd_hash: 3a8cf63082d462a7
+rmd_hash: 8420e5aa0bd0822c
 
 ---
 
