@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   location = "Lima"
   date_start = "2019-05-01"
   date_end = ""
-  description = """
+  description : """
     Responsabilidades:
   
     * Tarificar productos mediante modelos clásicos, GLM, Machine Learning.
