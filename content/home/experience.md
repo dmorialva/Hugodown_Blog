@@ -25,7 +25,7 @@ date_format = "Jan 2006"
   date_start = "2019-05-01"
   date_end = ""
   description = |2-
-  Responsabilidades:
+    Responsabilidades:
   
     * Tarificar productos mediante modelos clásicos, GLM, Machine Learning.
     * Elaborar escenarios simulados para la tarifa.
