@@ -14,7 +14,7 @@ role: Ingeniería Estadística
 
 # Organizations/Affiliations
 organizations:
-- name: University National of Engenieering
+- name: Universidad Nacional de Ingeniería
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
