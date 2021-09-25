@@ -33,7 +33,7 @@ date_format = "Jan 2006"
     * Proyectar reservas de siniestros para presupuesto y forecast.
     * Cálculo de parámetros para el Capital Basado en Riesgos (CBR).
     * Participación de la función actuarial.
-  """  
+    
 
 [[experience]]
   title = "Analista Acturial - P&C"
