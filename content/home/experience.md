@@ -43,7 +43,7 @@ date_format = "Jan 2006"
   date_start = "2016-06-01"
   date_end = "2019-05-01"
   description = """
-  Responsabilidades:
+    Responsabilidades:
   
     * Calcular reservas técnicas de primas y siniestros.
     * Realizar backtesting de modelos de reserving.
@@ -60,7 +60,7 @@ date_format = "Jan 2006"
   date_start = "2013-03-01"
   date_end = "2016-06-01"
   description = """
-  Responsabilidades:
+    Responsabilidades:
   
     * Generar estrategias sobre portafolios de inversión y carteras.
     * Crear y analizar modelos estadísticos-econométricos de inversión.
