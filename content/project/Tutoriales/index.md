@@ -23,7 +23,7 @@ url_pdf: ''
 url_slides: ''
 url_video: ''
 slides: []
-rmd_hash: 56b0f5fa694370e2
+rmd_hash: 9c33bf384a5aa38e
 
 ---
 
@@ -154,6 +154,45 @@ Creamos un objeto de tipo Conexión llamado "conn". Para esto debes conocer si e
 </div>
 
 Una vez que se estableció con éxito la conexión, se podrán hacer extracciones y filtros de la información con las sentencias **SELECT** por medio de la función "dbGetQuery" cuyo parámetro será la conexión que hicimos anteriormente.
+
+# Leer información de una base de datos local (MS Accsess)
+
+En el caso que contemos con información en nuestro disco local, y en un gestor de base de datos como por ejemplo un MS Accsess, podemos usar el paquete de R "RODBC". Para pode acceder al servidor local, debemos hacer lo siguiente:
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'>RODBC</span><span class='o'>)</span>
+
+<span class='nv'>conn</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/pkg/RODBC/man/odbcConnect.html'>odbcConnectAccess2007</a></span><span class='o'>(</span><span class='s'>"basedatos.accdb"</span><span class='o'>)</span>
+
+<span class='nv'>sin</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/pkg/RODBC/man/sqlQuery.html'>sqlQuery</a></span><span class='o'>(</span><span class='nv'>conn</span>, <span class='s'>"SELECT * FROM Tabla"</span>, stringsAsFactors <span class='o'>=</span> <span class='kc'>FALSE</span><span class='o'>)</span>
+
+<span class='nf'><a href='https://rdrr.io/pkg/RODBC/man/odbcClose.html'>odbcCloseAll</a></span><span class='o'>(</span><span class='o'>)</span>
+</code></pre>
+
+</div>
+
+Al igual que en el bloque anterior, debemos construir primero la conexión, esto se hace con la función **odbcConnectAccess2007**. Notar que esta se utiliza con versiones de access mayores a 2007. Para poder extraer datos de las tablas de la base, se usa la función **sqlQuery** cuyo parámetro es la conexión abierta y el query que necesites.
+
+Por último, es recomendable cerrar la conexión por el tráfico, para ellos puedes usar la función **odbcCloseAll()**.
+
+Aquí te dejo la versión de los paquetes que se usó en esta sesión.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='c'>#&gt;  package  * version date       lib source        </span>
+<span class='c'>#&gt;  DBI        1.1.1   2021-01-15 [1] CRAN (R 4.0.4)</span>
+<span class='c'>#&gt;  odbc       1.3.1   2021-03-16 [1] CRAN (R 4.0.4)</span>
+<span class='c'>#&gt;  openxlsx * 4.2.3   2020-10-27 [1] CRAN (R 4.0.4)</span>
+<span class='c'>#&gt;  RODBC      1.3-17  2020-05-11 [1] CRAN (R 4.0.0)</span>
+<span class='c'>#&gt; </span>
+<span class='c'>#&gt; [1] C:/Users/d_mor/Documents/R/win-library/4.0</span>
+<span class='c'>#&gt; [2] C:/Program Files/R/R-4.0.5/library</span></code></pre>
+
+</div>
+
+Te invito a realizar tus propias conexiones, aplicarlo en algún proyecto personal o laboral. Si tienes alguna pregunta o consejo, déjalo en los comentarios.
+
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌

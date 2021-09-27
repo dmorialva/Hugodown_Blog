@@ -98,6 +98,36 @@ consulta <- dbGetQuery(conn, "SELECT * FROM TABLA")
 ```
 
 Una vez que se estableció con éxito la conexión, se podrán hacer extracciones y filtros de la información con las sentencias **SELECT** por medio de la función "dbGetQuery" cuyo parámetro será la conexión que hicimos anteriormente.
+
+# Leer información de una base de datos local (MS Accsess)
+
+En el caso que contemos con información en nuestro disco local, y en un gestor de base de datos como por ejemplo un MS Accsess, podemos usar el paquete de R "RODBC".
+Para pode acceder al servidor local, debemos hacer lo siguiente:
+
+```{r, eval=FALSE, error=FALSE}
+library(RODBC)
+
+conn <- odbcConnectAccess2007("basedatos.accdb")
+
+sin <- sqlQuery(conn, "SELECT * FROM Tabla", stringsAsFactors = FALSE)
+
+odbcCloseAll()
+
+```
+
+Al igual que en el bloque anterior, debemos construir primero la conexión, esto se hace con la función **odbcConnectAccess2007**. Notar que esta se utiliza con versiones de access mayores a 2007. Para poder extraer datos de las tablas de la base, se usa la función **sqlQuery** cuyo parámetro es la conexión abierta y el query que necesites.
+
+Por último, es recomendable cerrar la conexión  por el tráfico, para ellos puedes usar la función **odbcCloseAll()**.
+
+Aquí te dejo la versión de los paquetes que se usó en esta sesión.
+
+```{r, eval=TRUE, echo=FALSE}
+sessioninfo::package_info(pkgs = c("RODBC", "odbc", "DBI", "openxlsx"),dependencies = F)
+
+```
+
+Te invito a realizar tus propias conexiones, aplicarlo en algún proyecto personal o laboral. Si tienes alguna pregunta o consejo, déjalo en los comentarios.
+
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌
