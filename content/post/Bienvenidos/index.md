@@ -6,7 +6,7 @@ title: "¿Data Science, estadística, matemática?"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [Data Science, Visualizacion]
+tags: [Data Science, Estadística]
 categories: []
 date: 2020-11-22
 lastmod: 2020-11-22
@@ -28,7 +28,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [inicio]
-rmd_hash: bdcfc08cdbfee369
+rmd_hash: d5a1db0f24b4a0fe
 
 ---
 

@@ -6,7 +6,7 @@ title: "Explorando Probabilidades"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [Data Science, Probabilidad, Estadistica, Deep Learning]
+tags: [Data Science, Probabilidad, Estadistica]
 categories: []
 date: 2021-01-31
 lastmod: 2021-01-31

@@ -6,7 +6,7 @@ summary: Como importar datos a R de distintas fuentes.
 date: '2021-09-18'
 tags:
 - Data Science
-- Deep Learning
+- Manejo Datos
 - R
 external_link: ''
 image:
