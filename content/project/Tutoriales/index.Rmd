@@ -42,7 +42,7 @@ head(airline)[,c(1:5)]
 
 ```
 Se usó la funcion read.csv, ya que la informacion se encuentra separada por comas. Si la informacion estuviera separa por otro caracter, se agregaria el parametro *sep = "/"* por ejemplo.
-
+No es indispensable que el formato almacenado en la web sea un CSV, tambien puede ser un texto plano (.TXT) u otro.
 
 # Leer información desde disco local (Zip file)
 

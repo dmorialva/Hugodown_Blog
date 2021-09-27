@@ -23,7 +23,7 @@ url_pdf: ''
 url_slides: ''
 url_video: ''
 slides: []
-rmd_hash: e4b4ba32cf895a2a
+rmd_hash: 56b0f5fa694370e2
 
 ---
 
@@ -67,7 +67,7 @@ El dataset "airlines" se compone por la información de los vuelos en Estados Un
 
 </div>
 
-Se usó la funcion read.csv, ya que la informacion se encuentra separada por comas. Si la informacion estuviera separa por otro caracter, se agregaria el parametro *sep = "/"* por ejemplo.
+Se usó la funcion read.csv, ya que la informacion se encuentra separada por comas. Si la informacion estuviera separa por otro caracter, se agregaria el parametro *sep = "/"* por ejemplo. No es indispensable que el formato almacenado en la web sea un CSV, tambien puede ser un texto plano (.TXT) u otro.
 
 # Leer información desde disco local (Zip file)
 
