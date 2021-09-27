@@ -14,16 +14,16 @@ image:
   focal_point: Smart
   placement: 1
 links:
-- icon: twitter
+- icon: linkedin
   icon_pack: fab
   name: Follow
-  url: https://twitter.com/georgecushen
+  url: https://www.linkedin.com/in/morialva27/
 url_code: ''
 url_pdf: ''
 url_slides: ''
 url_video: ''
 slides: []
-rmd_hash: 78272a42453e1247
+rmd_hash: 802ad0ddd2c82b5b
 
 ---
 
