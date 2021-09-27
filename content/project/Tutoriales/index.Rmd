@@ -74,6 +74,30 @@ head(coinbase,5)
 
 ```
 
+# Leer información de una base de datos externa (online)
+
+Con *R* podemos conectarnos a distintos gestores de base datos (MS Accsess, SQL, MySQL, Oracle, etc), por medio de la ODBC [(Open DataBase Connectivity)](https://es.wikipedia.org/wiki/Open_Database_Connectivity). Para ello se cuentan con distintos paquetes, entre ellos DBI, ODBC, etc. Si nuestra información se encuentra en una base SQL cuyo servidor físico se encuentra en tu centro laboral, o ubicado fuera de tu red local, podemos conectarnos a ella conociendo la IP y el usuario y contraseña para asegurar que tengas un perfil de acceso.
+
+```{r, eval=FALSE, error=FALSE}
+library(DBI)
+library(odbc)
+
+conn <- dbConnect(odbc::odbc(), Driver = "SQL Server",
+Server = "161.132.193.XXX",
+Database = "Nombre_Base",
+UID = "usuario",
+PWD = "usuario",
+encoding = "latin1")
+
+```
+
+Creamos un objeto de tipo Conexión llamado "conn". Para esto debes conocer si el gestor es un SQL Server, MySQL, etc. En el campo "Server", tienes que ingresar la IP del servidor. En "UID" el nombre del usuario de tu perfil de acceso y en "PWD" el password. El tipo de "encoding" ayuda con los caracteres especiales, como la ñ.
+
+```{r, eval=FALSE, error=FALSE}
+consulta <- dbGetQuery(conn, "SELECT * FROM TABLA")
+```
+
+Una vez que se estableció con éxito la conexión, se podrán hacer extracciones y filtros de la información con las sentencias **SELECT** por medio de la función "dbGetQuery" cuyo parámetro será la conexión que hicimos anteriormente.
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌

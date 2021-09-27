@@ -23,7 +23,7 @@ url_pdf: ''
 url_slides: ''
 url_video: ''
 slides: []
-rmd_hash: 8420e5aa0bd0822c
+rmd_hash: 0511e086b82e521a
 
 ---
 
@@ -126,6 +126,34 @@ Cuando tenemos un archivo en formato excel, debemos ser cuidadosos en ver si la 
 
 </div>
 
+# Leer información de una base de datos externa (online)
+
+Con *R* podemos conectarnos a distintos gestores de base datos (MS Accsess, SQL, MySQL, Oracle, etc), por medio de la ODBC [(Open DataBase Connectivity)](https://es.wikipedia.org/wiki/Open_Database_Connectivity). Para ello se cuentan con distintos paquetes, entre ellos DBI, ODBC, etc. Si nuestra información se encuentra en una base SQL cuyo servidor físico se encuentra en tu centro laboral, o ubicado fuera de tu red local, podemos conectarnos a ella conociendo la IP y el usuario y contraseña para asegurar que tengas un perfil de acceso.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://dbi.r-dbi.org'>DBI</a></span><span class='o'>)</span>
+<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/r-dbi/odbc'>odbc</a></span><span class='o'>)</span>
+
+<span class='nv'>conn</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://dbi.r-dbi.org/reference/dbConnect.html'>dbConnect</a></span><span class='o'>(</span><span class='nf'>odbc</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/pkg/odbc/man/odbc.html'>odbc</a></span><span class='o'>(</span><span class='o'>)</span>, Driver <span class='o'>=</span> <span class='s'>"SQL Server"</span>,
+Server <span class='o'>=</span> <span class='s'>"161.132.193.XXX"</span>,
+Database <span class='o'>=</span> <span class='s'>"Nombre_Base"</span>,
+UID <span class='o'>=</span> <span class='s'>"usuario"</span>,
+PWD <span class='o'>=</span> <span class='s'>"usuario"</span>,
+encoding <span class='o'>=</span> <span class='s'>"latin1"</span><span class='o'>)</span>
+</code></pre>
+
+</div>
+
+Creamos un objeto de tipo Conexión llamado "conn". Para esto debes conocer si el gestor es un SQL Server, MySQL, etc. En el campo "Server", tienes que ingresar la IP del servidor. En "UID" el nombre del usuario de tu perfil de acceso y en "PWD" el password. El tipo de "encoding" ayuda con los caracteres especiales, como la ñ.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='nv'>consulta</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://dbi.r-dbi.org/reference/dbGetQuery.html'>dbGetQuery</a></span><span class='o'>(</span><span class='nv'>conn</span>, <span class='s'>"SELECT * FROM TABLA"</span><span class='o'>)</span></code></pre>
+
+</div>
+
+Una vez que se estableció con éxito la conexión, se podrán hacer extracciones y filtros de la información con las sentencias **SELECT** por medio de la función "dbGetQuery" cuyo parámetro será la conexión que hicimos anteriormente.
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌
