@@ -23,7 +23,7 @@ url_pdf: ''
 url_slides: ''
 url_video: ''
 slides: []
-rmd_hash: 0511e086b82e521a
+rmd_hash: 78272a42453e1247
 
 ---
 
@@ -128,7 +128,7 @@ Cuando tenemos un archivo en formato excel, debemos ser cuidadosos en ver si la 
 
 # Leer información de una base de datos externa (online)
 
-Con *R* podemos conectarnos a distintos gestores de base datos (MS Accsess, SQL, MySQL, Oracle, etc), por medio de la ODBC [(Open DataBase Connectivity)](https://es.wikipedia.org/wiki/Open_Database_Connectivity). Para ello se cuentan con distintos paquetes, entre ellos DBI, ODBC, etc. Si nuestra información se encuentra en una base SQL cuyo servidor físico se encuentra en tu centro laboral, o ubicado fuera de tu red local, podemos conectarnos a ella conociendo la IP y el usuario y contraseña para asegurar que tengas un perfil de acceso.
+Con *R* podemos conectarnos a distintos gestores de base datos (MS Accsess, SQL, MySQL, Oracle, etc), por medio de la ODBC [(Open DataBase Connectivity)](https://es.wikipedia.org/wiki/Open_Database_Connectivity). Para ello se cuentan con distintos paquetes, entre ellos DBI, ODBC, etc. Si nuestra información se encuentra en una base SQL cuyo servidor físico se encuentra en tu centro laboral, o ubicado fuera de tu red local, podemos conectarnos a ella conociendo la IP, el usuario y contraseña y asegurar que tengas un perfil de acceso.
 
 <div class="highlight">
 
