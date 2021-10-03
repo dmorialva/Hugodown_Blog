@@ -1,6 +1,6 @@
 ---
 output: hugodown::md_document
-title: "Tengo datos. ¿Y ahora?"
+title: "Tengo datos. ¿Y ahora qué?"
 subtitle: "Carga de datos - I"
 summary: Como importar datos a R de distintas fuentes.
 date: '2021-09-18'
