@@ -8,6 +8,7 @@ tags:
 - Data Science
 - Manejo Datos
 - R
+- Importar datos a R
 external_link: ''
 image:
   caption: ''
@@ -119,10 +120,56 @@ Al igual que en el bloque anterior, debemos construir primero la conexión, esto
 
 Por último, es recomendable cerrar la conexión  por el tráfico, para ellos puedes usar la función **odbcCloseAll()**.
 
+# Leer información por medio de REST API (JSON)
+
+Podemos tener información valiosa proveniente de sitios web, en el cual si existe una API desarrollada para poder hacer peticiones o request HTTP, *R* nos entrega una librerias para poder extraer información. En este ejemplo, usaremos la API de Wikipedia, para recolectar las respuestas en ingles y español de lo que es un [capacitor](https://www.wikidata.org/wiki/Q5322), sus definiciones y sus alias.
+
+```{r, eval=TRUE}
+library(httr)
+library(XML)
+library(jsonlite)
+
+query <- 
+  'https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q5322&format=json'
+response <- GET(URLencode(query))
+response <- rawToChar(response$content)
+response <- fromJSON(response)
+
+# Buscamos como se dice capacitor en distintos idiomas:
+
+labels <- lapply(response$entities$Q5322$labels, function(x) {
+  paste0(x$value, "(", x$language, ")")
+})
+labels <- paste(labels, collapse = ", ")
+print(labels)
+
+```
+
+Para poder entender como usar la información, es necesario entender el modelo de datos o el diccionario de datos de la fuente en este caso de [wikipedia](https://www.mediawiki.org/wiki/Wikibase/DataModel), que si es bastante complicado, pero una vez comprendido, se tiene a una gran fuente de datos.
+
+# Leer información por medio de REST API (XML)
+
+Tomamos el mismo ejemplo, extraer toda la información de wikipedia de lo que es un capacitor.
+
+```{r, eval=TRUE}
+library(httr)
+library(XML)
+library(jsonlite)
+
+query <- 
+  'https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q5322&languages=en&format=xml'
+response <- GET(URLencode(query))
+response <- rawToChar(response$content)
+response <- xmlParse(response)
+response <- xmlToList(response)
+
+```
+
+
 Aquí te dejo la versión de los paquetes que se usó en esta sesión.
 
 ```{r, eval=TRUE, echo=FALSE}
-sessioninfo::package_info(pkgs = c("RODBC", "odbc", "DBI", "openxlsx"),dependencies = F)
+sessioninfo::package_info(pkgs = c("RODBC", "odbc", "DBI", "openxlsx", "httr", "XML","jsonlite"),dependencies = F)
 
 ```
 
