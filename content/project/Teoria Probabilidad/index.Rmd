@@ -54,6 +54,25 @@ sample(x=c("c","s"), size = 1)
 
 Creo que nos hes fácil entender, que un lanzamiento no influye en el resultado del siguiente, esta caracteristica hace que los eventos sea independientes. 
 
+```{r}
+library(gapminder)
+datos = gapminder
+
+library(ggplot2)
+library(dplyr)
+
+grafico <- datos %>%
+  ggplot() + 
+    geom_point(aes(x = gdpPercap, y = lifeExp, col = continent, size = pop), alpha = 0.8) + theme_minimal() + 
+    theme(legend.position = "bottom") + guides(size = "none") + 
+    labs(x = "PIB per Capita" ,y = "Esperanza de Vida",  col = "") 
+
+library(gganimate)
+
+grafico + transition_time(year)
+```
+
+
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌
