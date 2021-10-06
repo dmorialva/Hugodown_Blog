@@ -69,7 +69,8 @@ grafico <- datos %>%
 
 library(gganimate)
 
-grafico + transition_time(year)
+grafico <- grafico + transition_time(year)
+animate(grafico, renderer = sprite_renderer())
 ```
 
 
