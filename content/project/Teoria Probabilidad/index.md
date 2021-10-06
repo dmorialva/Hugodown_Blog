@@ -39,7 +39,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: a1352bf8c45baccf
+rmd_hash: 0dca8772bb7b18a1
 
 ---
 
@@ -53,7 +53,7 @@ Como vimos en el post de [Explorando Probabilidades](https://www.dmorialva.com/p
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='c'># Lanzamiento de una moneda</span>
 <span class='nf'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='o'>(</span>x<span class='o'>=</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"c"</span>,<span class='s'>"s"</span><span class='o'>)</span>, size <span class='o'>=</span> <span class='m'>1</span><span class='o'>)</span>
-<span class='c'>#&gt; [1] "c"</span>
+<span class='c'>#&gt; [1] "s"</span>
 <span class='c'># La probabilidad de este evento es 1/2</span></code></pre>
 
 </div>
@@ -85,7 +85,10 @@ Creo que nos hes fácil entender, que un lanzamiento no influye en el resultado 
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://gganimate.com'>gganimate</a></span><span class='o'>)</span>
 
 <span class='nv'>grafico</span> <span class='o'>&lt;-</span> <span class='nv'>grafico</span> <span class='o'>+</span> <span class='nf'><a href='https://gganimate.com/reference/transition_time.html'>transition_time</a></span><span class='o'>(</span><span class='nv'>year</span><span class='o'>)</span>
-<span class='nf'><a href='https://gganimate.com/reference/anim_save.html'>anim_save</a></span><span class='o'>(</span><span class='s'>"grafico1.gif"</span>, <span class='nv'>grafico</span><span class='o'>)</span></code></pre>
+<span class='nf'><a href='https://gganimate.com/reference/animate.html'>animate</a></span><span class='o'>(</span><span class='nv'>grafico</span>, fps <span class='o'>=</span> <span class='m'>10</span>, width <span class='o'>=</span> <span class='m'>750</span>, height <span class='o'>=</span> <span class='m'>450</span><span class='o'>)</span>
+</code></pre>
+<img src="figs/unnamed-chunk-2-1.gif" width="700px" style="display: block; margin: auto;" />
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='nf'><a href='https://gganimate.com/reference/anim_save.html'>anim_save</a></span><span class='o'>(</span><span class='s'>"grafico1.gif"</span><span class='o'>)</span></code></pre>
 
 </div>
 
