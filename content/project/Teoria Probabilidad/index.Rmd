@@ -52,6 +52,7 @@ sample(x=c("c","s"), size = 1)
 # La probabilidad de este evento es 1/2
 ```
 
+Creo que nos hes fácil entender, que un lanzamiento no influye en el resultado del siguiente, esta caracteristica hace que los eventos sea independientes. 
 
 <div/>
 

@@ -39,7 +39,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: b2967f982a2364ee
+rmd_hash: 4863bdb4230653c6
 
 ---
 
@@ -57,6 +57,8 @@ Como vimos en el post de [Explorando Probabilidades](https://www.dmorialva.com/p
 <span class='c'># La probabilidad de este evento es 1/2</span></code></pre>
 
 </div>
+
+Creo que nos hes fácil entender, que un lanzamiento no influye en el resultado del siguiente, esta caracteristica hace que los eventos sea independientes.
 
 <div/>
 
