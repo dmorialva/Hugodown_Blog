@@ -39,7 +39,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: 82454c0775ad25e0
+rmd_hash: 94c2944d039c08cc
 
 ---
 
@@ -47,7 +47,7 @@ rmd_hash: 82454c0775ad25e0
 
 # Definición de probabilidad
 
-Como vimos en el post de [Explorando Probabilidades](%22https://www.dmorialva.com/post/explorando-informacion/%22), la probabilidad se define como la cuantificación de la ocurrencia de un evento en un experimento. Para ello, debemos conocer el **espacio muestral**, que es el conjunto de todos los posibles resultados. Empecemos con el lanzamiento de una moneda. En este experimento, el espacio muestral es de Cara (c) o Sello (s).
+Como vimos en el post de [Explorando Probabilidades](), la probabilidad se define como la cuantificación de la ocurrencia de un evento en un experimento. Para ello, debemos conocer el **espacio muestral**, que es el conjunto de todos los posibles resultados. Empecemos con el lanzamiento de una moneda. En este experimento, el espacio muestral es de Cara (c) o Sello (s).
 
 <div class="highlight">
 
