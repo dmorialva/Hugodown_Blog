@@ -70,10 +70,10 @@ grafico <- datos %>%
 library(gganimate)
 
 grafico <- grafico + transition_time(year)
-animate(grafico, fps = 10, width = 750, height = 450)
-anim_save("grafico1.gif")
+animate(grafico, fps = 15, width = 750, height = 450)
+
 ```
-![Image](grafico1.gif)
+
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌
