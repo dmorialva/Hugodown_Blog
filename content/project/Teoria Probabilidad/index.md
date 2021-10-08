@@ -1,12 +1,13 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 output: hugodown::md_document
-title: "Teoria Probabilidad"
+title: "Teoria de Probabilidad"
 summary: ""
 authors: [admin]
 tags: [Data Science, Teoria de Probabilidad, R, Estadística]
 categories: []
 date: 2021-10-05
+draft: true
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -39,7 +40,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: 15b2c146a1e6c334
+rmd_hash: c4f9f250992ef0d3
 
 ---
 
@@ -53,12 +54,41 @@ Como vimos en el post de [Explorando Probabilidades](https://www.dmorialva.com/p
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='c'># Lanzamiento de una moneda</span>
 <span class='nf'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='o'>(</span>x<span class='o'>=</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"c"</span>,<span class='s'>"s"</span><span class='o'>)</span>, size <span class='o'>=</span> <span class='m'>1</span><span class='o'>)</span>
-<span class='c'>#&gt; [1] "c"</span>
+<span class='c'>#&gt; [1] "s"</span>
 <span class='c'># La probabilidad de este evento es 1/2</span></code></pre>
 
 </div>
 
 Creo que nos hes fácil entender, que un lanzamiento no influye en el resultado del siguiente, esta caracteristica hace que los eventos sea independientes.
+
+Haremos el siguiente experimento, lanzaremos una moneda 1000 veces, y comprobaremos las probabilidades.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='http://tidyverse.tidyverse.org'>tidyverse</a></span><span class='o'>)</span>
+<span class='c'>#&gt; -- <span style='font-weight: bold;'>Attaching packages</span><span> --------------------------------------- tidyverse 1.3.0 --</span></span>
+<span class='c'>#&gt; <span style='color: #00BB00;'>&lt;U+2714&gt;</span><span> </span><span style='color: #0000BB;'>ggplot2</span><span> 3.3.3     </span><span style='color: #00BB00;'>&lt;U+2714&gt;</span><span> </span><span style='color: #0000BB;'>purrr  </span><span> 0.3.4</span></span>
+<span class='c'>#&gt; <span style='color: #00BB00;'>&lt;U+2714&gt;</span><span> </span><span style='color: #0000BB;'>tibble </span><span> 3.1.0     </span><span style='color: #00BB00;'>&lt;U+2714&gt;</span><span> </span><span style='color: #0000BB;'>dplyr  </span><span> 1.0.5</span></span>
+<span class='c'>#&gt; <span style='color: #00BB00;'>&lt;U+2714&gt;</span><span> </span><span style='color: #0000BB;'>tidyr  </span><span> 1.1.3     </span><span style='color: #00BB00;'>&lt;U+2714&gt;</span><span> </span><span style='color: #0000BB;'>stringr</span><span> 1.4.0</span></span>
+<span class='c'>#&gt; <span style='color: #00BB00;'>&lt;U+2714&gt;</span><span> </span><span style='color: #0000BB;'>readr  </span><span> 1.4.0     </span><span style='color: #00BB00;'>&lt;U+2714&gt;</span><span> </span><span style='color: #0000BB;'>forcats</span><span> 0.5.1</span></span>
+<span class='c'>#&gt; -- <span style='font-weight: bold;'>Conflicts</span><span> ------------------------------------------ tidyverse_conflicts() --</span></span>
+<span class='c'>#&gt; <span style='color: #BB0000;'>&lt;U+2716&gt;</span><span> </span><span style='color: #0000BB;'>dplyr</span><span>::</span><span style='color: #00BB00;'>filter()</span><span> masks </span><span style='color: #0000BB;'>stats</span><span>::filter()</span></span>
+<span class='c'>#&gt; <span style='color: #BB0000;'>&lt;U+2716&gt;</span><span> </span><span style='color: #0000BB;'>dplyr</span><span>::</span><span style='color: #00BB00;'>lag()</span><span>    masks </span><span style='color: #0000BB;'>stats</span><span>::lag()</span></span>
+<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='o'>)</span>
+<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://gganimate.com'>gganimate</a></span><span class='o'>)</span>
+<span class='c'># Cara = 1, Cruz = 0</span>
+<span class='nv'>lanzamiento</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='o'>(</span><span class='m'>1</span><span class='o'>:</span><span class='m'>1000</span>, <span class='kr'>function</span><span class='o'>(</span><span class='nv'>x</span><span class='o'>)</span><span class='o'>&#123;</span><span class='nf'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>1</span>,<span class='m'>0</span><span class='o'>)</span>, size <span class='o'>=</span> <span class='m'>1</span>, prob<span class='o'>=</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>0.5</span>,<span class='m'>0.5</span><span class='o'>)</span><span class='o'>)</span><span class='o'>&#125;</span><span class='o'>)</span>
+<span class='nv'>lanzamiento</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/funprog.html'>Reduce</a></span><span class='o'>(</span><span class='nv'>rbind</span>, <span class='nv'>lanzamiento</span><span class='o'>)</span><span class='o'>)</span>
+<span class='nv'>lanzamiento</span> <span class='o'>&lt;-</span> <span class='nv'>lanzamiento</span> <span class='o'>%&gt;%</span> <span class='nf'>mutate</span><span class='o'>(</span>V2<span class='o'>=</span><span class='m'>1</span><span class='o'>-</span><span class='nv'>V1</span>, index <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>1000</span><span class='o'>)</span>
+
+<span class='nv'>graph</span> <span class='o'>&lt;-</span> <span class='nv'>lanzamiento</span> <span class='o'>%&gt;%</span> <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'>+</span> <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='o'>(</span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='o'>(</span>x<span class='o'>=</span><span class='nv'>V1</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>+</span>
+    <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'>+</span>
+    <span class='nf'><a href='https://gganimate.com/reference/transition_time.html'>transition_time</a></span><span class='o'>(</span><span class='nv'>index</span><span class='o'>)</span>
+<span class='nf'><a href='https://gganimate.com/reference/animate.html'>animate</a></span><span class='o'>(</span><span class='nv'>graph</span>, fps <span class='o'>=</span> <span class='m'>1</span>, width <span class='o'>=</span> <span class='m'>750</span>, height <span class='o'>=</span> <span class='m'>450</span><span class='o'>)</span>
+</code></pre>
+<img src="figs/unnamed-chunk-2-1.gif" width="700px" style="display: block; margin: auto;" />
+
+</div>
 
 <div class="highlight">
 
@@ -67,14 +97,6 @@ Creo que nos hes fácil entender, que un lanzamiento no influye en el resultado 
 
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='o'>)</span>
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='o'>)</span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt; Attaching package: 'dplyr'</span>
-<span class='c'>#&gt; The following objects are masked from 'package:stats':</span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt;     filter, lag</span>
-<span class='c'>#&gt; The following objects are masked from 'package:base':</span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt;     intersect, setdiff, setequal, union</span>
 
 <span class='nv'>grafico</span> <span class='o'>&lt;-</span> <span class='nv'>datos</span> <span class='o'>%&gt;%</span>
   <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'>+</span> 
@@ -87,7 +109,7 @@ Creo que nos hes fácil entender, que un lanzamiento no influye en el resultado 
 <span class='nv'>grafico</span> <span class='o'>&lt;-</span> <span class='nv'>grafico</span> <span class='o'>+</span> <span class='nf'><a href='https://gganimate.com/reference/transition_time.html'>transition_time</a></span><span class='o'>(</span><span class='nv'>year</span><span class='o'>)</span>
 <span class='nf'><a href='https://gganimate.com/reference/animate.html'>animate</a></span><span class='o'>(</span><span class='nv'>grafico</span>, fps <span class='o'>=</span> <span class='m'>15</span>, width <span class='o'>=</span> <span class='m'>750</span>, height <span class='o'>=</span> <span class='m'>450</span><span class='o'>)</span>
 </code></pre>
-<img src="figs/unnamed-chunk-2-1.gif" width="700px" style="display: block; margin: auto;" />
+<img src="figs/unnamed-chunk-3-1.gif" width="700px" style="display: block; margin: auto;" />
 
 </div>
 
