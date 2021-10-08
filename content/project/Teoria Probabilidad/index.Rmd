@@ -7,7 +7,7 @@ authors: [admin]
 tags: [Data Science, Teoria de Probabilidad, R, Estadística]
 categories: []
 date: 2021-10-05
-draft: true
+draft: false
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

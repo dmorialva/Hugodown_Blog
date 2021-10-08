@@ -7,7 +7,7 @@ authors: [admin]
 tags: [Data Science, Teoria de Probabilidad, R, Estadística]
 categories: []
 date: 2021-10-05
-draft: true
+draft: false
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -40,7 +40,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: c4f9f250992ef0d3
+rmd_hash: 652519b225d44231
 
 ---
 
