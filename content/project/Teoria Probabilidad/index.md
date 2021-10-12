@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 output: hugodown::md_document
-code_folding: show
+code_folding: hide
 title: "Teoria de Probabilidad"
 summary: ""
 authors: [admin]
@@ -41,7 +41,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: 3606c3920f00ebb0
+rmd_hash: cc1867eba7a7efd9
 
 ---
 
@@ -70,7 +70,7 @@ Haremos el siguiente experimento, lanzaremos una moneda 1000 veces, y comprobare
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='o'>)</span>
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://gganimate.com'>gganimate</a></span><span class='o'>)</span>
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/hadley/reshape'>reshape2</a></span><span class='o'>)</span>
-<span class='c'># Cara = 1, Cruz = 0</span>
+<span class='c'># Cara = 1, Sello = 0</span>
 <span class='nv'>lanzamiento</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='o'>(</span><span class='m'>1</span><span class='o'>:</span><span class='m'>500</span>, <span class='kr'>function</span><span class='o'>(</span><span class='nv'>x</span><span class='o'>)</span><span class='o'>&#123;</span><span class='nf'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>1</span>,<span class='m'>0</span><span class='o'>)</span>, size <span class='o'>=</span> <span class='m'>1</span>, prob<span class='o'>=</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>0.5</span>,<span class='m'>0.5</span><span class='o'>)</span><span class='o'>)</span><span class='o'>&#125;</span><span class='o'>)</span>
 <span class='nv'>lanzamiento</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/funprog.html'>Reduce</a></span><span class='o'>(</span><span class='nv'>rbind</span>, <span class='nv'>lanzamiento</span><span class='o'>)</span><span class='o'>)</span>
 <span class='nf'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='o'>(</span><span class='nv'>lanzamiento</span><span class='o'>)</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"c"</span><span class='o'>)</span>

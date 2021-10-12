@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 output: hugodown::md_document
-code_folding: show
+code_folding: hide
 title: "Teoria de Probabilidad"
 summary: ""
 authors: [admin]
@@ -62,7 +62,7 @@ library(tidyverse)
 library(ggplot2)
 library(gganimate)
 library(reshape2)
-# Cara = 1, Cruz = 0
+# Cara = 1, Sello = 0
 lanzamiento <- lapply(1:500, function(x){sample(c(1,0), size = 1, prob=c(0.5,0.5))})
 lanzamiento <- as.data.frame(Reduce(rbind, lanzamiento))
 colnames(lanzamiento) <- c("c")
