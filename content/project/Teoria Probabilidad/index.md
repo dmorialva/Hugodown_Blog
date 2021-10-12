@@ -40,7 +40,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: 3e5170752b51f02e
+rmd_hash: 025a4ac506ac398d
 
 ---
 
@@ -54,7 +54,7 @@ Como vimos en el post de [Explorando Probabilidades](https://www.dmorialva.com/p
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='c'># Lanzamiento de una moneda</span>
 <span class='nf'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='o'>(</span>x<span class='o'>=</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"c"</span>,<span class='s'>"s"</span><span class='o'>)</span>, size <span class='o'>=</span> <span class='m'>1</span><span class='o'>)</span>
-<span class='c'>#&gt; [1] "c"</span>
+<span class='c'>#&gt; [1] "s"</span>
 <span class='c'># La probabilidad de este evento es 1/2</span></code></pre>
 
 </div>
@@ -81,7 +81,8 @@ Haremos el siguiente experimento, lanzaremos una moneda 1000 veces, y comprobare
 <span class='nv'>graph</span> <span class='o'>&lt;-</span> <span class='nv'>lanzamiento</span> <span class='o'>%&gt;%</span> <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='o'>(</span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='o'>(</span>x <span class='o'>=</span> <span class='nv'>variable</span>, y <span class='o'>=</span> <span class='nv'>value</span>, fill <span class='o'>=</span> <span class='nv'>variable</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>+</span>              <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='o'>(</span>stat <span class='o'>=</span> <span class='s'>"identity"</span>, color <span class='o'>=</span> <span class='s'>"white"</span>, show.legend <span class='o'>=</span> <span class='kc'>FALSE</span>, width <span class='o'>=</span> <span class='m'>0.2</span><span class='o'>)</span> <span class='o'>+</span>
      <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/geom_text.html'>geom_text</a></span><span class='o'>(</span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='o'>(</span>label <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='o'>(</span><span class='nv'>value</span><span class='o'>)</span><span class='o'>)</span>,position <span class='o'>=</span> <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/position_dodge.html'>position_dodge</a></span><span class='o'>(</span><span class='m'>0.9</span><span class='o'>)</span>,
       vjust<span class='o'>=</span> <span class='m'>1.2</span>, size <span class='o'>=</span> <span class='m'>5</span>, color <span class='o'>=</span> <span class='s'>"white"</span><span class='o'>)</span>  <span class='o'>+</span>
-      <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'>+</span>
+      <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='o'>(</span>x <span class='o'>=</span> <span class='s'>"Moneda"</span>, y <span class='o'>=</span> <span class='s'>"Frecuencia"</span><span class='o'>)</span><span class='o'>+</span>
+      <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='o'>(</span>base_size <span class='o'>=</span> <span class='m'>18</span><span class='o'>)</span> <span class='o'>+</span>
       <span class='nf'><a href='https://gganimate.com/reference/enter_exit.html'>enter_appear</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'>+</span>
       <span class='nf'><a href='https://gganimate.com/reference/transition_states.html'>transition_states</a></span><span class='o'>(</span><span class='nv'>index</span>,transition_length <span class='o'>=</span> <span class='m'>1.5</span>,state_length <span class='o'>=</span> <span class='m'>2</span><span class='o'>)</span> <span class='o'>+</span>
       <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='o'>(</span>title <span class='o'>=</span> <span class='s'>" Lanzamiento \n número : &#123;closest_state&#125;"</span><span class='o'>)</span>

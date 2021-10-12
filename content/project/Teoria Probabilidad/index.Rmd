@@ -73,7 +73,8 @@ lanzamiento <- lanzamiento %>% mutate(index = rep(1:500,2))
 graph <- lanzamiento %>% ggplot(aes(x = variable, y = value, fill = variable)) +              geom_bar(stat = "identity", color = "white", show.legend = FALSE, width = 0.2) +
      geom_text(aes(label = as.numeric(value)),position = position_dodge(0.9),
       vjust= 1.2, size = 5, color = "white")  +
-      theme_minimal() +
+      labs(x = "Moneda", y = "Frecuencia")+
+      theme_minimal(base_size = 18) +
       enter_appear() +
       transition_states(index,transition_length = 1.5,state_length = 2) +
       labs(title = " Lanzamiento \n número : {closest_state}")
