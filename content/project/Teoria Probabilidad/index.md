@@ -1,6 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 output: hugodown::md_document
+code_folding: show
 title: "Teoria de Probabilidad"
 summary: ""
 authors: [admin]
@@ -40,7 +41,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: 025a4ac506ac398d
+rmd_hash: 3606c3920f00ebb0
 
 ---
 
