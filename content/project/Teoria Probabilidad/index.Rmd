@@ -56,19 +56,29 @@ sample(x=c("c","s"), size = 1)
 Creo que nos hes fácil entender, que un lanzamiento no influye en el resultado del siguiente, esta caracteristica hace que los eventos sea independientes. 
 
 Haremos el siguiente experimento, lanzaremos una moneda 1000 veces, y comprobaremos las probabilidades.
-```{r}
+```{r, message=FALSE}
 library(tidyverse)
 library(ggplot2)
 library(gganimate)
+library(reshape2)
 # Cara = 1, Cruz = 0
-lanzamiento <- lapply(1:1000, function(x){sample(c(1,0), size = 1, prob=c(0.5,0.5))})
+lanzamiento <- lapply(1:500, function(x){sample(c(1,0), size = 1, prob=c(0.5,0.5))})
 lanzamiento <- as.data.frame(Reduce(rbind, lanzamiento))
-lanzamiento <- lanzamiento %>% mutate(V2=1-V1, index = 1:1000)
+colnames(lanzamiento) <- c("c")
+lanzamiento <- lanzamiento %>% mutate(s=1-c)
+lanzamiento <- lanzamiento %>% mutate(c = cumsum(c), s = cumsum(s))
+lanzamiento <- melt(lanzamiento)
+lanzamiento <- lanzamiento %>% mutate(index = rep(1:500,2))
 
-graph <- lanzamiento %>% ggplot() + geom_bar(aes(x=V1)) +
-    theme_minimal() +
-    transition_time(index)
-animate(graph, fps = 1, width = 750, height = 450)
+graph <- lanzamiento %>% ggplot(aes(x = variable, y = value, fill = variable)) +              geom_bar(stat = "identity", color = "white", show.legend = FALSE, width = 0.2) +
+     geom_text(aes(label = as.numeric(value)),position = position_dodge(0.9),
+      vjust= 1.2, size = 5, color = "white")  +
+      theme_minimal() +
+      enter_appear() +
+      transition_states(index,transition_length = 1.5,state_length = 2) +
+      labs(title = " Lanzamiento \n número : {closest_state}")
+  
+animate(graph, fps = 20, width = 750, height = 450, duration = 50 )
 
 ```
 
