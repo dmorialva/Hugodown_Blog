@@ -41,7 +41,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: 42305312e1cb0717
+rmd_hash: bc97a6a803432987
 
 ---
 
@@ -55,7 +55,7 @@ Como vimos en el post de [Explorando Probabilidades](https://www.dmorialva.com/p
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='c'># Lanzamiento de una moneda</span>
 <span class='nf'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='o'>(</span>x<span class='o'>=</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"c"</span>,<span class='s'>"s"</span><span class='o'>)</span>, size <span class='o'>=</span> <span class='m'>1</span><span class='o'>)</span>
-<span class='c'>#&gt; [1] "s"</span>
+<span class='c'>#&gt; [1] "c"</span>
 <span class='c'># La probabilidad de este evento es 1/2</span></code></pre>
 
 </div>
@@ -105,8 +105,8 @@ Exactamente, es el escenario donde se da el 50/50. ¿Y cuál es la medida promed
 <span class='c'>#&gt; <span style='color: #555555;'># A tibble: 2 × 2</span></span>
 <span class='c'>#&gt;   Resultado  mean</span>
 <span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #555555; font-style: italic;'>&lt;dbl&gt;</span></span>
-<span class='c'>#&gt; <span style='color: #555555;'>1</span> Cara      0.509</span>
-<span class='c'>#&gt; <span style='color: #555555;'>2</span> Sello     0.492</span></code></pre>
+<span class='c'>#&gt; <span style='color: #555555;'>1</span> Cara      0.508</span>
+<span class='c'>#&gt; <span style='color: #555555;'>2</span> Sello     0.494</span></code></pre>
 
 </div>
 
