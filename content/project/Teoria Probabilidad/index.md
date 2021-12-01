@@ -66,7 +66,7 @@ Vamos hacer el siguiente experimento: lanzaremos una moneda 100 veces, y comprob
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span class='c'>#&gt; Warning: No renderer available. Please install the gifski, av, or magick package to create animated output</span></code></pre>
+<img src="figs/unnamed-chunk-2-1.gif" width="700px" style="display: block; margin: auto;" />
 
 </div>
 
@@ -106,7 +106,7 @@ Exactamente, es el escenario donde se da el 50/50. ¿Y cuál es la medida promed
 <span class='c'>#&gt;   Resultado  mean</span>
 <span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #555555; font-style: italic;'>&lt;dbl&gt;</span></span>
 <span class='c'>#&gt; <span style='color: #555555;'>1</span> Cara      0.509</span>
-<span class='c'>#&gt; <span style='color: #555555;'>2</span> Sello     0.493</span></code></pre>
+<span class='c'>#&gt; <span style='color: #555555;'>2</span> Sello     0.492</span></code></pre>
 
 </div>
 
@@ -128,7 +128,8 @@ Exactamente, es el escenario donde se da el 50/50. ¿Y cuál es la medida promed
 
 <span class='nv'>grafico</span> <span class='o'>&lt;-</span> <span class='nv'>grafico</span> <span class='o'>+</span> <span class='nf'><a href='https://rdrr.io/pkg/gganimate/man/transition_time.html'>transition_time</a></span><span class='o'>(</span><span class='nv'>year</span><span class='o'>)</span>
 <span class='nf'><a href='https://rdrr.io/pkg/gganimate/man/animate.html'>animate</a></span><span class='o'>(</span><span class='nv'>grafico</span>, fps <span class='o'>=</span> <span class='m'>15</span>, width <span class='o'>=</span> <span class='m'>750</span>, height <span class='o'>=</span> <span class='m'>450</span><span class='o'>)</span>
-<span class='c'>#&gt; Warning: No renderer available. Please install the gifski, av, or magick package to create animated output</span></code></pre>
+</code></pre>
+<img src="figs/unnamed-chunk-6-1.gif" width="700px" style="display: block; margin: auto;" />
 
 </div>
 
