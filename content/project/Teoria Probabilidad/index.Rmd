@@ -91,7 +91,7 @@ Es decir, si en un lanzamieno obtenemos cara, no es de esperar que en siguiente 
 moneda <- c('C', 'S')
 trials <- 10
 distribution <- c(.5, .5)
-experiment <- lapply(1:10000, function(x) {
+experiment <- lapply(1:1000, function(x) {
   sample(x = moneda,
          size = trials,
          replace = T,
@@ -100,15 +100,15 @@ experiment <- lapply(1:10000, function(x) {
 })
 
 experiment <- Reduce(rbind, experiment)
-probability <- apply(apply(experiment, 1, table),2, prop.table)
-probability <- as.data.frame(t(probability), 
-                             stringsAsFactors = F)
+probability <- sapply(apply(experiment, 1, table), prop.table, simplify = "array")
+probability <- as.data.frame(reduce(probability, rbind), 
+                              stringsAsFactors = F)
 
 pC <- as.data.frame(table(probability$C),stringsAsFactors = F)
 pC$Resultado <- 'Cara'
 pS <- as.data.frame(table(probability$S), 
                     stringsAsFactors = F)
-pT$Resultado <- 'Sello'
+pS$Resultado <- 'Sello'
 probabilityDistribution <- rbind(pC, pS)
 colnames(probabilityDistribution) <- c('Estimate', 'Frecuencia', 'Resultado')
 
