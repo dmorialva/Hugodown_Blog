@@ -56,20 +56,20 @@ sample(x=c("c","s"), size = 1)
 
 Creo que nos hes fácil entender, que un lanzamiento no influye en el resultado del siguiente, esta caracteristica hace que los eventos sea independientes. 
 
-Haremos el siguiente experimento, lanzaremos una moneda 1000 veces, y comprobaremos las probabilidades.
-```{r, message=FALSE}
+Vamos hacer el siguiente experimento: lanzaremos una moneda 100 veces, y comprobaremos las probabilidades. ¿Esperas tener 50 caras y 50 sellos exactamente?
+```{r, message=FALSE, echo=FALSE}
 library(tidyverse)
 library(ggplot2)
 library(gganimate)
 library(reshape2)
 # Cara = 1, Sello = 0
-lanzamiento <- lapply(1:500, function(x){sample(c(1,0), size = 1, prob=c(0.5,0.5))})
+lanzamiento <- lapply(1:100, function(x){sample(c(1,0), size = 1, prob=c(0.5,0.5))})
 lanzamiento <- as.data.frame(Reduce(rbind, lanzamiento))
 colnames(lanzamiento) <- c("c")
 lanzamiento <- lanzamiento %>% mutate(s=1-c)
 lanzamiento <- lanzamiento %>% mutate(c = cumsum(c), s = cumsum(s))
 lanzamiento <- melt(lanzamiento)
-lanzamiento <- lanzamiento %>% mutate(index = rep(1:500,2))
+lanzamiento <- lanzamiento %>% mutate(index = rep(1:100,2))
 
 graph <- lanzamiento %>% ggplot(aes(x = variable, y = value, fill = variable)) +              geom_bar(stat = "identity", color = "white", show.legend = FALSE, width = 0.2) +
      geom_text(aes(label = as.numeric(value)),position = position_dodge(0.9),
@@ -83,6 +83,69 @@ graph <- lanzamiento %>% ggplot(aes(x = variable, y = value, fill = variable)) +
 animate(graph, fps = 20, width = 750, height = 450, duration = 50 )
 
 ```
+
+Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitieramos este experimento muchas veces más, podemos tener muchas combinaciones posibles, por ejemplo P(c) = 0.2 y P(s) = 0.8
+Es decir, si en un lanzamieno obtenemos cara, no es de esperar que en siguiente sea sello, ya que los eventos son independientes. Vamos a ejecutar 1000 veces este experimento y graficar los histogramas.
+
+```{r, echo=FALSE}
+moneda <- c('C', 'S')
+trials <- 10
+distribution <- c(.5, .5)
+experiment <- lapply(1:10000, function(x) {
+  sample(x = moneda,
+         size = trials,
+         replace = T,
+         prob = distribution)
+  
+})
+
+experiment <- Reduce(rbind, experiment)
+probability <- apply(apply(experiment, 1, table),2, prop.table)
+probability <- as.data.frame(t(probability), 
+                             stringsAsFactors = F)
+
+pC <- as.data.frame(table(probability$C),stringsAsFactors = F)
+pC$Resultado <- 'Cara'
+pS <- as.data.frame(table(probability$S), 
+                    stringsAsFactors = F)
+pT$Resultado <- 'Sello'
+probabilityDistribution <- rbind(pC, pS)
+colnames(probabilityDistribution) <- c('Estimate', 'Frecuencia', 'Resultado')
+
+ggplot(probabilityDistribution, 
+       aes(x = Estimate, y = Frecuencia, 
+           color = Resultado, 
+           fill = Resultado)) + 
+  geom_bar(stat = "identity") + 
+  scale_color_manual(values = c('cadetblue4', 'cadetblue2')) +
+  scale_fill_manual(values = c('cadetblue4', 'cadetblue2')) + 
+  facet_wrap(~Resultado) + 
+  theme_bw() + 
+  theme(panel.border = element_blank()) + 
+  theme(strip.background = element_blank()) + 
+  theme(legend.position = "none")
+
+```
+
+Como vemos, el resultado no siempre es tener 50/50, es posible tener 10/90 o 70/30, pero con menos probabilidad. Si queremos obtener el valor mas probable seria:
+
+```{r}
+probabilityDistribution %>% 
+  select(Estimate, Frecuencia, Resultado) %>% 
+  group_by(Resultado) %>% 
+  summarise(mode = Estimate[which.max(Frecuencia)])
+```
+
+Exactamente, es el escenario donde se da el 50/50. ¿Y cuál es la medida promedio?
+
+```{r}
+probabilityDistribution %>% 
+  select(Estimate, Frecuencia, Resultado) %>% 
+  group_by(Resultado) %>% 
+  summarise(mean = sum(as.numeric(Estimate)*Frecuencia)/sum(Frecuencia))
+
+```
+
 
 
 ```{r}
