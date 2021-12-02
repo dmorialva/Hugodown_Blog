@@ -41,7 +41,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: bc97a6a803432987
+rmd_hash: cf25e4f5377b2269
 
 ---
 
@@ -70,7 +70,7 @@ Vamos hacer el siguiente experimento: lanzaremos una moneda 100 veces, y comprob
 
 </div>
 
-Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitieramos este experimento muchas veces más, podemos tener muchas combinaciones posibles, por ejemplo P(c) = 0.2 y P(s) = 0.8 Es decir, si en un lanzamieno obtenemos cara, no es de esperar que en siguiente sea sello, ya que los eventos son independientes. Vamos a ejecutar 1000 veces este experimento y graficar los histogramas.
+Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitieramos este experimento, podemos tener muchas combinaciones posibles, por ejemplo P(c) = 0.2 y P(s) = 0.8 Es decir, si en un lanzamieno obtenemos cara, no es de esperar que en siguiente sea sello, ya que los eventos son independientes. Vamos a ejecutar 1000 veces este experimento y graficar los histogramas.
 
 <div class="highlight">
 
@@ -78,23 +78,24 @@ Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitieramos este expe
 
 </div>
 
-Como vemos, el resultado no siempre es tener 50/50, es posible tener 10/90 o 70/30, pero con menos probabilidad. Si queremos obtener el valor mas probable seria:
+Como vemos, el resultado no siempre es tener 50/50, es posible tener 10/90 o 70/30, pero entonces ¿No era una moneda justa?. ¿Por qué no obtenemos siempre 50/50?. La respuesta es que nosotros esperamos que el evento de 50/50 sea el mas probable y cuya esperanza sea en el infinito de 0.5. Para estas 1000 simulaciones observamos qué el valor más probable:
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span class='nv'>probabilityDistribution</span> <span class='o'>%&gt;%</span> 
+<pre class='chroma'><code class='language-r' data-lang='r'>
+<span class='nv'>probabilityDistribution</span> <span class='o'>%&gt;%</span> 
   <span class='nf'>select</span><span class='o'>(</span><span class='nv'>Estimate</span>, <span class='nv'>Frecuencia</span>, <span class='nv'>Resultado</span><span class='o'>)</span> <span class='o'>%&gt;%</span> 
   <span class='nf'>group_by</span><span class='o'>(</span><span class='nv'>Resultado</span><span class='o'>)</span> <span class='o'>%&gt;%</span> 
   <span class='nf'>summarise</span><span class='o'>(</span>mode <span class='o'>=</span> <span class='nv'>Estimate</span><span class='o'>[</span><span class='nf'><a href='https://rdrr.io/r/base/which.min.html'>which.max</a></span><span class='o'>(</span><span class='nv'>Frecuencia</span><span class='o'>)</span><span class='o'>]</span><span class='o'>)</span>
 <span class='c'>#&gt; <span style='color: #555555;'># A tibble: 2 × 2</span></span>
 <span class='c'>#&gt;   Resultado mode </span>
 <span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span></span>
-<span class='c'>#&gt; <span style='color: #555555;'>1</span> Cara      0.5  </span>
-<span class='c'>#&gt; <span style='color: #555555;'>2</span> Sello     0.5</span></code></pre>
+<span class='c'>#&gt; <span style='color: #555555;'>1</span> C         0.5  </span>
+<span class='c'>#&gt; <span style='color: #555555;'>2</span> S         0.5</span></code></pre>
 
 </div>
 
-Exactamente, es el escenario donde se da el 50/50. ¿Y cuál es la medida promedio?
+Exactamente, es el escenario donde se da el 50/50, el mas probable (mayor frecuencia). ¿Y cuál es la medida promedio?
 
 <div class="highlight">
 
@@ -105,33 +106,12 @@ Exactamente, es el escenario donde se da el 50/50. ¿Y cuál es la medida promed
 <span class='c'>#&gt; <span style='color: #555555;'># A tibble: 2 × 2</span></span>
 <span class='c'>#&gt;   Resultado  mean</span>
 <span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #555555; font-style: italic;'>&lt;dbl&gt;</span></span>
-<span class='c'>#&gt; <span style='color: #555555;'>1</span> Cara      0.508</span>
-<span class='c'>#&gt; <span style='color: #555555;'>2</span> Sello     0.494</span></code></pre>
+<span class='c'>#&gt; <span style='color: #555555;'>1</span> C         0.507</span>
+<span class='c'>#&gt; <span style='color: #555555;'>2</span> S         0.499</span></code></pre>
 
 </div>
 
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/jennybc/gapminder'>gapminder</a></span><span class='o'>)</span>
-<span class='nv'>datos</span> <span class='o'>=</span> <span class='nv'>gapminder</span>
-
-<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='o'>)</span>
-<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='o'>)</span>
-
-<span class='nv'>grafico</span> <span class='o'>&lt;-</span> <span class='nv'>datos</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
-  <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'>+</span> 
-    <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='o'>(</span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='o'>(</span>x <span class='o'>=</span> <span class='nv'>gdpPercap</span>, y <span class='o'>=</span> <span class='nv'>lifeExp</span>, col <span class='o'>=</span> <span class='nv'>continent</span>, size <span class='o'>=</span> <span class='nv'>pop</span><span class='o'>)</span>, alpha <span class='o'>=</span> <span class='m'>0.8</span><span class='o'>)</span> <span class='o'>+</span> <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'>+</span> 
-    <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='o'>(</span>legend.position <span class='o'>=</span> <span class='s'>"bottom"</span><span class='o'>)</span> <span class='o'>+</span> <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/guides.html'>guides</a></span><span class='o'>(</span>size <span class='o'>=</span> <span class='s'>"none"</span><span class='o'>)</span> <span class='o'>+</span> 
-    <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='o'>(</span>x <span class='o'>=</span> <span class='s'>"PIB per Capita"</span> ,y <span class='o'>=</span> <span class='s'>"Esperanza de Vida"</span>,  col <span class='o'>=</span> <span class='s'>""</span><span class='o'>)</span> 
-
-<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://gganimate.com'>gganimate</a></span><span class='o'>)</span>
-
-<span class='nv'>grafico</span> <span class='o'>&lt;-</span> <span class='nv'>grafico</span> <span class='o'>+</span> <span class='nf'><a href='https://rdrr.io/pkg/gganimate/man/transition_time.html'>transition_time</a></span><span class='o'>(</span><span class='nv'>year</span><span class='o'>)</span>
-<span class='nf'><a href='https://rdrr.io/pkg/gganimate/man/animate.html'>animate</a></span><span class='o'>(</span><span class='nv'>grafico</span>, fps <span class='o'>=</span> <span class='m'>15</span>, width <span class='o'>=</span> <span class='m'>750</span>, height <span class='o'>=</span> <span class='m'>450</span><span class='o'>)</span>
-</code></pre>
-<img src="figs/unnamed-chunk-6-1.gif" width="700px" style="display: block; margin: auto;" />
-
-</div>
+Conforme sigamos lanzando la moneda, la probabilidad que resulte cara en el infinito debe ser 0.5, por la definicion de [convergencia en probabilidad](https://es.wikipedia.org/wiki/Convergencia_en_probabilidad). Esto tambien se podria demostrar mediante inferencia estadistica, por ejemplo por una prueba de hipótesis, en el cual se quiere probar que el parámetro de interés resulte ser estadísticamente significativo a partir de una muestra.
 
 <div/>
 

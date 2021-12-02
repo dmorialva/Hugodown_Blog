@@ -84,7 +84,7 @@ animate(graph, fps = 20, width = 750, height = 450, duration = 10 )
 
 ```
 
-Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitieramos este experimento muchas veces más, podemos tener muchas combinaciones posibles, por ejemplo P(c) = 0.2 y P(s) = 0.8
+Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitieramos este experimento, podemos tener muchas combinaciones posibles, por ejemplo P(c) = 0.2 y P(s) = 0.8
 Es decir, si en un lanzamieno obtenemos cara, no es de esperar que en siguiente sea sello, ya que los eventos son independientes. Vamos a ejecutar 1000 veces este experimento y graficar los histogramas.
 
 ```{r, echo=FALSE}
@@ -101,14 +101,14 @@ experiment <- lapply(1:1000, function(x) {
 
 experiment <- Reduce(rbind, experiment)
 probability <- sapply(apply(experiment, 1, table), prop.table, simplify = "array")
-probability <- as.data.frame(reduce(probability, rbind), 
+probability <- as.data.frame(purrr::reduce(probability, rbind), 
                               stringsAsFactors = F)
 
 pC <- as.data.frame(table(probability$C),stringsAsFactors = F)
-pC$Resultado <- 'Cara'
+pC$Resultado <- 'C'
 pS <- as.data.frame(table(probability$S), 
                     stringsAsFactors = F)
-pS$Resultado <- 'Sello'
+pS$Resultado <- 'S'
 probabilityDistribution <- rbind(pC, pS)
 colnames(probabilityDistribution) <- c('Estimate', 'Frecuencia', 'Resultado')
 
@@ -127,16 +127,17 @@ ggplot(probabilityDistribution,
 
 ```
 
-Como vemos, el resultado no siempre es tener 50/50, es posible tener 10/90 o 70/30, pero con menos probabilidad. Si queremos obtener el valor mas probable seria:
+Como vemos, el resultado no siempre es tener 50/50, es posible tener 10/90 o 70/30, pero entonces ¿No era una moneda justa?. ¿Por qué no obtenemos siempre 50/50?. La respuesta es que nosotros esperamos que el evento de 50/50 sea el mas probable y cuya esperanza sea en el infinito de 0.5. Para estas 1000 simulaciones observamos qué el valor más probable:
 
 ```{r}
+
 probabilityDistribution %>% 
   select(Estimate, Frecuencia, Resultado) %>% 
   group_by(Resultado) %>% 
   summarise(mode = Estimate[which.max(Frecuencia)])
 ```
 
-Exactamente, es el escenario donde se da el 50/50. ¿Y cuál es la medida promedio?
+Exactamente, es el escenario donde se da el 50/50, el mas probable (mayor frecuencia). ¿Y cuál es la medida promedio?
 
 ```{r}
 probabilityDistribution %>% 
@@ -146,27 +147,9 @@ probabilityDistribution %>%
 
 ```
 
+Conforme sigamos lanzando la moneda, la probabilidad que resulte cara en el infinito debe ser 0.5, por la definicion de [convergencia en probabilidad](https://es.wikipedia.org/wiki/Convergencia_en_probabilidad). Esto tambien se podria demostrar mediante inferencia estadistica, por ejemplo por una prueba de hipótesis, en el cual se quiere probar que el parámetro de interés resulte ser estadísticamente significativo a partir de una muestra. 
 
 
-```{r}
-library(gapminder)
-datos = gapminder
-
-library(ggplot2)
-library(dplyr)
-
-grafico <- datos %>%
-  ggplot() + 
-    geom_point(aes(x = gdpPercap, y = lifeExp, col = continent, size = pop), alpha = 0.8) + theme_minimal() + 
-    theme(legend.position = "bottom") + guides(size = "none") + 
-    labs(x = "PIB per Capita" ,y = "Esperanza de Vida",  col = "") 
-
-library(gganimate)
-
-grafico <- grafico + transition_time(year)
-animate(grafico, fps = 15, width = 750, height = 450)
-
-```
 
 <div/>
 
