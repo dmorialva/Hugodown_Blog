@@ -88,6 +88,7 @@ Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitieramos este expe
 Es decir, si en un lanzamieno obtenemos cara, no es de esperar que en siguiente sea sello, ya que los eventos son independientes. Vamos a ejecutar 1000 veces este experimento y graficar los histogramas.
 
 ```{r, echo=FALSE}
+set.seed(1112)
 moneda <- c('C', 'S')
 trials <- 10
 distribution <- c(.5, .5)

@@ -41,7 +41,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: cf25e4f5377b2269
+rmd_hash: 064d8a7bc1cdb05f
 
 ---
 
@@ -106,8 +106,8 @@ Exactamente, es el escenario donde se da el 50/50, el mas probable (mayor frecue
 <span class='c'>#&gt; <span style='color: #555555;'># A tibble: 2 × 2</span></span>
 <span class='c'>#&gt;   Resultado  mean</span>
 <span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #555555; font-style: italic;'>&lt;dbl&gt;</span></span>
-<span class='c'>#&gt; <span style='color: #555555;'>1</span> C         0.507</span>
-<span class='c'>#&gt; <span style='color: #555555;'>2</span> S         0.499</span></code></pre>
+<span class='c'>#&gt; <span style='color: #555555;'>1</span> C         0.496</span>
+<span class='c'>#&gt; <span style='color: #555555;'>2</span> S         0.505</span></code></pre>
 
 </div>
 
