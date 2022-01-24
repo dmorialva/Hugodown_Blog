@@ -41,7 +41,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: 064d8a7bc1cdb05f
+rmd_hash: d5fa38ef056003f4
 
 ---
 
@@ -55,14 +55,14 @@ Como vimos en el post de [Explorando Probabilidades](https://www.dmorialva.com/p
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='c'># Lanzamiento de una moneda</span>
 <span class='nf'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='o'>(</span>x<span class='o'>=</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"c"</span>,<span class='s'>"s"</span><span class='o'>)</span>, size <span class='o'>=</span> <span class='m'>1</span><span class='o'>)</span>
-<span class='c'>#&gt; [1] "c"</span>
+<span class='c'>#&gt; [1] "s"</span>
 <span class='c'># La probabilidad de este evento es 1/2</span></code></pre>
 
 </div>
 
-Creo que nos hes fácil entender, que un lanzamiento no influye en el resultado del siguiente, esta caracteristica hace que los eventos sea independientes.
+Es fácil entender, que un lanzamiento no influye en el resultado del siguiente, esta característica hace que los eventos sean independientes.
 
-Vamos hacer el siguiente experimento: lanzaremos una moneda 100 veces, y comprobaremos las probabilidades. ¿Esperas tener 50 caras y 50 sellos exactamente?
+Vamos a hacer el siguiente experimento: lanzaremos una moneda 100 veces, y comprobaremos las probabilidades. ¿Esperas tener 50 caras y 50 sellos exactamente?
 
 <div class="highlight">
 
@@ -70,7 +70,7 @@ Vamos hacer el siguiente experimento: lanzaremos una moneda 100 veces, y comprob
 
 </div>
 
-Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitieramos este experimento, podemos tener muchas combinaciones posibles, por ejemplo P(c) = 0.2 y P(s) = 0.8 Es decir, si en un lanzamieno obtenemos cara, no es de esperar que en siguiente sea sello, ya que los eventos son independientes. Vamos a ejecutar 1000 veces este experimento y graficar los histogramas.
+Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitiéramos este experimento, podemos tener muchas combinaciones posibles, por ejemplo, P(c) = 0.2 y P(s) = 0.8 Es decir, si en un lanzamiento obtenemos cara, no es de esperar que en siguiente sea sello, ya que los eventos son independientes. Vamos a ejecutar 1000 veces este experimento y graficar los histogramas.
 
 <div class="highlight">
 
@@ -78,7 +78,7 @@ Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitieramos este expe
 
 </div>
 
-Como vemos, el resultado no siempre es tener 50/50, es posible tener 10/90 o 70/30, pero entonces ¿No era una moneda justa?. ¿Por qué no obtenemos siempre 50/50?. La respuesta es que nosotros esperamos que el evento de 50/50 sea el mas probable y cuya esperanza sea en el infinito de 0.5. Para estas 1000 simulaciones observamos qué el valor más probable:
+Como vemos, el resultado no siempre es tener 50/50, es posible tener 10/90 o 70/30, pero entonces ¿No era una moneda justa? ¿Por qué no obtenemos siempre 50/50? La respuesta es que nosotros esperamos que el evento de 50/50 sea el más probable y cuya esperanza sea en el infinito de 0.5. Para estas 1000 simulaciones observamos qué el valor más probable:
 
 <div class="highlight">
 
@@ -95,7 +95,7 @@ Como vemos, el resultado no siempre es tener 50/50, es posible tener 10/90 o 70/
 
 </div>
 
-Exactamente, es el escenario donde se da el 50/50, el mas probable (mayor frecuencia). ¿Y cuál es la medida promedio?
+Exactamente, es el escenario donde se da el 50/50, el más probable (mayor frecuencia). ¿Y cuál es la medida promedio?
 
 <div class="highlight">
 
@@ -111,7 +111,9 @@ Exactamente, es el escenario donde se da el 50/50, el mas probable (mayor frecue
 
 </div>
 
-Conforme sigamos lanzando la moneda, la probabilidad que resulte cara en el infinito debe ser 0.5, por la definicion de [convergencia en probabilidad](https://es.wikipedia.org/wiki/Convergencia_en_probabilidad). Esto tambien se podria demostrar mediante inferencia estadistica, por ejemplo por una prueba de hipótesis, en el cual se quiere probar que el parámetro de interés resulte ser estadísticamente significativo a partir de una muestra.
+Conforme sigamos lanzando la moneda, la probabilidad que resulte cara en el infinito debe ser 0.5, por la definicion de [convergencia en probabilidad](https://es.wikipedia.org/wiki/Convergencia_en_probabilidad). Esto también se podría demostrar mediante inferencia estadística, por ejemplo por una prueba de hipótesis, en el cual se quiere probar que el parámetro de interés resulte ser estadísticamente significativo a partir de una muestra.
+
+Te dejo una razón más del porqué es importante la teoría de probabilidad. Para los casinos, que trabajan con juegos de azar que involucran las probabilidades, no les hace falta saber el resultado de cada experimento del juego de la ruleta o de un blackjack o del giro de una máquina de monedas, solamente necesitan saber que tienen probabilidades esperadas favorables a ellos, y que en promedio siempre estarán por encima que el jugador, así que no importa si el jugador saca una flor imperial, ya que eso lo tienen contemplado.
 
 <div/>
 
