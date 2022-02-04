@@ -41,7 +41,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: d5fa38ef056003f4
+rmd_hash: 7500c91e2a786a3f
 
 ---
 
@@ -49,7 +49,7 @@ rmd_hash: d5fa38ef056003f4
 
 # Definición de probabilidad
 
-Como vimos en el post de [Explorando Probabilidades](https://www.dmorialva.com/post/explorando-informacion/), la probabilidad se define como la cuantificación de la ocurrencia de un evento en un experimento. Para ello, debemos conocer el **espacio muestral**, que es el conjunto de todos los posibles resultados. Empecemos con el lanzamiento de una moneda. En este experimento, el espacio muestral es de Cara (c) o Sello (s).
+Como vimos en el post de [Explorando Probabilidades](https://www.dmorialva.com/post/explorando-informacion/), la probabilidad se define como la cuantificación de la ocurrencia de un evento en un experimento. Para ello, debemos conocer el **espacio muestral**, que es el conjunto de todos los posibles resultados. Empecemos con el lanzamiento de una moneda. En este experimento, el espacio muestral es de Cara (c) o Sello (s), tambien conocido como ensayo de [Bernoulli.](https://es.wikipedia.org/wiki/Ensayo_de_Bernoulli#:~:text=En%20la%20teoría%20de%20probabilidad,en%20honor%20a%20Jakob%20Bernoulli.)
 
 <div class="highlight">
 
@@ -62,7 +62,7 @@ Como vimos en el post de [Explorando Probabilidades](https://www.dmorialva.com/p
 
 Es fácil entender, que un lanzamiento no influye en el resultado del siguiente, esta característica hace que los eventos sean independientes.
 
-Vamos a hacer el siguiente experimento: lanzaremos una moneda 100 veces, y comprobaremos las probabilidades. ¿Esperas tener 50 caras y 50 sellos exactamente?
+Vamos a realizar el siguiente experimento: simulamos el lanzamiento de una moneda 100 veces, y cuantificaremos las probabilidades. ¿Esperas tener 50 caras y 50 sellos exactamente?. Este experimento se convierte en una distribución binomial, el cual se define como "n" ensayos de Bernoulli.
 
 <div class="highlight">
 
@@ -78,7 +78,7 @@ Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitiéramos este exp
 
 </div>
 
-Como vemos, el resultado no siempre es tener 50/50, es posible tener 10/90 o 70/30, pero entonces ¿No era una moneda justa? ¿Por qué no obtenemos siempre 50/50? La respuesta es que nosotros esperamos que el evento de 50/50 sea el más probable y cuya esperanza sea en el infinito de 0.5. Para estas 1000 simulaciones observamos qué el valor más probable:
+Tal ves la pregunta que viene a la cabeza es, ¿No era una moneda justa? ¿Por qué no obtenemos siempre 50/50? La respuesta es que en 1000 lanzamientos obtienes todas las combinaciones posibles, pero hay algo más que podríamos notar. ¿Cuál es el valor mas probable?.
 
 <div class="highlight">
 
@@ -111,9 +111,9 @@ Exactamente, es el escenario donde se da el 50/50, el más probable (mayor frecu
 
 </div>
 
-Conforme sigamos lanzando la moneda, la probabilidad que resulte cara en el infinito debe ser 0.5, por la definicion de [convergencia en probabilidad](https://es.wikipedia.org/wiki/Convergencia_en_probabilidad). Esto también se podría demostrar mediante inferencia estadística, por ejemplo por una prueba de hipótesis, en el cual se quiere probar que el parámetro de interés resulte ser estadísticamente significativo a partir de una muestra.
+Conforme sigamos lanzando la moneda, la probabilidad que resulte cara en el infinito debe ser 0.5, por la definicion de [convergencia en probabilidad](https://es.wikipedia.org/wiki/Convergencia_en_probabilidad) siempre y cuando la moneda sea justa y no cargada. Esto también se podría demostrar mediante inferencia estadística, por ejemplo por una prueba de hipótesis, en el cual se quiere probar que el parámetro de interés resulte ser estadísticamente significativo a partir de una muestra.
 
-Te dejo una razón más del porqué es importante la teoría de probabilidad. Para los casinos, que trabajan con juegos de azar que involucran las probabilidades, no les hace falta saber el resultado de cada experimento del juego de la ruleta o de un blackjack o del giro de una máquina de monedas, solamente necesitan saber que tienen probabilidades esperadas favorables a ellos, y que en promedio siempre estarán por encima que el jugador, así que no importa si el jugador saca una flor imperial, ya que eso lo tienen contemplado.
+Te dejo una razón más del porqué es importante la teoría de probabilidad. Para los casinos, que trabajan con juegos de azar que involucran las probabilidades, no les hace falta saber el resultado de cada experimento del juego de la ruleta o de un blackjack o del giro de una máquina de monedas, solamente necesitan saber que tienen probabilidades esperadas favorables a ellos, y que en promedio siempre estarán por encima que el jugador, así que no importa si el jugador saca una flor imperial, ya que es un resultado esperado.
 
 <div/>
 
