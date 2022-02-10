@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 8290d7afbbbbcfe1
+rmd_hash: 1f6350b75d198853
 
 ---
 
@@ -88,11 +88,14 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span class='nf'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='o'>(</span><span class='nv'>cars</span><span class='o'>)</span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/ramnathv/htmlwidgets'>htmlwidgets</a></span><span class='o'>)</span>
+<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/rstudio/htmltools'>htmltools</a></span><span class='o'>)</span>
+<span class='nf'><a href='https://rdrr.io/pkg/htmlwidgets/man/saveWidget.html'>saveWidget</a></span><span class='o'>(</span><span class='nv'>grahp_btc</span>, <span class='s'>"btc.html"</span><span class='o'>)</span></code></pre>
 
 </div>
 
-{{\< figure src="figs/cars-plot-1.png" \>}}
+<iframe seamless src="btc.html" width="100%" height="500">
+</iframe>
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌
