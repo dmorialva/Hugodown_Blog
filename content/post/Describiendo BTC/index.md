@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 888838b4088f6c35
+rmd_hash: ee445f2d5d6f4461
 
 ---
 
@@ -71,7 +71,6 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='o'>)</span>
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://plotly-r.com'>plotly</a></span><span class='o'>)</span>
 
-
 <span class='c'># Convertimos el dataframe en un objeto xts</span>
 <span class='nv'>btc_graph</span> <span class='o'>&lt;-</span> <span class='nv'>btc</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
             <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='o'>(</span> <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='o'>(</span>x<span class='o'>=</span><span class='nv'>fecha</span>, y<span class='o'>=</span><span class='nv'>close</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>+</span>
@@ -82,6 +81,22 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
 <img src="figs/unnamed-chunk-2-1.png" width="700px" style="display: block; margin: auto;" />
 
 </div>
+
+A partir del grafico, solo podemos observar que el precio en este lapso de tiempo, formo un soporte alrededor de los 30 mil y un maximo de 65 mil. Ahora mencionaremos 2 conceptos básicos para empezar a analizar el bitcoin y cualquier otro instrumento bursátil.
+
+# Rendimiento o Retorno Simple y continuo
+
+Al iniciar a estudiar los modelos de finanzas cuantitativas básicos, como obtener el riesgo historico de un activo, o al intentar aplicar el modelo de Markowitz para un portafolio de inversión, necesitamos la variable retorno del activo. Para esto existen modelos que usan el rendimiento simple o aritmetico y otros el compuesto o logaritmico.¿Cuando usar uno u otro?. ¿Son iguales o diferentes?. Intentaré poner sobre la mesa las ventajas y los usos de cada uno.
+
+## Aritmetico o Simple
+
+Se calcula como la variacion porcentual de 2 precios: $$Rs = \frac{P_t - P_{t-1}}{P_{t-1}}$$ Esta forma del cálculo de los retornos hace que se encuentren normalizados, es decir son comparables con otra serie de retornos de otro activo a pesar que las magnitudes de sus precios sean considerablemente diferentes. Esto tambien debe usarse para el cálculo de la matriz de covarianzas en nuestros análisis, a fin de poder diversificar una cartera con el modelo de Markowitz. La rentabilidad de un periodo de tiempo es la media geometrica de las rentabilidades que lo componen. $$R_{acumulada} = \sqrt[N]{\prod_{i=1}^{N}Rs_i}$$ Mas adelante este será un punto en contra para el retorno simple.
+
+## Logaritmico o Continuo
+
+Se calcula como la diferencia de los precios en logaritmos naturales: $$Rc = \ln{(\frac{P_t}{P_{t-1}})}$$ De la formula de arriba es fácil deducir la siguiente relación: $$Rc = \ln{(1+Rs)}$$ La rentabilidad de un periodo de tiempo es la sumatoria de las rentabilidades que lo componen, gracias a las propiedades de los logaritmos. $$R_{acumulada} = \sum_{i=1}^{N}Rc_i = \sum_{i=1}^{N}ln{(1+Rs_i)}$$
+
+Tomando como válido el supuesto de muchos modelos que la distribución de los retornos de un activo siguen una distribucion normal, los retornos podrian ir hasta valores de -$\infty$, y sabemos que la pérdida máxima es del 100% de la inversión.
 
 <div>
 
