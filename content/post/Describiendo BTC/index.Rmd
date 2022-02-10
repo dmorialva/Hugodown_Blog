@@ -39,7 +39,40 @@ projects: []
 ---
 <div style="text-align: justify">
 
+Bitcoin es una moneda digital creada en el 2008 por una entidad bajo el pseudonimo de Satoshi Nakamoto, que sirve de intercambio como otra moneda física. La característica mas resaltante es que es una moneda descentralizada, es decir que no existe una autoridad o ente de control que sea responsable de su emisión y registro de sus movimientos y no sufre de inflación, ya que existe un numero limite de monedas. La tecnología que usa para la transferencia o movimientos de la moneda digital es la cadena de bloques o Blockchain, la cual en terminos simple lleva un registro de cada movimiento o etiqueta, y se copia en cada cadena de bloques de manera que todos los usuarios de la cadena deben tener la misma información para validar la transacción, lo que hace muy dificil la falsificación. Si quieres saber mas te dejo información [aquí](https://es.wikipedia.org/wiki/Bitcoin)
 
+# Leer información desde (CSV)
+```{r}
+library(tidyverse)
+library(PerformanceAnalytics)
+
+btc <- read.csv("dailyDataBTC-USD.csv", stringsAsFactors = F, header = T)
+btc <- btc %>% mutate(fecha = as.Date(as.POSIXct(unix, origin = "1970-01-01"))) %>% arrange(fecha)
+min(btc$fecha)
+max(btc$fecha)
+max(btc$fecha)-min(btc$fecha)
+
+```
+
+Para fines practicos usaremos este archivo para el análisis. Pero te dejaré un link para que puedas extraer informacion desde la una API.
+
+Como un primer análisis, mostraremos la serie temporal del bitcoin con su precio ajustado al cierre diario.
+
+```{r}
+library(dygraphs)
+library(xts)
+
+# Convertimos el dataframe en un objeto xts
+
+btc_xts <- xts(btc$close, order.by = as.Date(btc$fecha))
+names(btc_xts) <- "BTC"
+
+btc_xts %>%
+  dygraph(main = "Precio Diario Cierre BTC") %>%
+  dyAxis(name = "y",
+         axisLabelFormatter = 'function(d){return Math.round(d) + "$"}') %>%
+    dyRangeSelector(dateWindow = c(min(btc$fecha), max(btc$fecha)))
+```
 
 <div/>
 
