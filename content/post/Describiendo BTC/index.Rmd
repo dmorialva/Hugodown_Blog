@@ -85,7 +85,7 @@ setwd("static")
 saveWidget(grahp_btc, "btc.html")
 setwd(currentWD)
 ```
-<iframe seamless src="static/btc.html" width="100%" height="500"></iframe>
+<iframe src="static/btc.html" width="100%" height="500"></iframe>
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌
