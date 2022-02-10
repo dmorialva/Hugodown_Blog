@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 461c92df3c55f123
+rmd_hash: ab54637f6394743d
 
 ---
 
@@ -83,18 +83,6 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
     <span class='nf'><a href='https://rdrr.io/pkg/dygraphs/man/dyRangeSelector.html'>dyRangeSelector</a></span><span class='o'>(</span>dateWindow <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='o'>(</span><span class='nv'>btc</span><span class='o'>$</span><span class='nv'>fecha</span><span class='o'>)</span>, <span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='o'>(</span><span class='nv'>btc</span><span class='o'>$</span><span class='nv'>fecha</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>-&gt;</span> <span class='nv'>grahp_btc</span>
 
 <span class='nf'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='o'>(</span><span class='nv'>grahp_btc</span><span class='o'>)</span></code></pre>
-
-</div>
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/ramnathv/htmlwidgets'>htmlwidgets</a></span><span class='o'>)</span>
-<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/rstudio/htmltools'>htmltools</a></span><span class='o'>)</span>
-<span class='nv'>currentWD</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/getwd.html'>getwd</a></span><span class='o'>(</span><span class='o'>)</span>
-<span class='nf'><a href='https://rdrr.io/r/base/files2.html'>dir.create</a></span><span class='o'>(</span><span class='s'>"static"</span>, showWarnings <span class='o'>=</span> <span class='kc'>FALSE</span><span class='o'>)</span>
-<span class='nf'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='o'>(</span><span class='s'>"static"</span><span class='o'>)</span>
-<span class='nf'><a href='https://rdrr.io/pkg/htmlwidgets/man/saveWidget.html'>saveWidget</a></span><span class='o'>(</span><span class='nv'>grahp_btc</span>, <span class='s'>"btc.html"</span><span class='o'>)</span>
-<span class='nf'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='o'>(</span><span class='nv'>currentWD</span><span class='o'>)</span></code></pre>
 
 </div>
 
