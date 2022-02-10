@@ -79,10 +79,13 @@ print(grahp_btc)
 ```{r }
 library(htmlwidgets)
 library(htmltools)
+currentWD <- getwd()
+dir.create("static", showWarnings = FALSE)
+setwd("static")
 saveWidget(grahp_btc, "btc.html")
-
+setwd(currentWD)
 ```
-<iframe seamless src="btc.html" width="100%" height="500"></iframe>
+<iframe seamless src="static/btc.html" width="100%" height="500"></iframe>
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌

@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 1f6350b75d198853
+rmd_hash: 944a76e855cc56d1
 
 ---
 
@@ -90,11 +90,15 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/ramnathv/htmlwidgets'>htmlwidgets</a></span><span class='o'>)</span>
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/rstudio/htmltools'>htmltools</a></span><span class='o'>)</span>
-<span class='nf'><a href='https://rdrr.io/pkg/htmlwidgets/man/saveWidget.html'>saveWidget</a></span><span class='o'>(</span><span class='nv'>grahp_btc</span>, <span class='s'>"btc.html"</span><span class='o'>)</span></code></pre>
+<span class='nv'>currentWD</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/getwd.html'>getwd</a></span><span class='o'>(</span><span class='o'>)</span>
+<span class='nf'><a href='https://rdrr.io/r/base/files2.html'>dir.create</a></span><span class='o'>(</span><span class='s'>"static"</span>, showWarnings <span class='o'>=</span> <span class='kc'>FALSE</span><span class='o'>)</span>
+<span class='nf'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='o'>(</span><span class='s'>"static"</span><span class='o'>)</span>
+<span class='nf'><a href='https://rdrr.io/pkg/htmlwidgets/man/saveWidget.html'>saveWidget</a></span><span class='o'>(</span><span class='nv'>grahp_btc</span>, <span class='s'>"btc.html"</span><span class='o'>)</span>
+<span class='nf'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='o'>(</span><span class='nv'>currentWD</span><span class='o'>)</span></code></pre>
 
 </div>
 
-<iframe seamless src="btc.html" width="100%" height="500">
+<iframe seamless src="static/btc.html" width="100%" height="500">
 </iframe>
 <div/>
 
