@@ -75,10 +75,14 @@ btc_xts %>%
 
 print(grahp_btc)
 ```
+```{r cars-plot, fig.show='hide'}
+grahp_btc
+```
 
-![alt text](static/btc.html "This is a caption.")
+{{< figure src="`r knitr::fig_chunk('cars-plot', 'html')`" >}}
 
-<div src="static/btc.html" width="100%" height="500"></div>
+
+
 
 <div/>
 
