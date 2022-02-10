@@ -76,6 +76,10 @@ btc_xts %>%
 print(grahp_btc)
 ```
 
+```{r cars-plot, fig.show='hide'}
+plot(cars)
+```
+{{< figure src="`r knitr::fig_chunk('cars-plot', 'png')`" >}}
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌

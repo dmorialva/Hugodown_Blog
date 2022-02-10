@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: a9f3f88ed034d5a1
+rmd_hash: 8290d7afbbbbcfe1
 
 ---
 
@@ -86,6 +86,13 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
 
 </div>
 
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='nf'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='o'>(</span><span class='nv'>cars</span><span class='o'>)</span></code></pre>
+
+</div>
+
+{{\< figure src="figs/cars-plot-1.png" \>}}
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌
