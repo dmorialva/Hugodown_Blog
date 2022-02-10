@@ -90,8 +90,8 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
 <span class='nf'><a href='https://rdrr.io/pkg/widgetframe/man/frameWidget.html'>frameWidget</a></span><span class='o'>(</span><span class='nv'>grahp_btc</span><span class='o'>)</span>
 
 ```{=html}
-<div id="htmlwidget-55bf0cffe2e7cccb4314" style="width:100%;height:415.296px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-55bf0cffe2e7cccb4314">{"x":{"url":"figs//widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-de5d1344a985d365f20e" style="width:100%;height:415.296px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-de5d1344a985d365f20e">{"x":{"url":"figs//widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 ```</code></pre>
 
 </div>
