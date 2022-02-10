@@ -36,7 +36,11 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 6d7fc58afbd17d26
+rmd_hash: 7ace5da2552a9c5e
+html_dependencies:
+- <script src="htmlwidgets-1.5.4/htmlwidgets.js"></script>
+- <script src="pymjs-1.3.2/pym.v1.js"></script>
+- <script src="widgetframe-binding-0.3.1/widgetframe.js"></script>
 
 ---
 
@@ -72,6 +76,7 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/joshuaulrich/xts'>xts</a></span><span class='o'>)</span>
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/bhaskarvk/widgetframe'>widgetframe</a></span><span class='o'>)</span>
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/ramnathv/htmlwidgets'>htmlwidgets</a></span><span class='o'>)</span>
+<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/rstudio/htmltools'>htmltools</a></span><span class='o'>)</span>
 
 <span class='c'># Convertimos el dataframe en un objeto xts</span>
 
@@ -84,12 +89,15 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
          axisLabelFormatter <span class='o'>=</span> <span class='s'>'function(d)&#123;return Math.round(d) + "$"&#125;'</span><span class='o'>)</span> <span class='o'><a href='https://rdrr.io/pkg/dygraphs/man/dygraphs-exports.html'>%&gt;%</a></span>
     <span class='nf'><a href='https://rdrr.io/pkg/dygraphs/man/dyRangeSelector.html'>dyRangeSelector</a></span><span class='o'>(</span>dateWindow <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='o'>(</span><span class='nv'>btc</span><span class='o'>$</span><span class='nv'>fecha</span><span class='o'>)</span>, <span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='o'>(</span><span class='nv'>btc</span><span class='o'>$</span><span class='nv'>fecha</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>-&gt;</span> <span class='nv'>grahp_btc</span>
 
-<span class='nf'>htmlwidgets</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/pkg/htmlwidgets/man/saveWidget.html'>saveWidget</a></span><span class='o'>(</span><span class='nv'>grahp_btc</span>, file <span class='o'>=</span> <span class='s'>"grahp_btc.html"</span>, selfcontained <span class='o'>=</span> <span class='kc'>TRUE</span><span class='o'>)</span></code></pre>
+<span class='nf'><a href='https://rdrr.io/pkg/widgetframe/man/frameWidget.html'>frameWidget</a></span><span class='o'>(</span><span class='nv'>grahp_btc</span><span class='o'>)</span>
+
+```{=html}
+<div id="htmlwidget-c79f2eece1faad734a80" style="width:100%;height:415.296px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c79f2eece1faad734a80">{"x":{"url":"figs//widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+```</code></pre>
 
 </div>
 
-<iframe src="grahp_btc.html">
-</iframe>
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌

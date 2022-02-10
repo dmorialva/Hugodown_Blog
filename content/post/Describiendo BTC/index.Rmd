@@ -63,6 +63,7 @@ library(dygraphs)
 library(xts)
 library(widgetframe)
 library(htmlwidgets)
+library(htmltools)
 
 # Convertimos el dataframe en un objeto xts
 
@@ -75,9 +76,10 @@ btc_xts %>%
          axisLabelFormatter = 'function(d){return Math.round(d) + "$"}') %>%
     dyRangeSelector(dateWindow = c(min(btc$fecha), max(btc$fecha))) -> grahp_btc
 
-htmlwidgets::saveWidget(grahp_btc, file = "grahp_btc.html", selfcontained = TRUE)
+frameWidget(grahp_btc)
+
 ```
-<iframe src="grahp_btc.html"></iframe>
+
 
 
 <div/>
