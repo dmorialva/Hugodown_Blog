@@ -67,13 +67,12 @@ library(plotly)
 btc_graph <- btc %>%
             ggplot( aes(x=fecha, y=close)) +
             geom_line(color="#69b3a5") +
-            ylab("bitcoin price ($)") 
-btc_graph <- ggplotly(btc_graph)
-btc_graph
+            ylab("Bitcoin ($)") 
+btc_graph 
 
 ```
 
 
 
-
+<div>
 ### Te parece útil? Considera compartirlo 🙌
