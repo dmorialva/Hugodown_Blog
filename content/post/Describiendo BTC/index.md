@@ -36,11 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 93ce45ab224e9de9
-html_dependencies:
-- <script src="htmlwidgets-1.5.4/htmlwidgets.js"></script>
-- <script src="pymjs-1.3.2/pym.v1.js"></script>
-- <script src="widgetframe-binding-0.3.1/widgetframe.js"></script>
+rmd_hash: 3f35d8ff0762dab4
 
 ---
 
@@ -90,15 +86,15 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
     <span class='nf'><a href='https://rdrr.io/pkg/dygraphs/man/dyRangeSelector.html'>dyRangeSelector</a></span><span class='o'>(</span>dateWindow <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='o'>(</span><span class='nv'>btc</span><span class='o'>$</span><span class='nv'>fecha</span><span class='o'>)</span>, <span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='o'>(</span><span class='nv'>btc</span><span class='o'>$</span><span class='nv'>fecha</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>-&gt;</span> <span class='nv'>grahp_btc</span>
 
 <span class='c'>#htmlwidgets::saveWidget(frameableWidget(grahp_btc),'btc.html')</span>
-<span class='nf'><a href='https://rdrr.io/pkg/widgetframe/man/frameWidget.html'>frameWidget</a></span><span class='o'>(</span><span class='nv'>grahp_btc</span>, width<span class='o'>=</span><span class='s'>'90%'</span><span class='o'>)</span>
-
-```{=html}
-<div id="htmlwidget-373cc6610a9e0a436d52" style="width:90%;height:415.296px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-373cc6610a9e0a436d52">{"x":{"url":"figs//widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
-```</code></pre>
+<span class='c'>#frameWidget(grahp_btc, width='90%')</span></code></pre>
 
 </div>
 
+<div id="htmlwidget-373cc6610a9e0a436d52" class="widgetframe html-widget" style="width:90%;height:415.296px;">
+
+</div>
+
+<script type="application/json" data-for="htmlwidget-373cc6610a9e0a436d52">{"x":{"url":"figs/widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌

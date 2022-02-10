@@ -77,9 +77,10 @@ btc_xts %>%
     dyRangeSelector(dateWindow = c(min(btc$fecha), max(btc$fecha))) -> grahp_btc
 
 #htmlwidgets::saveWidget(frameableWidget(grahp_btc),'btc.html')
-frameWidget(grahp_btc, width='90%')
+#frameWidget(grahp_btc, width='90%')
 ```
-
+<div id="htmlwidget-373cc6610a9e0a436d52" style="width:90%;height:415.296px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-373cc6610a9e0a436d52">{"x":{"url":"figs/widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 
 <div/>
