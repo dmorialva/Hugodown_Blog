@@ -76,7 +76,8 @@ btc_xts %>%
          axisLabelFormatter = 'function(d){return Math.round(d) + "$"}') %>%
     dyRangeSelector(dateWindow = c(min(btc$fecha), max(btc$fecha))) -> grahp_btc
 
-htmlwidgets::saveWidget(frameableWidget(grahp_btc),'btc.html')
+#htmlwidgets::saveWidget(frameableWidget(grahp_btc),'btc.html')
+frameWidget(grahp_btc, width='90%')
 ```
 
 
