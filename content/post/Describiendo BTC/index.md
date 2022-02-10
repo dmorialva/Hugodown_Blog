@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 607de6ccb6d8b367
+rmd_hash: a9f3f88ed034d5a1
 
 ---
 
@@ -49,32 +49,7 @@ Bitcoin es una moneda digital creada en el 2008 por una entidad bajo el pseudoni
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='o'>)</span>
-<span class='c'>#&gt; -- <span style='font-weight: bold;'>Attaching packages</span> --------------------------------------- tidyverse 1.3.1 --</span>
-<span class='c'>#&gt; <span style='color: #00BB00;'>&lt;U+2714&gt;</span> <span style='color: #0000BB;'>ggplot2</span> 3.3.5     <span style='color: #00BB00;'>&lt;U+2714&gt;</span> <span style='color: #0000BB;'>purrr  </span> 0.3.4</span>
-<span class='c'>#&gt; <span style='color: #00BB00;'>&lt;U+2714&gt;</span> <span style='color: #0000BB;'>tibble </span> 3.1.6     <span style='color: #00BB00;'>&lt;U+2714&gt;</span> <span style='color: #0000BB;'>dplyr  </span> 1.0.7</span>
-<span class='c'>#&gt; <span style='color: #00BB00;'>&lt;U+2714&gt;</span> <span style='color: #0000BB;'>tidyr  </span> 1.1.4     <span style='color: #00BB00;'>&lt;U+2714&gt;</span> <span style='color: #0000BB;'>stringr</span> 1.4.0</span>
-<span class='c'>#&gt; <span style='color: #00BB00;'>&lt;U+2714&gt;</span> <span style='color: #0000BB;'>readr  </span> 2.1.1     <span style='color: #00BB00;'>&lt;U+2714&gt;</span> <span style='color: #0000BB;'>forcats</span> 0.5.1</span>
-<span class='c'>#&gt; -- <span style='font-weight: bold;'>Conflicts</span> ------------------------------------------ tidyverse_conflicts() --</span>
-<span class='c'>#&gt; <span style='color: #BB0000;'>&lt;U+2716&gt;</span> <span style='color: #0000BB;'>dplyr</span>::<span style='color: #00BB00;'>filter()</span> masks <span style='color: #0000BB;'>stats</span>::filter()</span>
-<span class='c'>#&gt; <span style='color: #BB0000;'>&lt;U+2716&gt;</span> <span style='color: #0000BB;'>dplyr</span>::<span style='color: #00BB00;'>lag()</span>    masks <span style='color: #0000BB;'>stats</span>::lag()</span>
 <span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/braverock/PerformanceAnalytics'>PerformanceAnalytics</a></span><span class='o'>)</span>
-<span class='c'>#&gt; Loading required package: xts</span>
-<span class='c'>#&gt; Loading required package: zoo</span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt; Attaching package: 'zoo'</span>
-<span class='c'>#&gt; The following objects are masked from 'package:base':</span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt;     as.Date, as.Date.numeric</span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt; Attaching package: 'xts'</span>
-<span class='c'>#&gt; The following objects are masked from 'package:dplyr':</span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt;     first, last</span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt; Attaching package: 'PerformanceAnalytics'</span>
-<span class='c'>#&gt; The following object is masked from 'package:graphics':</span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt;     legend</span>
 
 <span class='nv'>btc</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span><span class='o'>(</span><span class='s'>"dailyDataBTC-USD.csv"</span>, stringsAsFactors <span class='o'>=</span> <span class='kc'>F</span>, header <span class='o'>=</span> <span class='kc'>T</span><span class='o'>)</span>
 <span class='nv'>btc</span> <span class='o'>&lt;-</span> <span class='nv'>btc</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>fecha <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/as.POSIXlt.html'>as.POSIXct</a></span><span class='o'>(</span><span class='nv'>unix</span>, origin <span class='o'>=</span> <span class='s'>"1970-01-01"</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://dplyr.tidyverse.org/reference/arrange.html'>arrange</a></span><span class='o'>(</span><span class='nv'>fecha</span><span class='o'>)</span>
