@@ -76,7 +76,9 @@ btc_xts %>%
 print(grahp_btc)
 ```
 
-<iframe src="static/img/btc.html" width="100%" height="500"></iframe>
+![alt text](static/btc.html "This is a caption.")
+
+<iframe src="static/btc.html" width="100%" height="500"></iframe>
 
 <div/>
 
