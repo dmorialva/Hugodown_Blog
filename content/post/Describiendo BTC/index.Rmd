@@ -71,8 +71,6 @@ btc_graph <- btc %>%
 btc_graph <- ggplotly(btc_graph)
 btc_graph
 
-#htmlwidgets::saveWidget(frameableWidget(grahp_btc),'btc.html')
-#frameWidget(grahp_btc, width='90%')
 ```
 
 
