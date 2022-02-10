@@ -59,28 +59,22 @@ Para fines practicos usaremos este archivo para el análisis. Pero te dejaré un
 Como un primer análisis, mostraremos la serie temporal del bitcoin con su precio ajustado al cierre diario.
 
 ```{r, message=FALSE, eval=TRUE}
-library(dygraphs)
-library(xts)
-library(widgetframe)
-library(htmlwidgets)
-library(htmltools)
+library(ggplot2)
+library(plotly)
+
 
 # Convertimos el dataframe en un objeto xts
-
-btc_xts <- xts(btc$close, order.by = as.Date(btc$fecha))
-names(btc_xts) <- "BTC"
-
-btc_xts %>%
-  dygraph(main = "Precio Diario Cierre BTC") %>%
-  dyAxis(name = "y",
-         axisLabelFormatter = 'function(d){return Math.round(d) + "$"}') %>%
-    dyRangeSelector(dateWindow = c(min(btc$fecha), max(btc$fecha))) -> grahp_btc
+btc_graph <- btc %>%
+            ggplot( aes(x=fecha, y=close)) +
+            geom_line(color="#69b3a5") +
+            ylab("bitcoin price ($)") 
+btc_graph <- ggplotly(btc_graph)
+btc_graph
 
 #htmlwidgets::saveWidget(frameableWidget(grahp_btc),'btc.html')
 #frameWidget(grahp_btc, width='90%')
 ```
-<div id="htmlwidget-373cc6610a9e0a436d52" style="width:90%;height:415.296px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-373cc6610a9e0a436d52">{"x":{"url":"figs/widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+
 
 
 <div/>
