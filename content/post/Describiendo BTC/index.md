@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 5abee38dfcab7c9a
+rmd_hash: 6750cdb72a9ec74d
 
 ---
 
@@ -88,8 +88,10 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
 
 ![alt text](static/btc.html "This is a caption.")
 
-<iframe src="static/btc.html" width="100%" height="500">
-</iframe>
+<div src="static/btc.html" width="100%" height="500">
+
+</div>
+
 <div/>
 
 ### Te parece útil? Considera compartirlo 🙌
