@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: e0bb814931d2b811
+rmd_hash: 239d698f3deb988e
 
 ---
 
@@ -85,8 +85,7 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
          axisLabelFormatter <span class='o'>=</span> <span class='s'>'function(d)&#123;return Math.round(d) + "$"&#125;'</span><span class='o'>)</span> <span class='o'><a href='https://rdrr.io/pkg/dygraphs/man/dygraphs-exports.html'>%&gt;%</a></span>
     <span class='nf'><a href='https://rdrr.io/pkg/dygraphs/man/dyRangeSelector.html'>dyRangeSelector</a></span><span class='o'>(</span>dateWindow <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='o'>(</span><span class='nv'>btc</span><span class='o'>$</span><span class='nv'>fecha</span><span class='o'>)</span>, <span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='o'>(</span><span class='nv'>btc</span><span class='o'>$</span><span class='nv'>fecha</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>-&gt;</span> <span class='nv'>grahp_btc</span>
 
-<span class='nf'>knitr</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/pkg/knitr/man/include_url.html'>include_url</a></span><span class='o'>(</span><span class='s'>"https://www.dmorialva.com/post/describiendo-btc/widget_unnamed-chunk-2.html"</span><span class='o'>)</span>
-<iframe src="https://www.dmorialva.com/post/describiendo-btc/widget_unnamed-chunk-2.html" width="700px" height="400px" data-external="1"></iframe></code></pre>
+<span class='nf'>htmlwidgets</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/pkg/htmlwidgets/man/saveWidget.html'>saveWidget</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/pkg/widgetframe/man/frameableWidget.html'>frameableWidget</a></span><span class='o'>(</span><span class='nv'>grahp_btc</span><span class='o'>)</span>,<span class='s'>'btc.html'</span><span class='o'>)</span></code></pre>
 
 </div>
 

@@ -76,7 +76,7 @@ btc_xts %>%
          axisLabelFormatter = 'function(d){return Math.round(d) + "$"}') %>%
     dyRangeSelector(dateWindow = c(min(btc$fecha), max(btc$fecha))) -> grahp_btc
 
-knitr::include_url("https://www.dmorialva.com/post/describiendo-btc/widget_unnamed-chunk-2.html")
+htmlwidgets::saveWidget(frameableWidget(grahp_btc),'btc.html')
 ```
 
 
