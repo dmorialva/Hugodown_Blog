@@ -75,6 +75,5 @@ btc_graph
 
 
 
-<div/>
 
 ### Te parece útil? Considera compartirlo 🙌
