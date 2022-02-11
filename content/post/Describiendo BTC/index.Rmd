@@ -94,7 +94,9 @@ Logaritmico o Continuo
  La rentabilidad de un periodo de tiempo es la sumatoria de las rentabilidades que lo componen,      gracias a las propiedades de los logaritmos.
   $$R_{acumulada} = \sum_{i=1}^{N}Rc_i = \sum_{i=1}^{N}ln{(1+Rs_i)}$$
   
-  Tomando como válido el supuesto de muchos modelos que la distribución de los retornos de un activo   siguen una distribucion normal, los retornos podrian ir hasta valores de -$\infty$, y sabemos que   la pérdida máxima es del 100% de la inversión.
+  Tomando como válido el supuesto de muchos modelos, que la distribución de los retornos de un activo siguen una distribucion normal, los retornos podrian ir hasta valores de -$\infty$ y sabemos que la pérdida máxima es del 100% de la inversión. Otro problema de asumir esta distribucion es que constantemente estará a prueba la curtosis, que da la forma a las colas de la distribucion que en muchos casos seran mas pesadas que una normal.
+  
+  En este punto, al asumir que el retorno logaritmico se distribuye como una lognormal
 
 <div>
 ### Te parece útil? Considera compartirlo 🙌

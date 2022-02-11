@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: ee445f2d5d6f4461
+rmd_hash: b39545792f71c778
 
 ---
 
@@ -96,7 +96,9 @@ Se calcula como la variacion porcentual de 2 precios: $$Rs = \frac{P_t - P_{t-1}
 
 Se calcula como la diferencia de los precios en logaritmos naturales: $$Rc = \ln{(\frac{P_t}{P_{t-1}})}$$ De la formula de arriba es fácil deducir la siguiente relación: $$Rc = \ln{(1+Rs)}$$ La rentabilidad de un periodo de tiempo es la sumatoria de las rentabilidades que lo componen, gracias a las propiedades de los logaritmos. $$R_{acumulada} = \sum_{i=1}^{N}Rc_i = \sum_{i=1}^{N}ln{(1+Rs_i)}$$
 
-Tomando como válido el supuesto de muchos modelos que la distribución de los retornos de un activo siguen una distribucion normal, los retornos podrian ir hasta valores de -$\infty$, y sabemos que la pérdida máxima es del 100% de la inversión.
+Tomando como válido el supuesto de muchos modelos, que la distribución de los retornos de un activo siguen una distribucion normal, los retornos podrian ir hasta valores de -$\infty$ y sabemos que la pérdida máxima es del 100% de la inversión. Otro problema de asumir esta distribucion es que constantemente estará a prueba la curtosis, que da la forma a las colas de la distribucion que en muchos casos seran mas pesadas que una normal.
+
+En este punto, al asumir que el retorno logaritmico se distribuye como una lognormal
 
 <div>
 
