@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: b39545792f71c778
+rmd_hash: 3c35ece3c7fefe25
 
 ---
 
@@ -44,7 +44,7 @@ rmd_hash: b39545792f71c778
 
 Bitcoin es una moneda digital creada en el 2008 por una entidad bajo el pseudonimo de Satoshi Nakamoto, que sirve de intercambio como otra moneda física. La característica mas resaltante es que es una moneda descentralizada, es decir que no existe una autoridad o ente de control que sea responsable de su emisión y registro de sus movimientos y no sufre de inflación, ya que existe un numero limite de monedas. La tecnología que usa para la transferencia o movimientos de la moneda digital es la cadena de bloques o Blockchain, la cual en terminos simple lleva un registro de cada movimiento o etiqueta, y se copia en cada cadena de bloques de manera que todos los usuarios de la cadena deben tener la misma información para validar la transacción, lo que hace muy dificil la falsificación. Si quieres saber mas te dejo información [aquí](https://es.wikipedia.org/wiki/Bitcoin)
 
-# Leer información desde (CSV)
+# **Leer información desde (CSV)**
 
 <div class="highlight">
 
@@ -62,14 +62,13 @@ Bitcoin es una moneda digital creada en el 2008 por una entidad bajo el pseudoni
 
 </div>
 
-Para fines practicos usaremos este archivo para el análisis. Pero te dejaré un link para que puedas extraer informacion desde la una API.
+Para fines practicos usaremos este [archivo](https://www.dmorialva.com/post/describiendo-btc/dailyDataBTC-USD.csv) para el análisis. Pero te dejaré un link para que puedas extraer informacion desde la una API.
 
 Como un primer análisis, mostraremos la serie temporal del bitcoin con su precio ajustado al cierre diario.
 
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='o'>)</span>
-<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://plotly-r.com'>plotly</a></span><span class='o'>)</span>
 
 <span class='c'># Convertimos el dataframe en un objeto xts</span>
 <span class='nv'>btc_graph</span> <span class='o'>&lt;-</span> <span class='nv'>btc</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
@@ -84,21 +83,21 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
 
 A partir del grafico, solo podemos observar que el precio en este lapso de tiempo, formo un soporte alrededor de los 30 mil y un maximo de 65 mil. Ahora mencionaremos 2 conceptos básicos para empezar a analizar el bitcoin y cualquier otro instrumento bursátil.
 
-# Rendimiento o Retorno Simple y continuo
+# **Rendimiento o Retorno Simple y continuo**
 
 Al iniciar a estudiar los modelos de finanzas cuantitativas básicos, como obtener el riesgo historico de un activo, o al intentar aplicar el modelo de Markowitz para un portafolio de inversión, necesitamos la variable retorno del activo. Para esto existen modelos que usan el rendimiento simple o aritmetico y otros el compuesto o logaritmico.¿Cuando usar uno u otro?. ¿Son iguales o diferentes?. Intentaré poner sobre la mesa las ventajas y los usos de cada uno.
 
-## Aritmetico o Simple
+## **Aritmetico o Simple**
 
 Se calcula como la variacion porcentual de 2 precios: $$Rs = \frac{P_t - P_{t-1}}{P_{t-1}}$$ Esta forma del cálculo de los retornos hace que se encuentren normalizados, es decir son comparables con otra serie de retornos de otro activo a pesar que las magnitudes de sus precios sean considerablemente diferentes. Esto tambien debe usarse para el cálculo de la matriz de covarianzas en nuestros análisis, a fin de poder diversificar una cartera con el modelo de Markowitz. La rentabilidad de un periodo de tiempo es la media geometrica de las rentabilidades que lo componen. $$R_{acumulada} = \sqrt[N]{\prod_{i=1}^{N}Rs_i}$$ Mas adelante este será un punto en contra para el retorno simple.
 
-## Logaritmico o Continuo
+## **Logaritmico o Continuo**
 
 Se calcula como la diferencia de los precios en logaritmos naturales: $$Rc = \ln{(\frac{P_t}{P_{t-1}})}$$ De la formula de arriba es fácil deducir la siguiente relación: $$Rc = \ln{(1+Rs)}$$ La rentabilidad de un periodo de tiempo es la sumatoria de las rentabilidades que lo componen, gracias a las propiedades de los logaritmos. $$R_{acumulada} = \sum_{i=1}^{N}Rc_i = \sum_{i=1}^{N}ln{(1+Rs_i)}$$
 
-Tomando como válido el supuesto de muchos modelos, que la distribución de los retornos de un activo siguen una distribucion normal, los retornos podrian ir hasta valores de -$\infty$ y sabemos que la pérdida máxima es del 100% de la inversión. Otro problema de asumir esta distribucion es que constantemente estará a prueba la curtosis, que da la forma a las colas de la distribucion que en muchos casos seran mas pesadas que una normal.
+En muchos modelos se asumen que la distribución de los retornos de un activo siguen una distribucion normal, segun esto los retornos podrian ir hasta valores de -$\infty$ y sabemos que la pérdida máxima es del 100% de la inversión. Otro problema de asumir esta distribucion es que constantemente estará a prueba la curtosis, que da la forma a las colas de la distribucion que en muchos casos seran mas pesadas que una normal.
 
-En este punto, al asumir que el retorno logaritmico se distribuye como una lognormal
+De aqui se desprende que tanto el retorno simple y el continuo se distribuyen como una normal. En particual, al ser el retorno continuo el logaritmo de 1 + Rs, se dice que 1 + Rs se distribuye como una lognormal. Por los teoremas de convolución, para el caso del retorno simple, el retorno acumulado es la productoria de variables normales, cuyo resultado no se distribuye como una normal, mientras que en el caso continuo, el retorno acumulado es hallado como la suma de variables normal cuyo resultado es una normal, mostrandose asi una gran ventaja sobre el simple.
 
 <div>
 
