@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 3c35ece3c7fefe25
+rmd_hash: 8b33ce7d92799ee2
 
 ---
 
@@ -98,6 +98,10 @@ Se calcula como la diferencia de los precios en logaritmos naturales: $$Rc = \ln
 En muchos modelos se asumen que la distribución de los retornos de un activo siguen una distribucion normal, segun esto los retornos podrian ir hasta valores de -$\infty$ y sabemos que la pérdida máxima es del 100% de la inversión. Otro problema de asumir esta distribucion es que constantemente estará a prueba la curtosis, que da la forma a las colas de la distribucion que en muchos casos seran mas pesadas que una normal.
 
 De aqui se desprende que tanto el retorno simple y el continuo se distribuyen como una normal. En particual, al ser el retorno continuo el logaritmo de 1 + Rs, se dice que 1 + Rs se distribuye como una lognormal. Por los teoremas de convolución, para el caso del retorno simple, el retorno acumulado es la productoria de variables normales, cuyo resultado no se distribuye como una normal, mientras que en el caso continuo, el retorno acumulado es hallado como la suma de variables normal cuyo resultado es una normal, mostrandose asi una gran ventaja sobre el simple.
+
+<div class="highlight">
+
+</div>
 
 <div>
 
