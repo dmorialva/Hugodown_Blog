@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: c850262296fc70c3
+rmd_hash: 87950cc9a046d063
 
 ---
 
@@ -99,12 +99,36 @@ En muchos modelos se asumen que la distribución de los retornos de un activo si
 
 De aqui se desprende que tanto el retorno simple y el continuo se distribuyen como una normal. En particual, al ser el retorno continuo el logaritmo de 1 + Rs, se dice que 1 + Rs se distribuye como una lognormal. Por los teoremas de convolución, para el caso del retorno simple, el retorno acumulado es la productoria de variables normales, cuyo resultado no se distribuye como una normal, mientras que en el caso continuo, el retorno acumulado es hallado como la suma de variables normal cuyo resultado es una normal, mostrandose asi una gran ventaja sobre el simple.
 
+# **Histograma de retornos BTC**
+
+Ahora vamos a empezar con un pequeño análisis de cómo se comportan los rendimientos logaritmicos diarios del BTC en el periodo de tiempo en estudio. Una manera simple de observarlo sería construir un histograma y obtener medidas que nos pueden ser muy informativas:
+
 <div class="highlight">
 
 <img src="figs/unnamed-chunk-3-1.png" width="700px" style="display: block; margin: auto;" />
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='c'>#&gt;   crypto Ret_Esperado Riesgo_sd</span>
+<span class='c'>#&gt; 1    BTC         0.27      4.43</span>
+<span class='c'>#&gt;    Metrica Valor_pct</span>
+<span class='c'>#&gt; 1  VaR 99%    -11.88</span>
+<span class='c'>#&gt; 2  VaR 95%     -6.46</span>
+<span class='c'>#&gt; 3 TVaR 99%    -14.38</span>
+<span class='c'>#&gt; 4 TVaR 95%     -9.80</span></code></pre>
 
 </div>
 
+Pasaremos a explicar brevemente cada métrica descriptiva y para ello vamos a suponer que queremos tomar una posicion en el mercado Spot, es decir comprar, mantener y luego vender.
+
+**Probabilidad de ganar** $$P(Rc > 0) = \frac{Cuenta\;Días\;Positivos}{Total\;Días}$$ En el periodo analizado, en un dia cualquiera existe esta probabilidad de que sea un dia con un retorno positivo (52.84%).
+
+**Retorno Promedio** $$\overline{Rc} = \frac{\sum_{i=1}^{N}{Rc_i}}{N}$$ No indica cual fue la rentabilidad diaria promedio en el periodo (0.27%).
+
+**Retorno Positivo** $$\overline{Rc+} = \frac{\sum_{i=1}^{N+}{Rc_i+}}{Cuenta\;Días\;Positivos}$$ Nos informa, que si el dia en el que hemos abierto una posicion de compra (posición Long), y éste resulta en un movimento al alza, el retorno promedio esperado seria de 3.38%
+
+**Retorno Negativo** $$\overline{Rc-} = \frac{\sum_{i=1}^{N-}{Rc_i-}}{Cuenta\;Días\;Negativos}$$ Al contrario del apartado anterior, si el dia resulta en un movimiento a la baja, esperamos tener un retorno promedio de -3.21%
+
+**Volatilidad o Riesgo** $$\widehat {\sigma_R} = \sqrt\frac{\sum_{i=1}^{N}{(Rc_i-\overline{Rc})^{2}}}{N-1}$$ Esta medida de dispersión nos indica en cuanto se puede desviar la retantabilidad promedio esperada tanto positiva como negativamente, esto se le conoce como la volatilidad, que en este caso es de 4.43%. Piense en esta medida tambien como el riesgo o incertidumbre debido a los movimientos del mercado.
+
+**Valor en Riesgo o VaR No Paramétrico** $$VaR_{q} = quantil(1-q) = F_R^{-1}(1-q)  \;\;para\;q \in\;<0,1>$$ Otra medida de riesgo adicional a la de la volatilidad es la del VaR. Si el inversor esta interesado en saber cual es la máxima pérdida en un periodo con un nivel de confianza asociado, esta es la del VaR. Por ejemplo, en el caso en estudio el VaR(95%) es -6.46%, que indica
 <div>
 
 ### Te parece útil? Considera compartirlo 🙌
