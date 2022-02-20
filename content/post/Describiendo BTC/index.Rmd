@@ -108,11 +108,17 @@ source("funciones.R")
 names(btc)[5] <- "BTC"
 output_btc <- histograma_variacion_log(btc,"BTC")
 output_btc$plot
-output_btc$r_r
-output_btc$VaR
 
 ```
 
+```{r, message=FALSE, echo=FALSE}
+library(knitr)
+kable(output_btc$r_r, booktabs = TRUE, align = "c", 
+      col.names = c("Cripto","Retorno Esperado","Volatilidad"), caption = "Tabla 1: Medidas Descriptivas")
+
+kable(output_btc$VaR, booktabs = TRUE, align = "c", 
+      col.names = c("Métrica","Valor Retorno(%)"), caption = "Tabla 2: VaR & TVaR")
+```
 Pasaremos a explicar brevemente cada métrica descriptiva y para ello vamos a suponer que queremos tomar una posicion en el mercado Spot, es decir comprar, mantener y luego vender.
 
 **Probabilidad de ganar**

@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 24de0f71adbc4e99
+rmd_hash: 74facbac428c9720
 
 ---
 
@@ -106,13 +106,25 @@ Ahora vamos a empezar con un pequeño análisis de cómo se comportan los rendim
 <div class="highlight">
 
 <img src="figs/unnamed-chunk-3-1.png" width="700px" style="display: block; margin: auto;" />
-<pre class='chroma'><code class='language-r' data-lang='r'><span class='c'>#&gt;   crypto Ret_Esperado Riesgo_sd</span>
-<span class='c'>#&gt; 1    BTC         0.27      4.43</span>
-<span class='c'>#&gt;    Metrica Valor_pct</span>
-<span class='c'>#&gt; 1  VaR 99%    -11.88</span>
-<span class='c'>#&gt; 2  VaR 95%     -6.46</span>
-<span class='c'>#&gt; 3 TVaR 99%    -14.38</span>
-<span class='c'>#&gt; 4 TVaR 95%     -9.80</span></code></pre>
+
+</div>
+
+<div class="highlight">
+
+| Cripto | Retorno Esperado | Volatilidad |
+|:------:|:----------------:|:-----------:|
+|  BTC   |       0.27       |    4.43     |
+
+Tabla 1: Medidas Descriptivas
+
+| Métrica  | Valor Retorno(%) |
+|:--------:|:----------------:|
+| VaR 99%  |      -11.88      |
+| VaR 95%  |      -6.46       |
+| TVaR 99% |      -14.38      |
+| TVaR 95% |      -9.80       |
+
+Tabla 2: VaR & TVaR
 
 </div>
 
