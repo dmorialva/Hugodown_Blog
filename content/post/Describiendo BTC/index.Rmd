@@ -44,7 +44,6 @@ Bitcoin es una moneda digital creada en el 2008 por una entidad bajo el pseudoni
 # **Leer información desde (CSV)**
 ```{r, message=FALSE}
 library(tidyverse)
-library(PerformanceAnalytics)
 
 btc <- read.csv("dailyDataBTC-USD.csv", stringsAsFactors = F, header = T)
 btc <- btc %>% mutate(fecha = as.Date(as.POSIXct(unix, origin = "1970-01-01"))) %>% arrange(fecha)
@@ -54,7 +53,7 @@ max(btc$fecha)-min(btc$fecha)
 
 ```
 
-Para fines practicos usaremos este [archivo](https://www.dmorialva.com/post/describiendo-btc/dailyDataBTC-USD.csv) para el análisis. Pero te dejaré un link para que puedas extraer informacion desde la una API.
+Para fines practicos usaremos este [archivo](https://www.dmorialva.com/post/describiendo-btc/dailyDataBTC-USD.csv) para el análisis. Pero te dejaré un [link](https://www.dmorialva.com/post/describiendo-btc/funciones.R) para que puedas extraer informacion desde la una API.
 
 Como un primer análisis, mostraremos la serie temporal del bitcoin con su precio ajustado al cierre diario.
 

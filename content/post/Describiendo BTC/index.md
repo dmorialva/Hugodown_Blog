@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 84699ae06455571d
+rmd_hash: 65fcbd5e2cefda24
 
 ---
 
@@ -49,7 +49,6 @@ Bitcoin es una moneda digital creada en el 2008 por una entidad bajo el pseudoni
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='o'>)</span>
-<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://github.com/braverock/PerformanceAnalytics'>PerformanceAnalytics</a></span><span class='o'>)</span>
 
 <span class='nv'>btc</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span><span class='o'>(</span><span class='s'>"dailyDataBTC-USD.csv"</span>, stringsAsFactors <span class='o'>=</span> <span class='kc'>F</span>, header <span class='o'>=</span> <span class='kc'>T</span><span class='o'>)</span>
 <span class='nv'>btc</span> <span class='o'>&lt;-</span> <span class='nv'>btc</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>fecha <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/as.POSIXlt.html'>as.POSIXct</a></span><span class='o'>(</span><span class='nv'>unix</span>, origin <span class='o'>=</span> <span class='s'>"1970-01-01"</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://dplyr.tidyverse.org/reference/arrange.html'>arrange</a></span><span class='o'>(</span><span class='nv'>fecha</span><span class='o'>)</span>
@@ -62,7 +61,7 @@ Bitcoin es una moneda digital creada en el 2008 por una entidad bajo el pseudoni
 
 </div>
 
-Para fines practicos usaremos este [archivo](https://www.dmorialva.com/post/describiendo-btc/dailyDataBTC-USD.csv) para el análisis. Pero te dejaré un link para que puedas extraer informacion desde la una API.
+Para fines practicos usaremos este [archivo](https://www.dmorialva.com/post/describiendo-btc/dailyDataBTC-USD.csv) para el análisis. Pero te dejaré un [link](https://www.dmorialva.com/post/describiendo-btc/funciones.R) para que puedas extraer informacion desde la una API.
 
 Como un primer análisis, mostraremos la serie temporal del bitcoin con su precio ajustado al cierre diario.
 
