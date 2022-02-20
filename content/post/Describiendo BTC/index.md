@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: ba5a0684682f7fda
+rmd_hash: 24de0f71adbc4e99
 
 ---
 
@@ -118,17 +118,17 @@ Ahora vamos a empezar con un pequeño análisis de cómo se comportan los rendim
 
 Pasaremos a explicar brevemente cada métrica descriptiva y para ello vamos a suponer que queremos tomar una posicion en el mercado Spot, es decir comprar, mantener y luego vender.
 
-**Probabilidad de ganar** $$P(Rc > 0) = \frac{Cuenta\;Días\;Positivos}{Total\;Días}$$ En el periodo analizado, en un dia cualquiera existe esta probabilidad de que sea un dia con un retorno positivo (52.84%).
+**Probabilidad de ganar** $$P(Rc > 0) = \frac{Cuenta\ Días\ Positivos}{Total\ Días}$$ En el periodo analizado, en un dia cualquiera existe esta probabilidad de que sea un dia con un retorno positivo (52.84%).
 
 **Retorno Promedio** $$\overline{Rc} = \frac{\sum_{i=1}^{N}{Rc_i}}{N}$$ No indica cual fue la rentabilidad diaria promedio en el periodo (0.27%).
 
-**Retorno Positivo** $$\overline{Rc+} = \frac{\sum_{i=1}^{N+}{Rc_i+}}{Cuenta\;Días\;Positivos}$$ Nos informa, que si el dia en el que hemos abierto una posicion de compra (posición Long), y éste resulta en un movimento al alza, el retorno promedio esperado seria de 3.38%
+**Retorno Positivo** $$\overline{Rc+} = \frac{\sum_{i=1}^{N+}{Rc_i+}}{Cuenta\ Días\ Positivos}$$ Nos informa, que si el dia en el que hemos abierto una posicion de compra (posición Long), y éste resulta en un movimento al alza, el retorno promedio esperado seria de 3.38%
 
-**Retorno Negativo** $$\overline{Rc-} = \frac{\sum_{i=1}^{N-}{Rc_i-}}{Cuenta\;Días\;Negativos}$$ Al contrario del apartado anterior, si el dia resulta en un movimiento a la baja, esperamos tener un retorno promedio de -3.21%
+**Retorno Negativo** $$\overline{Rc-} = \frac{\sum_{i=1}^{N-}{Rc_i-}}{Cuenta\ Días\ Negativos}$$ Al contrario del apartado anterior, si el dia resulta en un movimiento a la baja, esperamos tener un retorno promedio de -3.21%
 
 **Volatilidad o Riesgo** $$\widehat {\sigma_R} = \sqrt\frac{\sum_{i=1}^{N}{(Rc_i-\overline{Rc})^{2}}}{N-1}$$ Esta medida de dispersión nos indica en cuanto se puede desviar la retantabilidad promedio esperada tanto positiva como negativamente, esto se le conoce como la volatilidad, que en este caso es de 4.43%. Piense en esta medida tambien como el riesgo o incertidumbre debido a los movimientos del mercado.
 
-**Valor en Riesgo o VaR No Paramétrico** $$VaR_{q} = quantil(1-q) = F_R^{-1}(1-q)  \;para\;q\in\;<0,1>$$ Otra medida de riesgo adicional a la de la volatilidad es la del VaR. Si el inversor esta interesado en saber cual es la máxima pérdida en un periodo con un nivel de confianza asociado, esta es la del VaR. Por ejemplo, en el caso en estudio el VaR(95%) es -6.46%, el cual indica que con un nivel de confianza del 95%, esperamos tener una perdida maxima en un día de 6.46% sobre la inversión.
+**Valor en Riesgo o VaR No Paramétrico** $$VaR_{q} = quantil(1-q) = F_R^{-1}(1-q)  \ ;para\ q\in<0,1>$$ Otra medida de riesgo adicional a la de la volatilidad es la del VaR. Si el inversor esta interesado en saber cual es la máxima pérdida en un periodo con un nivel de confianza asociado, esta es la del VaR. Por ejemplo, en el caso en estudio el VaR(95%) es -6.46%, el cual indica que con un nivel de confianza del 95%, esperamos tener una perdida maxima en un día de 6.46% sobre la inversión. Otra manera intuitiva en este caso, pero que no se recomienda usar en el VaR no Parametrico sin simulaciones de montecarlo es tener como referencia un periodo de retorno, es decir con que frecuencia se da el suceso de esta perdida, en este caso es cada 20 dias aproximadamente. Para llegar a este resultado es tomar la siguiente formula: $$Periodo\ Retorno = \frac{1}{1-q} \ q\in<0,1>$$
 <div>
 
 ### Te parece útil? Considera compartirlo 🙌
