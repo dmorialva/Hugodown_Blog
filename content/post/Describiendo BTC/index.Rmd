@@ -114,9 +114,9 @@ output_btc$plot
 ```{r, message=FALSE, echo=FALSE}
 library(knitr)
 kable(output_btc$r_r, booktabs = TRUE, align = "c", 
-      col.names = c("Cripto","Retorno Esperado","Volatilidad"), caption = "Tabla 1: Medidas Descriptivas",format = "html")
+      col.names = c("Cripto","Retorno Esperado","Volatilidad"),format = "html")
 
-kable(caption = "Tabla 2: VaR & TVaR", output_btc$VaR, booktabs = TRUE, align = "c", 
+kable(output_btc$VaR, booktabs = TRUE, align = "c", 
       col.names = c("Métrica","Valor Retorno(%)"),format = "html")
 ```
 Pasaremos a explicar brevemente cada métrica descriptiva y para ello vamos a suponer que queremos tomar una posicion en el mercado Spot, es decir comprar, mantener y luego vender.
@@ -145,5 +145,9 @@ Esta medida de dispersión nos indica en cuanto se puede desviar la retantabilid
  $$VaR_{q} = quantil(1-q) = F_R^{-1}(1-q)  \ ;para\ q\in<0,1>$$
 Otra medida de riesgo adicional a la de la volatilidad es la del VaR. Si el inversor esta interesado en saber cual es la máxima pérdida en un periodo con un nivel de confianza asociado, esta es la del VaR. Por ejemplo, en el caso en estudio el VaR(95%) es -6.46%, el cual indica que con un nivel de confianza del 95%, esperamos tener una perdida maxima en un día de 6.46% sobre la inversión. Otra manera intuitiva en este caso, pero que no se recomienda usar en el VaR no Parametrico sin simulaciones de montecarlo es tener como referencia un periodo de retorno, es decir con que frecuencia se da el suceso de esta perdida, en este caso es cada 20 dias aproximadamente. Para llegar a este resultado es tomar la siguiente formula:
  $$Periodo\ Retorno = \frac{1}{1-q} \ q\in<0,1>$$
+**Valor en Riesgo o VaR No Paramétrico**
+ $$TVaR_{q} = E[R/R<=VaR_{q}]$$
+Comúnmente conocido como Tail Value at Risk y también como Conditional Value at risk(CVaR) o expected shortall es la perdida esperada por una cartera en un periodo determinado mayor al umbral del VaR a un nivel de confianza. Esta medida de riesgo es muy usada en seguros y en el sistema financiero, y en mucha de la bibliografía se considera que esta cumple con las propiedades de una medida coherente (Denuit Michael, Dhaene Jan, Goovaerts Marc, Kaas Rob, ACTUARIAL THEORY
+FOR DEPENDET RISKS, MEASURES, ORDERS AND MODELS, 2005). En este ejemplo, esta medida responde a la pregunta si en el peor de los casos se rompa el umbral de perdida maxima esperada (VaR), cuanto en promedio se esperaría de perdida en ese escenario, que para BTC seria de -9.8% Tvar95%.
 <div>
 ### Te parece útil? Considera compartirlo 🙌

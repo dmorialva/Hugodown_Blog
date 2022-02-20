@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: b2a159bacf4c1f0c
+rmd_hash: 84699ae06455571d
 
 ---
 
@@ -112,9 +112,6 @@ Ahora vamos a empezar con un pequeño análisis de cómo se comportan los rendim
 <div class="highlight">
 
 <table>
-<caption>
-Tabla 1: Medidas Descriptivas
-</caption>
 <thead>
 <tr>
 <th style="text-align:center;">
@@ -143,9 +140,6 @@ BTC
 </tbody>
 </table>
 <table>
-<caption>
-Tabla 2: VaR & TVaR
-</caption>
 <thead>
 <tr>
 <th style="text-align:center;">
@@ -206,7 +200,7 @@ Pasaremos a explicar brevemente cada métrica descriptiva y para ello vamos a su
 
 **Volatilidad o Riesgo** $$\widehat {\sigma_R} = \sqrt\frac{\sum_{i=1}^{N}{(Rc_i-\overline{Rc})^{2}}}{N-1}$$ Esta medida de dispersión nos indica en cuanto se puede desviar la retantabilidad promedio esperada tanto positiva como negativamente, esto se le conoce como la volatilidad, que en este caso es de 4.43%. Piense en esta medida tambien como el riesgo o incertidumbre debido a los movimientos del mercado.
 
-**Valor en Riesgo o VaR No Paramétrico** $$VaR_{q} = quantil(1-q) = F_R^{-1}(1-q)  \ ;para\ q\in<0,1>$$ Otra medida de riesgo adicional a la de la volatilidad es la del VaR. Si el inversor esta interesado en saber cual es la máxima pérdida en un periodo con un nivel de confianza asociado, esta es la del VaR. Por ejemplo, en el caso en estudio el VaR(95%) es -6.46%, el cual indica que con un nivel de confianza del 95%, esperamos tener una perdida maxima en un día de 6.46% sobre la inversión. Otra manera intuitiva en este caso, pero que no se recomienda usar en el VaR no Parametrico sin simulaciones de montecarlo es tener como referencia un periodo de retorno, es decir con que frecuencia se da el suceso de esta perdida, en este caso es cada 20 dias aproximadamente. Para llegar a este resultado es tomar la siguiente formula: $$Periodo\ Retorno = \frac{1}{1-q} \ q\in<0,1>$$
+**Valor en Riesgo o VaR No Paramétrico** $$VaR_{q} = quantil(1-q) = F_R^{-1}(1-q)  \ ;para\ q\in<0,1>$$ Otra medida de riesgo adicional a la de la volatilidad es la del VaR. Si el inversor esta interesado en saber cual es la máxima pérdida en un periodo con un nivel de confianza asociado, esta es la del VaR. Por ejemplo, en el caso en estudio el VaR(95%) es -6.46%, el cual indica que con un nivel de confianza del 95%, esperamos tener una perdida maxima en un día de 6.46% sobre la inversión. Otra manera intuitiva en este caso, pero que no se recomienda usar en el VaR no Parametrico sin simulaciones de montecarlo es tener como referencia un periodo de retorno, es decir con que frecuencia se da el suceso de esta perdida, en este caso es cada 20 dias aproximadamente. Para llegar a este resultado es tomar la siguiente formula: $$Periodo\ Retorno = \frac{1}{1-q} \ q\in<0,1>$$ **Valor en Riesgo o VaR No Paramétrico** $$TVaR_{q} = E[R/R<=VaR_{q}]$$ Comúnmente conocido como Tail Value at Risk y también como Conditional Value at risk(CVaR) o expected shortall es la perdida esperada por una cartera en un periodo determinado mayor al umbral del VaR a un nivel de confianza. Esta medida de riesgo es muy usada en seguros y en el sistema financiero, y en mucha de la bibliografía se considera que esta cumple con las propiedades de una medida coherente (Denuit Michael, Dhaene Jan, Goovaerts Marc, Kaas Rob, ACTUARIAL THEORY FOR DEPENDET RISKS, MEASURES, ORDERS AND MODELS, 2005). En este ejemplo, esta medida responde a la pregunta si en el peor de los casos se rompa el umbral de perdida maxima esperada (VaR), cuanto en promedio se esperaría de perdida en ese escenario, que para BTC seria de -9.8% Tvar95%.
 <div>
 
 ### Te parece útil? Considera compartirlo 🙌
