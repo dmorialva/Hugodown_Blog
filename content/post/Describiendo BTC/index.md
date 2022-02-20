@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 74facbac428c9720
+rmd_hash: b2a159bacf4c1f0c
 
 ---
 
@@ -111,20 +111,86 @@ Ahora vamos a empezar con un pequeño análisis de cómo se comportan los rendim
 
 <div class="highlight">
 
-| Cripto | Retorno Esperado | Volatilidad |
-|:------:|:----------------:|:-----------:|
-|  BTC   |       0.27       |    4.43     |
-
+<table>
+<caption>
 Tabla 1: Medidas Descriptivas
-
-| Métrica  | Valor Retorno(%) |
-|:--------:|:----------------:|
-| VaR 99%  |      -11.88      |
-| VaR 95%  |      -6.46       |
-| TVaR 99% |      -14.38      |
-| TVaR 95% |      -9.80       |
-
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Cripto
+</th>
+<th style="text-align:center;">
+Retorno Esperado
+</th>
+<th style="text-align:center;">
+Volatilidad
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+BTC
+</td>
+<td style="text-align:center;">
+0.27
+</td>
+<td style="text-align:center;">
+4.43
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>
 Tabla 2: VaR & TVaR
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Métrica
+</th>
+<th style="text-align:center;">
+Valor Retorno(%)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+VaR 99%
+</td>
+<td style="text-align:center;">
+-11.88
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+VaR 95%
+</td>
+<td style="text-align:center;">
+-6.46
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+TVaR 99%
+</td>
+<td style="text-align:center;">
+-14.38
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+TVaR 95%
+</td>
+<td style="text-align:center;">
+-9.80
+</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 
