@@ -8,8 +8,8 @@ summary: "Analizaremos con la ayuda de la estadística descriptiva los movimient
 authors: [admin]
 tags: [Probabilidad, Estadistica, Criptomoneda]
 categories: []
-date: 2022-02-04
-lastmod: 2022-02-04
+date: 2022-02-18
+lastmod: 2022-02-18
 featured: false
 draft: false
 
@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: a82acc5ecddf5317
+rmd_hash: 1fc828719a2a3e50
 
 ---
 
@@ -202,7 +202,7 @@ Como sabemos, el histograma es la distribución empírica de la variable aleator
 
 **TVaR o CVaR** $$TVaR_{q} = E[R/R<=VaR_{q}]$$ Comúnmente conocido como Tail Value at Risk y también como Conditional Value at risk(CVaR) o expected shortall es la pérdida esperada por una cartera en un periodo determinado mayor al umbral del VaR a un nivel de confianza. Esta medida de riesgo es muy usada en seguros y en el sistema financiero y en mucha de la bibliografía se considera que este cumple con las propiedades de una medida coherente (Denuit Michael, Dhaene Jan, Goovaerts Marc, Kaas Rob, ACTUARIAL THEORY FOR DEPENDET RISKS, MEASURES, ORDERS AND MODELS, 2005). En este ejemplo, esta medida responde a la pregunta si en el peor de los casos se rompa el umbral de perdida máxima esperada (VaR), cuanto en promedio se esperaría de pérdida en ese escenario, que para BTC sería de -9.8% Tvar95%.
 
-Como mencionamos anteriormente, suponiendo que entramos en una posición de compra en el mercado spot, y asumiendo que el periodo analizado es suficiente y representativo para esperar que esta se replique en el futuro, se esperaría tener más días al alza ya que este tiene una probabilidad del 52.84%, también esperarías tener un retorno promedio en el día de 0.27% de tu inversión, con una volatilidad de 4.43%, con una probabilidad máxima de perdida al 95% de 6.46% cada 20 días y con una perdida promedio esperada mayor al 6.46% de 9.80%. Esta información puede ser un punto de partida a considerar para poder compararlo con las mismas métricas en otras criptomonedas y ver en cuales prefieras invertir. Si deseas tener una estrategia con mas de 1 criptomoneda a la vez, es importante que se cumpla la propiedad de subaditividad, que refleja la idea que el riesgo puede ser reducido por la diversificación. No está demás decir que este ejemplo es sólo informativo y educativo y no es ningún consejo de inversión. Espero haya podido despertar la curiosidad y que tengas un ejemplo de cómo las probabilidades y la estadística están incluida en estos temas.
+Como mencionamos anteriormente, suponiendo que entramos en una posición de compra en el mercado spot y asumiendo que el periodo analizado es suficiente y representativo para esperar que ésta se replique en el futuro, se esperaría tener más días al alza ya que este tiene una probabilidad del 52.84%, también esperarías tener un retorno promedio en el día de 0.27% de tu inversión, con una volatilidad de 4.43%, con una probabilidad máxima de perdida al 95% de 6.46% cada 20 días y con una perdida promedio esperada mayor al 6.46% de 9.80%. Esta información puede ser un punto de partida a considerar para poder compararlo con las mismas métricas en otras criptomonedas y ver en cuales prefieras invertir. Si deseas tener una estrategia con mas de 1 criptomoneda a la vez, es importante que se cumpla la propiedad de subaditividad, que refleja la idea que el riesgo puede ser reducido por la diversificación. No está demás decir que este ejemplo es sólo informativo y educativo y no es ningún consejo de inversión. Espero haya podido despertar la curiosidad y que tengas un ejemplo de cómo las probabilidades y la estadística están incluida en estos temas.
 
 <div>
 
