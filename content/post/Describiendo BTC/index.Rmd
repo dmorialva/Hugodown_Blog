@@ -119,7 +119,7 @@ kable(output_btc$r_r, booktabs = TRUE, align = "c",
 kable(output_btc$VaR, booktabs = TRUE, align = "c", 
       col.names = c("Métrica","Valor Retorno(%)"),format = "html")
 ```
-Como sabemos, el histograma es la distribución empírica de la variable aleatoria en estudio, en este caso son los retornos diarios del Bitcoin.  En esta vista podemos observar preferencias o acumulaciones en ciertos rangos representados por una barra de mayor altura, lo cual significa que con frecuencia los retornos se agrupan en esa área y también poder observar los mínimos, máximos y medidas de tendencia central. Pasaremos a explicar brevemente cada métrica descriptiva y para ello vamos a suponer que queremos tomar una posición en el mercado Spot con un capital de 100 USD, es decir comprar, mantener y luego vender.
+Como sabemos, el histograma es la distribución empírica de la variable aleatoria en estudio, en este caso son los retornos diarios del Bitcoin.  En esta vista podemos observar preferencias o acumulaciones en ciertos rangos representados por una barra de mayor altura, lo cual significa que con frecuencia los retornos se agrupan en esa área y también poder observar los mínimos, máximos y medidas de tendencia central, en particular la linea roja vertical representa el VaR al 95%. Pasaremos a explicar brevemente cada métrica descriptiva y para ello vamos a suponer que queremos tomar una posición en el mercado Spot con un capital de 100 USD, es decir comprar, mantener y luego vender.
 
 **Probabilidad de ganar**
  $$P(Rc > 0) = \frac{Cuenta\ Días\ Positivos}{Total\ Días}$$

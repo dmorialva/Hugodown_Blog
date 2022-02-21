@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 1fc828719a2a3e50
+rmd_hash: 5a7e815d78c78b1d
 
 ---
 
@@ -186,7 +186,7 @@ TVaR 95%
 
 </div>
 
-Como sabemos, el histograma es la distribución empírica de la variable aleatoria en estudio, en este caso son los retornos diarios del Bitcoin. En esta vista podemos observar preferencias o acumulaciones en ciertos rangos representados por una barra de mayor altura, lo cual significa que con frecuencia los retornos se agrupan en esa área y también poder observar los mínimos, máximos y medidas de tendencia central. Pasaremos a explicar brevemente cada métrica descriptiva y para ello vamos a suponer que queremos tomar una posición en el mercado Spot con un capital de 100 USD, es decir comprar, mantener y luego vender.
+Como sabemos, el histograma es la distribución empírica de la variable aleatoria en estudio, en este caso son los retornos diarios del Bitcoin. En esta vista podemos observar preferencias o acumulaciones en ciertos rangos representados por una barra de mayor altura, lo cual significa que con frecuencia los retornos se agrupan en esa área y también poder observar los mínimos, máximos y medidas de tendencia central, en particular la linea roja vertical representa el VaR al 95%. Pasaremos a explicar brevemente cada métrica descriptiva y para ello vamos a suponer que queremos tomar una posición en el mercado Spot con un capital de 100 USD, es decir comprar, mantener y luego vender.
 
 **Probabilidad de ganar** $$P(Rc > 0) = \frac{Cuenta\ Días\ Positivos}{Total\ Días}$$ En el periodo analizado, en un día cualquiera existe un 52.84% de que sea un día con un retorno positivo.
 
