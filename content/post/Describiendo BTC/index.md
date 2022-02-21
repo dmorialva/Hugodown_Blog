@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: f385b429a5d11c09
+rmd_hash: a82acc5ecddf5317
 
 ---
 
@@ -116,10 +116,10 @@ Ahora vamos a empezar con un pequeño análisis de cómo se comportan los rendim
 Cripto
 </th>
 <th style="text-align:center;">
-Retorno Esperado
+Retorno Esperado(%)
 </th>
 <th style="text-align:center;">
-Volatilidad
+Volatilidad(%)
 </th>
 </tr>
 </thead>
@@ -200,7 +200,9 @@ Como sabemos, el histograma es la distribución empírica de la variable aleator
 
 **Valor en Riesgo o VaR No Paramétrico** $$VaR_{q} = quantil(1-q) = F_R^{-1}(1-q)  \ ;para\ q\in<0,1>$$ Otra medida de riesgo adicional a la de la volatilidad es la del VaR. Si el inversor está interesado en saber cuál es la máxima pérdida en un periodo con un nivel de confianza asociado, esta es la del VaR. Por ejemplo, en el caso en estudio el VaR(95%) es -6.46%, el cual indica que con un nivel de confianza del 95%, esperamos tener una perdida máxima en un día de 6.46% sobre la inversión. Otra manera intuitiva en este caso, pero que no se recomienda usar en el VaR no Paramétrico sin simulaciones de Montecarlo es tener como referencia un periodo de retorno, es decir con qué frecuencia se da el suceso de esta perdida, en este caso es cada 20 días aproximadamente. Para llegar a este resultado es tomar la siguiente formula: $$Periodo\ Retorno = \frac{1}{1-q} \ q\in<0,1>$$
 
-**TVaR o CVaR** $$TVaR_{q} = E[R/R<=VaR_{q}]$$ Comúnmente conocido como Tail Value at Risk y también como Conditional Value at risk(CVaR) o expected shortall es la pérdida esperada por una cartera en un periodo determinado mayor al umbral del VaR a un nivel de confianza. Esta medida de riesgo es muy usada en seguros y en el sistema financiero y en mucha de la bibliografía se considera que este cumple con las propiedades de una medida coherente (Denuit Michael, Dhaene Jan, Goovaerts Marc, Kaas Rob, ACTUARIAL THEORY FOR DEPENDET RISKS, MEASURES, ORDERS AND MODELS, 2005). En este ejemplo, esta medida responde a la pregunta si en el peor de los casos se rompa el umbral de perdida máxima esperada (VaR), cuanto en promedio se esperaría de perdida en ese escenario, que para BTC sería de -9.8% Tvar95%.
+**TVaR o CVaR** $$TVaR_{q} = E[R/R<=VaR_{q}]$$ Comúnmente conocido como Tail Value at Risk y también como Conditional Value at risk(CVaR) o expected shortall es la pérdida esperada por una cartera en un periodo determinado mayor al umbral del VaR a un nivel de confianza. Esta medida de riesgo es muy usada en seguros y en el sistema financiero y en mucha de la bibliografía se considera que este cumple con las propiedades de una medida coherente (Denuit Michael, Dhaene Jan, Goovaerts Marc, Kaas Rob, ACTUARIAL THEORY FOR DEPENDET RISKS, MEASURES, ORDERS AND MODELS, 2005). En este ejemplo, esta medida responde a la pregunta si en el peor de los casos se rompa el umbral de perdida máxima esperada (VaR), cuanto en promedio se esperaría de pérdida en ese escenario, que para BTC sería de -9.8% Tvar95%.
+
+Como mencionamos anteriormente, suponiendo que entramos en una posición de compra en el mercado spot, y asumiendo que el periodo analizado es suficiente y representativo para esperar que esta se replique en el futuro, se esperaría tener más días al alza ya que este tiene una probabilidad del 52.84%, también esperarías tener un retorno promedio en el día de 0.27% de tu inversión, con una volatilidad de 4.43%, con una probabilidad máxima de perdida al 95% de 6.46% cada 20 días y con una perdida promedio esperada mayor al 6.46% de 9.80%. Esta información puede ser un punto de partida a considerar para poder compararlo con las mismas métricas en otras criptomonedas y ver en cuales prefieras invertir. Si deseas tener una estrategia con mas de 1 criptomoneda a la vez, es importante que se cumpla la propiedad de subaditividad, que refleja la idea que el riesgo puede ser reducido por la diversificación. No está demás decir que este ejemplo es sólo informativo y educativo y no es ningún consejo de inversión. Espero haya podido despertar la curiosidad y que tengas un ejemplo de cómo las probabilidades y la estadística están incluida en estos temas.
 
 <div>
 
