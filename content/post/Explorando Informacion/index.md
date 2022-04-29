@@ -9,7 +9,7 @@ authors: [admin]
 tags: [Data Science, Probabilidad, Estadistica, Teorema de Bayes]
 categories: []
 date: 2021-01-31
-lastmod: 2021-01-31
+lastmod: 2022-01-31
 featured: false
 draft: false
 
@@ -27,7 +27,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [Tutoriales] 
-rmd_hash: aeb50cf031699763
+rmd_hash: 4033b36099d1085e
 
 ---
 
