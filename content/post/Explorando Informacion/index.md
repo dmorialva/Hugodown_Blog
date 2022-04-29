@@ -23,9 +23,9 @@ links:
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Photo by [https://www.heraldo.es]"
-  focal_point: "smart"
-  preview_only: True
+  caption: ""
+  focal_point: "Smart"
+  #preview_only: True
   placement: 1
 
 # Projects (optional).
@@ -34,7 +34,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [Tutoriales] 
-rmd_hash: e2d69db80e068f00
+rmd_hash: e2b46c7e1296b1a7
 
 ---
 
