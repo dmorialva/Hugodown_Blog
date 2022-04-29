@@ -20,7 +20,7 @@ image:
   caption: "Photo by [https://www.heraldo.es](https://www.heraldo.es/noticias/sociedad/2021/07/16/las-hadas-de-la-probabilidad-matematicas-contigo-1502023.html)"
   focal_point: "smart"
   #preview_only: false
-  placement: 1
+  #placement: 1
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -28,7 +28,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [Tutoriales] 
-rmd_hash: 719df639b79b9f2d
+rmd_hash: 2062ae0688a8b153
 
 ---
 
