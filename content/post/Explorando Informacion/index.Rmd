@@ -19,7 +19,7 @@ draft: false
 image:
   caption: "Photo by [https://www.heraldo.es](https://www.heraldo.es/noticias/sociedad/2021/07/16/las-hadas-de-la-probabilidad-matematicas-contigo-1502023.html)"
   focal_point: "smart"
-  preview_only: false
+  #preview_only: false
   placement: 1
 
 # Projects (optional).
