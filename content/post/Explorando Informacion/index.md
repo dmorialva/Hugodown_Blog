@@ -17,9 +17,10 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
-  focal_point: ""
+  caption: "Photo by [https://www.heraldo.es](https://www.heraldo.es/noticias/sociedad/2021/07/16/las-hadas-de-la-probabilidad-matematicas-contigo-1502023.html)"
+  focal_point: "smart"
   preview_only: false
+  placement: 1
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -27,7 +28,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [Tutoriales] 
-rmd_hash: 4033b36099d1085e
+rmd_hash: 3326a3ea9bfc32b8
 
 ---
 
