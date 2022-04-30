@@ -25,7 +25,7 @@ links:
 image:
   caption: ""
   focal_point: "Smart"
-  #preview_only: True
+  preview_only: false
   placement: 1
 
 # Projects (optional).

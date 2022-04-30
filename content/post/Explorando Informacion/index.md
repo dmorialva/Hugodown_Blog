@@ -25,7 +25,7 @@ links:
 image:
   caption: ""
   focal_point: "Smart"
-  #preview_only: True
+  preview_only: false
   placement: 1
 
 # Projects (optional).
@@ -34,7 +34,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [Tutoriales] 
-rmd_hash: e2b46c7e1296b1a7
+rmd_hash: 03fa8442c8712982
 
 ---
 
