@@ -8,15 +8,10 @@ summary: "Examinaremos los tópicos iniciales de probabilidad"
 authors: [admin]
 tags: [Data Science, Probabilidad, Estadistica, Teorema de Bayes]
 categories: []
-date: 2021-01-31
-lastmod: 2022-01-31
+date: 2022-01-30
+lastmod: 2022-04-30
 featured: false
 draft: false
-links:
-- icon: linkedin
-  icon_pack: fab
-  name: Follow
-  url: https://www.linkedin.com/in/morialva27/
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -32,7 +27,7 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: [] 
+projects: []
 ---
 
 <div style="text-align: justify">
