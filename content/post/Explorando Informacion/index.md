@@ -12,7 +12,6 @@ date: 2021-01-31
 lastmod: 2022-01-31
 featured: false
 draft: false
-external_link: ''
 links:
 - icon: linkedin
   icon_pack: fab
@@ -34,7 +33,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: cbf9138ead9c25e1
+rmd_hash: 1ed1925a917e9c59
 
 ---
 
