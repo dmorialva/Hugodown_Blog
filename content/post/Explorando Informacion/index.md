@@ -3,7 +3,7 @@ output: hugodown::md_document
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Explorando Probabilidades"
-subtitle: "Parte I"
+subtitle: ""
 summary: "Examinaremos los tópicos iniciales de probabilidad"
 authors: [admin]
 tags: [Data Science, Probabilidad, Estadistica, Teorema de Bayes]
@@ -34,7 +34,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: 49d1a9f297493a46
+rmd_hash: cbf9138ead9c25e1
 
 ---
 

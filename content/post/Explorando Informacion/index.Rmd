@@ -3,7 +3,7 @@ output: hugodown::md_document
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Explorando Probabilidades"
-subtitle: "Parte I"
+subtitle: ""
 summary: "Examinaremos los tópicos iniciales de probabilidad"
 authors: [admin]
 tags: [Data Science, Probabilidad, Estadistica, Teorema de Bayes]
