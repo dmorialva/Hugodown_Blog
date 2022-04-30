@@ -23,7 +23,7 @@ links:
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: ""
-  focal_point: "Smart"
+  focal_point: "smart"
   preview_only: false
   placement: 1
 
@@ -33,7 +33,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: [] 
-rmd_hash: 1ed1925a917e9c59
+rmd_hash: e31dcb988a1ce67b
 
 ---
 
