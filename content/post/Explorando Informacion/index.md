@@ -12,6 +12,11 @@ date: 2022-01-30
 lastmod: 2022-04-30
 featured: false
 draft: false
+links:
+- icon: linkedin
+  icon_pack: fab
+  name: Follow
+  url: https://www.linkedin.com/in/morialva27/
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -28,7 +33,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: ca2bc23ba21a2ac3
+rmd_hash: 48e577d78991588e
 
 ---
 
