@@ -7,7 +7,7 @@ summary: ""
 authors: [admin]
 tags: [Data Science, Teoria de Probabilidad, R, Estadística]
 categories: []
-date: 2021-10-05
+date: 2022-03-15
 draft: false
 
 # Optional external URL for project (replaces project detail page).
@@ -18,7 +18,7 @@ external_link: ""
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: "Photo by [www.cuemath.com](https://www.cuemath.com)"
-  focal_point: "Smart"
+  focal_point: "smart"
   preview_only: false
   placement: 1
 
@@ -41,7 +41,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: 0c2e9bbcac348fc1
+rmd_hash: 330a5118982f9125
 
 ---
 
@@ -55,7 +55,7 @@ Como vimos en el post de [Explorando Probabilidades](https://www.dmorialva.com/p
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='c'># Lanzamiento de una moneda</span>
 <span class='nf'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='o'>(</span>x<span class='o'>=</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"c"</span>,<span class='s'>"s"</span><span class='o'>)</span>, size <span class='o'>=</span> <span class='m'>1</span><span class='o'>)</span>
-<span class='c'>#&gt; [1] "s"</span>
+<span class='c'>#&gt; [1] "c"</span>
 <span class='c'># La probabilidad de este evento es 1/2</span></code></pre>
 
 </div>
