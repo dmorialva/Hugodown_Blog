@@ -41,7 +41,7 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-rmd_hash: 7500c91e2a786a3f
+rmd_hash: 0c2e9bbcac348fc1
 
 ---
 
@@ -78,7 +78,7 @@ Como es de esperar, no obtenemos 50 caras y 50 sellos. Si repitiéramos este exp
 
 </div>
 
-Tal ves la pregunta que viene a la cabeza es, ¿No era una moneda justa? ¿Por qué no obtenemos siempre 50/50? La respuesta es que en 1000 lanzamientos obtienes todas las combinaciones posibles, pero hay algo más que podríamos notar. ¿Cuál es el valor mas probable?.
+Tal vez la pregunta que viene a la cabeza es, ¿No era una moneda justa? ¿Por qué no obtenemos siempre 50/50? La respuesta es que en 1000 lanzamientos obtienes todas las combinaciones posibles, pero hay algo más que podríamos notar. ¿Cuál es el valor más probable?.
 
 <div class="highlight">
 

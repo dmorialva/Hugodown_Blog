@@ -129,7 +129,7 @@ ggplot(probabilityDistribution,
 
 ```
 
-Tal ves la pregunta que viene a la cabeza es, ¿No era una moneda justa? ¿Por qué no obtenemos siempre 50/50? La respuesta es que en 1000 lanzamientos obtienes todas las combinaciones posibles, pero hay algo más que podríamos notar. ¿Cuál es el valor mas probable?.
+Tal vez la pregunta que viene a la cabeza es, ¿No era una moneda justa? ¿Por qué no obtenemos siempre 50/50? La respuesta es que en 1000 lanzamientos obtienes todas las combinaciones posibles, pero hay algo más que podríamos notar. ¿Cuál es el valor más probable?.
 
 ```{r}
 
