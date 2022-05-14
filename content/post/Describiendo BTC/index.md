@@ -8,8 +8,8 @@ summary: "Analizaremos con la ayuda de la estadística descriptiva los movimient
 authors: [admin]
 tags: [Probabilidad, Estadistica, Criptomoneda]
 categories: []
-date: 2022-02-18
-lastmod: 2022-02-18
+date: 2022-05-10
+lastmod: 2022-05-10
 featured: false
 draft: false
 
@@ -36,7 +36,7 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 5a7e815d78c78b1d
+rmd_hash: 597a50bbcf50347c
 
 ---
 
@@ -79,7 +79,7 @@ Como un primer análisis, mostraremos la serie temporal del bitcoin con su preci
 
 </div>
 
-A partir del gráfico, solo podemos observar que el precio en este lapso de tiempo, formo un soporte alrededor de los 30 mil y un máximo de 65 mil. Ahora mencionaremos 2 conceptos básicos para empezar a analizar el bitcoin y cualquier otro instrumento bursátil.
+A partir del gráfico, solo podemos observar que el precio en este lapso de tiempo, formó un soporte alrededor de los 30 mil y un máximo de 65 mil. Ahora mencionaremos 2 conceptos básicos para empezar a analizar el bitcoin y cualquier otro instrumento bursátil.
 
 # **Rendimiento o Retorno Simple y continuo**
 
@@ -192,13 +192,13 @@ Como sabemos, el histograma es la distribución empírica de la variable aleator
 
 **Retorno Promedio** $$\overline{Rc} = \frac{\sum_{i=1}^{N}{Rc_i}}{N}$$ Nos indica cual fue la rentabilidad diaria promedio en el periodo (0.27%).
 
-**Retorno Positivo** $$\overline{Rc+} = \frac{\sum_{i=1}^{N+}{Rc_i+}}{Cuenta\ Días\ Positivos}$$ Nos informa, que si el día en el que hemos abierto una posición de compra (posición Long), y éste resulta en un movimiento al alza, el retorno promedio esperado seria de 3.38%.
+**Retorno Positivo** $$\overline{Rc+} = \frac{\sum_{i=1}^{N+}{Rc_i+}}{Cuenta\ Días\ Positivos}$$ Nos informa, que si el día en el que hemos abierto una posición de compra (posición Long), y éste resulta en un movimiento al alza, el retorno promedio esperado sería de 3.38%.
 
 **Retorno Negativo** $$\overline{Rc-} = \frac{\sum_{i=1}^{N-}{Rc_i-}}{Cuenta\ Días\ Negativos}$$ Al contrario del apartado anterior, si el día resulta en un movimiento a la baja, esperamos tener un retorno promedio de -3.21%.
 
 **Volatilidad o Riesgo** $$\widehat {\sigma_R} = \sqrt\frac{\sum_{i=1}^{N}{(Rc_i-\overline{Rc})^{2}}}{N-1}$$ Esta medida de dispersión nos indica en cuanto se puede desviar la rentabilidad promedio esperada tanto positiva como negativamente, esto se le conoce como la volatilidad, que en este caso es de 4.43%. Piense en esta medida también como el riesgo o incertidumbre debido a los movimientos del mercado.
 
-**Valor en Riesgo o VaR No Paramétrico** $$VaR_{q} = quantil(1-q) = F_R^{-1}(1-q)  \ ;para\ q\in<0,1>$$ Otra medida de riesgo adicional a la de la volatilidad es la del VaR. Si el inversor está interesado en saber cuál es la máxima pérdida en un periodo con un nivel de confianza asociado, esta es la del VaR. Por ejemplo, en el caso en estudio el VaR(95%) es -6.46%, el cual indica que con un nivel de confianza del 95%, esperamos tener una perdida máxima en un día de 6.46% sobre la inversión. Otra manera intuitiva en este caso, pero que no se recomienda usar en el VaR no Paramétrico sin simulaciones de Montecarlo es tener como referencia un periodo de retorno, es decir con qué frecuencia se da el suceso de esta perdida, en este caso es cada 20 días aproximadamente. Para llegar a este resultado es tomar la siguiente formula: $$Periodo\ Retorno = \frac{1}{1-q} \ q\in<0,1>$$
+**Valor en Riesgo o VaR No Paramétrico** $$VaR_{q} = quantil(1-q) = F_R^{-1}(1-q)  \ ;para\ q\in<0,1>$$ Otra medida de riesgo adicional a la de la volatilidad es la del VaR. Si el inversor está interesado en saber cuál es la máxima pérdida en un periodo con un nivel de confianza asociado, esta es la del VaR. Por ejemplo, en el caso en estudio el VaR(95%) es -6.46%, el cual indica que con un nivel de confianza del 95%, esperamos tener una perdida máxima en un día de 6.46% sobre la inversión. Otra manera intuitiva en este caso, pero que no se recomienda usar en el VaR no Paramétrico sin simulaciones de Montecarlo es tener como referencia un periodo de retorno, es decir con qué frecuencia se da el suceso de esta pérdida, en este caso es cada 20 días aproximadamente. Para llegar a este resultado es tomar la siguiente fórmula: $$Periodo\ Retorno = \frac{1}{1-q} \ q\in<0,1>$$
 
 **TVaR o CVaR** $$TVaR_{q} = E[R/R<=VaR_{q}]$$ Comúnmente conocido como Tail Value at Risk y también como Conditional Value at risk(CVaR) o expected shortall es la pérdida esperada por una cartera en un periodo determinado mayor al umbral del VaR a un nivel de confianza. Esta medida de riesgo es muy usada en seguros y en el sistema financiero y en mucha de la bibliografía se considera que este cumple con las propiedades de una medida coherente (Denuit Michael, Dhaene Jan, Goovaerts Marc, Kaas Rob, ACTUARIAL THEORY FOR DEPENDET RISKS, MEASURES, ORDERS AND MODELS, 2005). En este ejemplo, esta medida responde a la pregunta si en el peor de los casos se rompa el umbral de perdida máxima esperada (VaR), cuanto en promedio se esperaría de pérdida en ese escenario, que para BTC sería de -9.8% Tvar95%.
 
