@@ -36,13 +36,13 @@ links:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-rmd_hash: 597a50bbcf50347c
+rmd_hash: 24c9272a1047e9a0
 
 ---
 
 <div style="text-align: justify">
 
-Bitcoin (BTC en adelante por sus siglas) es una moneda digital creada en el 2008 por una entidad bajo el pseudonimo de Satoshi Nakamoto, que sirve de intercambio como otra moneda física. La característica más resaltante es que es una moneda descentralizada, es decir no existe una autoridad o ente de control que sea responsable de su emisión y registro de sus movimientos y además esta blindada contra la inflación, ya que existe un numero límite de monedas. La tecnología que usa para la transferencia o movimientos de la moneda digital es la cadena de bloques o Blockchain, la cual en términos simples lleva un registro de cada movimiento o etiqueta, y se copia en cada cadena de bloques de manera que todos los usuarios de la cadena deben tener la misma información para validar la transacción, lo que hace muy difícil la falsificación. Si quieres saber más te dejo información [aquí](https://es.wikipedia.org/wiki/Bitcoin)
+Bitcoin (BTC en adelante por sus siglas) es una moneda digital creada en el 2008 por una entidad bajo el pseudonimo de Satoshi Nakamoto, que sirve de intercambio como otra moneda física. La característica más resaltante es que es una moneda descentralizada, es decir no existe una autoridad o ente de control que sea responsable de su emisión y registro de sus movimientos y además esta blindada contra la inflación, ya que existe un número límite de monedas. La tecnología que usa para la transferencia o movimientos de la moneda digital es la cadena de bloques o Blockchain, la cual en términos simples lleva un registro de cada movimiento o etiqueta, y se copia en cada cadena de bloques de manera que todos los usuarios de la cadena deben tener la misma información para validar la transacción, lo que hace muy difícil la falsificación. Si quieres saber más te dejo información [aquí](https://es.wikipedia.org/wiki/Bitcoin)
 
 # **Leer información desde (CSV)**
 
